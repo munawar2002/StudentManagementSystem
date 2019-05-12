@@ -1,0 +1,8 @@
+*.project
+.settings/
+.idea/
+*.classpath
+*.iml
+target/
+dependency-reduced-pom.xml
+*.flattened-pom.xml
