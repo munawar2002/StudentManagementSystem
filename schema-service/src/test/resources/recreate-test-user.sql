@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS @schema.name@;
-CREATE DATABASE @schema.name@;
+DROP DATABASE IF EXISTS @test.db.username@;
+CREATE DATABASE @test.db.username@;
