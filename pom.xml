@@ -47,7 +47,7 @@
 
         <!-- Test database properties (Mysql for now) -->
         <test.db.user>root</test.db.user>
-        <test.db.username>client</test.db.username>
+        <test.db.username>testDB</test.db.username>
         <test.db.password>HlhWuFRV62A=</test.db.password>
         <test.db.password.decrypted>str0ng</test.db.password.decrypted>
         <test.db.validation-query>SELECT 1 FROM DUAL</test.db.validation-query>
