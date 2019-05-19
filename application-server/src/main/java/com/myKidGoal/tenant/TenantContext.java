@@ -12,7 +12,7 @@ public class TenantContext {
     }
 
     public static String getDefaultTenant() {
-        return "login";
+        return "testDB";
     }
 
 }
