@@ -1,15 +1,10 @@
 package com.myKidGoal.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
-import org.codehaus.jackson.annotate.JsonManagedReference;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Objects;
 
 /*
@@ -17,31 +12,17 @@ import java.util.Objects;
     Note: Here i didn't used the lombok library. Just to show i know both ways.
  */
 @Entity
-@Table(name = "ASSET")
 public class Asset {
 
     private Long id;
-    private Portfolio portfolio;
     private String assetRef;
     private String address;
     private int zipCode;
     private String city;
     private boolean restricted;
     private String yoc;
-    private List<Unit> units;
 
     public Asset() {
-    }
-
-    public Asset(Portfolio portfolio, String assetRef, String address, int zipCode, String city, boolean restricted,
-            String yoc) {
-        this.portfolio = portfolio;
-        this.assetRef = assetRef;
-        this.address = address;
-        this.zipCode = zipCode;
-        this.city = city;
-        this.restricted = restricted;
-        this.yoc = yoc;
     }
 
     @Id
@@ -52,17 +33,6 @@ public class Asset {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JsonBackReference
-    @JoinColumn(name = "PORTFOLIOID", nullable = false)
-    public Portfolio getPortfolio() {
-        return portfolio;
-    }
-
-    public void setPortfolio(Portfolio portfolio) {
-        this.portfolio = portfolio;
     }
 
     @Basic
@@ -127,17 +97,6 @@ public class Asset {
         this.yoc = yoc;
     }
 
-    @Fetch(FetchMode.SUBSELECT)
-    @JsonManagedReference
-    @OneToMany(mappedBy = "asset", fetch = FetchType.EAGER)
-    public List<Unit> getUnits() {
-        return units;
-    }
-
-    public void setUnits(List<Unit> units) {
-        this.units = units;
-    }
-
     @Override
     public boolean equals(Object o) {
         return EqualsBuilder.reflectionEquals(this, o);
@@ -145,7 +104,7 @@ public class Asset {
 
     @Override
     public int hashCode() {
-        return Objects.hash(portfolio, assetRef);
+        return Objects.hash(id, assetRef);
     }
 
     @Override

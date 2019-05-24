@@ -1,0 +1,68 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-1">
+        <createTable tableName="DS_ACCOUNT">
+            <column name="Id_Account" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_AccountSubGroup" type="INT"/>
+            <column name="Code" type="VARCHAR(5)"/>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="Remarks" type="VARCHAR(200)"/>
+            <column name="IsLocked" type="${booleanType}"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-2">
+        <createTable tableName="DS_ACCOUNTGROUP">
+            <column name="Id_AccountGroup" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_AccountType" type="INT"/>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="Code" type="VARCHAR(5)"/>
+            <column name="Remarks" type="VARCHAR(200)"/>
+            <column name="IsLocked" type="${booleanType}"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-3">
+        <createTable tableName="DS_ACCOUNTSUBGROUP">
+            <column name="Id_AccountSubGroup" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_AccountGroup" type="INT"/>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="Code" type="VARCHAR(5)"/>
+            <column name="Remarks" type="VARCHAR(200)"/>
+            <column name="IsLocked" type="${booleanType}"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-4">
+        <createTable tableName="DS_ACCOUNTTYPE">
+            <column name="Id_AccountType" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="OrderNo" type="INT"/>
+            <column name="Color" type="INT"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+            <column name="Code" type="VARCHAR(2)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

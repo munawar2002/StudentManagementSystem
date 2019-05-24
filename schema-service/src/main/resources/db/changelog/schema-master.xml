@@ -26,5 +26,5 @@
     <property name="booleanType" value="TINYINT"/>
 
     <!-- Add in all the version change logs. -->
-    <include file="db/changelog/global-schema-0.0.1.xml"/>
+    <include file="db/changelog/student-management-schema-0.0.1.xml"/>
 </databaseChangeLog>
