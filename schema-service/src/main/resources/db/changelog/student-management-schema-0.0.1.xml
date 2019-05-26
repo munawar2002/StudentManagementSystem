@@ -65,4 +65,601 @@
         </createTable>
     </changeSet>
 
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-5">
+        <createTable tableName="DS_AREA">
+            <column name="ID_Area" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-6">
+        <createTable tableName="DS_ATTENDANCESTATUS">
+            <column name="Id_AttendanceStatus" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-7">
+        <createTable tableName="DS_BANK">
+            <column name="Id_Bank" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-8">
+        <createTable tableName="DS_BOOK">
+            <column name="ID_Book" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="ID_BookLanguage" type="INT"/>
+            <column name="ID_BookSubGroup" type="INT"/>
+            <column name="ID_BookPublisher" type="INT"/>
+            <column name="ID_BookType" type="INT"/>
+            <column name="AUTHOR" type="VARCHAR(255)"/>
+            <column name="Title" type="VARCHAR(255)"/>
+            <column name="Description" type="VARCHAR(255)"/>
+            <column name="ISBN" type="VARCHAR(255)"/>
+            <column name="Pages" type="INT"/>
+            <column name="AgeLimit" type="INT"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+            <column name="Stars" type="INT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-9">
+        <createTable tableName="DS_BOOKCONDITION">
+            <column name="ID_BookCondition" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(255)"/>
+            <column name="IconNo" type="INT"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-10">
+        <createTable tableName="DS_BOOKCOPY">
+            <column name="ID_BookCopy" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="ID_Book" type="INT"/>
+            <column name="ID_BookCondition" type="INT"/>
+            <column name="CopyNo" type="INT"/>
+            <column name="StockInDate" type="DATE"/>
+            <column name="Cost" type="INT"/>
+            <column name="Remarks" type="VARCHAR(255)"/>
+            <column name="StockOutDate" type="DATE"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+            <column name="ID_BookShelf" type="INT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-11">
+        <createTable tableName="DS_BOOKGROUP">
+            <column name="ID_BookGroup" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-12">
+        <createTable tableName="DS_BOOKLANGUAGE">
+            <column name="ID_BookLanguage" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-13">
+        <createTable tableName="DS_BOOKPUBLISHER">
+            <column name="ID_BookPublisher" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-14">
+        <createTable tableName="DS_BOOKSHELF">
+            <column name="ID_BookShelf" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-15">
+        <createTable tableName="DS_BOOKSUBGROUP">
+            <column name="ID_BookSubGroup" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="ID_BookGroup" type="INT"/>
+            <column name="Name" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-16">
+        <createTable tableName="DS_BOOKTRANSACTION">
+            <column name="ID_BookTransaction" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="ID_BookCopy" type="INT"/>
+            <column name="ID_LibraryCard" type="INT"/>
+            <column name="IssueDate" type="DATE"/>
+            <column name="ID_IssuedCondition" type="INT"/>
+            <column name="ForDays" type="INT"/>
+            <column name="IsReturned" type="${booleanType}"/>
+            <column name="ReturnDate" type="DATE"/>
+            <column name="ID_ReturnedCondition" type="INT"/>
+            <column name="LateFine" type="DOUBLE"/>
+            <column name="FineIsPaid" type="${booleanType}"/>
+            <column name="Remarks" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+            <column name="IsRated" type="${booleanType}"/>
+            <column name="Stars" type="INT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-17">
+        <createTable tableName="DS_BOOKTYPE">
+            <column name="ID_BookType" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-18">
+        <createTable tableName="DS_CALENDAR">
+            <column name="Id_Calendar" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-19">
+        <createTable tableName="DS_CATEGORY">
+            <column name="ID_Category" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="OrderNo" type="INT"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+            <column name="BankAccount" type="VARCHAR(255)"/>
+            <column name="Short" type="VARCHAR(5)"/>
+            <column name="code" type="INT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-20">
+        <createTable tableName="DS_CHEQUETYPE">
+            <column name="Id_ChequeType" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="Short" type="VARCHAR(50)"/>
+            <column name="OrderNo" type="INT"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-21">
+        <createTable tableName="DS_CLASS">
+            <column name="ID_Class" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="ID_Category" type="INT"/>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="IsDeleted" type="${booleanType}"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-22">
+        <createTable tableName="DS_CLASSDOCUMENT">
+            <column name="Id_ClassDocument" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_Class" type="INT"/>
+            <column name="Id_Document" type="INT"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-23">
+        <createTable tableName="DS_CLASSFEE">
+            <column name="Id_ClassFee" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_FeeChargedFor" type="INT"/>
+            <column name="Id_Account" type="INT"/>
+            <column name="Id_Class" type="INT"/>
+            <column name="Fee" type="DOUBLE"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-24">
+        <createTable tableName="DS_CLIENTINFO">
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="SubName" type="VARCHAR(255)"/>
+            <column name="Address" type="VARCHAR(255)"/>
+            <column name="Contacts" type="VARCHAR(255)"/>
+            <column name="DATE" type="DATE"/>
+            <column name="Font" type="VARCHAR(50)"/>
+            <column name="FontSize" type="VARCHAR(50)"/>
+            <column name="IsBold" type="VARCHAR(50)"/>
+            <column name="M01" type="VARCHAR(50)"/>
+            <column name="M02" type="VARCHAR(50)"/>
+            <column name="M03" type="VARCHAR(50)"/>
+            <column name="M04" type="VARCHAR(50)"/>
+            <column name="M05" type="VARCHAR(50)"/>
+            <column name="M06" type="VARCHAR(50)"/>
+            <column name="M07" type="VARCHAR(50)"/>
+            <column name="M08" type="VARCHAR(50)"/>
+            <column name="M09" type="VARCHAR(50)"/>
+            <column name="M010" type="VARCHAR(50)"/>
+            <column name="Bank" type="VARCHAR(255)"/>
+            <column name="BankAccount" type="VARCHAR(255)"/>
+            <column name="VoucherFooter" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-25">
+        <createTable tableName="DS_CLIENTPICS">
+            <column name="Id_Pic" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="Pic" type="LONGBLOB"/>
+            <column name="bytes" type="INT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-26">
+        <createTable tableName="DS_COPY">
+            <column name="Copy" type="INT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-27">
+        <createTable tableName="DS_CRT_PROVISIONAL">
+            <column name="Id_Crt_Provisional" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_Student" type="INT"/>
+            <column name="CNo" type="VARCHAR(50)"/>
+            <column name="Board" type="VARCHAR(50)"/>
+            <column name="Exam" type="VARCHAR(50)"/>
+            <column name="Group" type="VARCHAR(50)"/>
+            <column name="Year" type="VARCHAR(50)"/>
+            <column name="RollNo" type="VARCHAR(50)"/>
+            <column name="Grade" type="VARCHAR(50)"/>
+            <column name="IssueDate" type="DATE"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-28">
+        <createTable tableName="DS_CRT_TWIMC">
+            <column name="Id_Crt_TWIMC" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_Student" type="INT"/>
+            <column name="CNo" type="VARCHAR(50)"/>
+            <column name="IssueDate" type="DATE"/>
+            <column name="Remarks" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-29">
+        <createTable tableName="DS_DATA">
+            <column name="Category" type="VARCHAR(255)"/>
+            <column name="Short" type="VARCHAR(50)"/>
+            <column name="CLASS" type="VARCHAR(255)"/>
+            <column name="Sec" type="VARCHAR(255)"/>
+            <column name="GRNo" type="INT"/>
+            <column name="GRNo_Fake" type="INT"/>
+            <column name="Name" type="VARCHAR(255)"/>
+            <column name="Sex" type="VARCHAR(255)"/>
+            <column name="Father" type="VARCHAR(255)"/>
+            <column name="Profession" type="VARCHAR(255)"/>
+            <column name="Contact1" type="VARCHAR(255)"/>
+            <column name="Contact2" type="VARCHAR(255)"/>
+            <column name="Contact3" type="VARCHAR(255)"/>
+            <column name="NICNo" type="VARCHAR(255)"/>
+            <column name="Area" type="VARCHAR(255)"/>
+            <column name="Address" type="VARCHAR(255)"/>
+            <column name="DOB" type="DATE"/>
+            <column name="PlaceOfBirth" type="VARCHAR(255)"/>
+            <column name="LastSchool" type="VARCHAR(255)"/>
+            <column name="Nationality" type="VARCHAR(255)"/>
+            <column name="Religion" type="VARCHAR(255)"/>
+            <column name="House" type="VARCHAR(255)"/>
+            <column name="Annual_Charges" type="DOUBLE"/>
+            <column name="Tuition_Fee" type="DOUBLE"/>
+            <column name="Lab_Fee" type="DOUBLE"/>
+            <column name="Balance" type="DOUBLE"/>
+            <column name="Remark" type="VARCHAR(255)"/>
+            <column name="F26" type="VARCHAR(255)"/>
+            <column name="F27" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-30">
+        <createTable tableName="DS_DAYATTENDANCE">
+            <column name="Id_DayAttendance" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_DayEvent" type="INT"/>
+            <column name="Id_StudentSec" type="INT"/>
+            <column name="Id_AttendanceStatus" type="INT"/>
+             <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-31">
+        <createTable tableName="DS_DAYEVENT">
+            <column name="Id_DayEvent" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_Calendar" type="INT"/>
+            <column name="Id_EventTitle" type="INT"/>
+            <column name="Date" type="DATE"/>
+            <column name="IsHoliday" type="${booleanType}"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-32">
+        <createTable tableName="DS_DELETELOG">
+            <column name="ID_DeleteLog" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="ID_User" type="INT"/>
+            <column name="TableName" type="VARCHAR(255)"/>
+            <column name="ID" type="INT"/>
+            <column name="Remarks" type="VARCHAR(255)"/>
+            <column name="OnDate" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-33">
+        <createTable tableName="DS_DEPARTMENT">
+            <column name="Id_Department" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-34">
+        <createTable tableName="DS_DESIGNATION">
+            <column name="Id_Designation" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="ID_Department" type="INT"/>
+            <column name="ID_Parent" type="INT"/>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-35">
+        <createTable tableName="DS_DOCUMENT">
+            <column name="ID_Document" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-36">
+        <createTable tableName="DS_EMPLOYEE">
+            <column name="Id_Employee" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_Qualification" type="INT"/>
+            <column name="ID_Area" type="INT"/>
+            <column name="ECode" type="INT"/>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="IsMale" type="${booleanType}"/>
+            <column name="IsMarried" type="${booleanType}"/>
+            <column name="FatherOrHusband" type="VARCHAR(255)"/>
+            <column name="NICNo" type="VARCHAR(50)"/>
+            <column name="NICExpiredOn" type="DATE"/>
+            <column name="Contact1" type="VARCHAR(50)"/>
+            <column name="Contact2" type="VARCHAR(50)"/>
+            <column name="Address" type="VARCHAR(255)"/>
+            <column name="BankAccount" type="VARCHAR(50)"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="OnProbation" type="${booleanType}"/>
+            <column name="DOJ" type="DATE"/>
+            <column name="DOP" type="DATE"/>
+            <column name="IsLeft" type="${booleanType}"/>
+            <column name="DOL" type="DATE"/>
+            <column name="CauseOfLeaving" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-37">
+        <createTable tableName="DS_EMPLOYEEATTENDANCE">
+            <column name="Id_EmployeeAttendance" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_Employee" type="INT"/>
+            <column name="Id_AttendanceStatus" type="INT"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-38">
+        <createTable tableName="DS_EMPLOYEEEXPERIENCE">
+            <column name="ID_EmployeeExperience" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_Employee" type="INT"/>
+            <column name="WorkedAs" type="VARCHAR(255)"/>
+            <column name="Duration" type="VARCHAR(255)"/>
+            <column name="Organization" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-39">
+        <createTable tableName="DS_EMPLOYEEIDCARD">
+            <column name="Id_EmployeeIDCard" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_EmployeeJob" type="INT"/>
+            <column name="IssueDate" type="DATE"/>
+            <column name="ExpiryDate" type="DATE"/>
+            <column name="IsExpired" type="${booleanType}"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-40">
+        <createTable tableName="DS_EMPLOYEEJOB">
+            <column name="Id_EmployeeJob" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="ID_Employee" type="INT"/>
+            <column name="ID_Designation" type="INT"/>
+            <column name="ID_PayScale" type="INT"/>
+            <column name="FromDate" type="DATE"/>
+            <column name="IsActive" type="${booleanType}"/>
+            <column name="TaxDeduction" type="${booleanType}"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-41">
+        <createTable tableName="DS_EMPLOYEELEAVE">
+            <column name="Id_EmployeeLeave" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_EmployeeJob" type="INT"/>
+            <column name="Id_LeaveType" type="INT"/>
+            <column name="Id_LeaveTime" type="INT"/>
+            <column name="IsEarned" type="${booleanType}"/>
+            <column name="Days" type="INT"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-42">
+        <createTable tableName="DS_EMPLOYEESALARY">
+            <column name="Id_EmployeeSalary" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_EmployeeJob" type="INT"/>
+            <column name="Id_Account" type="INT"/>
+            <column name="Amount" type="DOUBLE"/>
+            <column name="IsEarning" type="${booleanType}"/>
+            <column name="IsPercent" type="${booleanType}"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-43">
+        <createTable tableName="DS_EMPLOYEESKILL">
+            <column name="ID_EmployeeSkill" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="ID_Employee" type="INT"/>
+            <column name="ID_Skill" type="INT"/>
+            <column name="Details" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-44">
+        <createTable tableName="DS_EVENTTITLE">
+            <column name="Id_EventTitle" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Name" type="VARCHAR(50)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+            <column name="COLOR" type="INT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-45">
+        <createTable tableName="DS_EXAM">
+            <column name="Id_Exam" type="INT" >
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="Id_ExamTitle" type="INT"/>
+            <column name="Id_Session" type="INT"/>
+            <column name="Remarks" type="VARCHAR(50)"/>
+            <column name="SideNote" type="VARCHAR(255)"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+
 </databaseChangeLog>
