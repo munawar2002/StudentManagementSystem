@@ -1,1 +1,0 @@
-ID_BookTransaction,ID_BookCopy,ID_LibraryCard,IssueDate,ID_IssuedCondition,ForDays,IsReturned,ReturnDate,ID_ReturnedCondition,LateFine,FineIsPaid,Remarks,ID_User,UserTime,IsRated,Stars

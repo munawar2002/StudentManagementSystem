@@ -1,8 +1,0 @@
-Id_VoucherType,Name,Short,Id_User,UserTime,OrderNo
-6,Fee Charging Voucher,FCV,0,,6
-7,Fee Payment Voucher,FPV,0,,7
-1,Journal Voucher,JV,0,,3
-2,Bank Payment Voucher,BPV,0,,1
-3,Bank Receiving Voucher,BRV,0,,4
-4,Cash Payment Voucher,CPV,0,,2
-5,Cash Receiving Voucher,CRV,0,,5
