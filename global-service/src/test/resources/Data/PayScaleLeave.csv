@@ -1,0 +1,2 @@
+Id_PayScaleLeave,Id_PayScale,Id_LeaveType,Id_LeaveTime,IsEarned,Days,ProbationDays,Id_User,UserTime
+1,1,1,2,True,20,0,7,2015-11-18 15:06:36

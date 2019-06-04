@@ -1,0 +1,49 @@
+Id_AccountSubGroup,Id_AccountGroup,Name,Code,Remarks,IsLocked,Id_User,UserTime
+1,1,Building,001,-,False,1,2011-08-12 12:14:43
+2,1,Land,002,-,False,1,2011-08-18 09:14:56
+3,1,Vehicle,003,,False,1,2011-08-18 09:15:52
+4,3,Company,001,,False,1,2011-09-29 12:22:18
+5,4,Advertising Exp,001,,False,7,2013-03-25 10:30:23
+6,4,Auditor And Income Tax,002,,False,7,2013-03-25 10:31:59
+7,4,Utilities Exp,003,,False,1,2011-08-15 10:27:05
+8,2,Bank Accounts,004,,False,1,2013-03-18 18:37:38
+9,4,Events Expense,004,,False,7,2013-03-25 10:38:01
+10,4,Staff Salary,005,,False,7,2016-02-04 15:36:53
+11,4,Stationery Expense,006,,False,1,2011-08-15 12:20:04
+12,4,Petrol,diesel,cng & Oil Expense,007,,False,1,2011-08-15 13:12:27
+14,4,Building Repairing & Maintenance Expanse,008,,False,1,2011-08-15 13:25:13
+15,4,Photostat,009,,False,1,2011-08-15 13:27:56
+16,4,Electric Goods Expense,010,,False,1,2011-08-15 13:31:20
+17,4,Cloth Expense,011,,False,1,2011-08-15 13:33:06
+18,4,Misc. Expense,012,,False,1,2011-08-15 14:12:50
+19,4,Bank Charges,013,,False,1,2011-08-15 14:15:35
+20,4,Gce Exam Fee,014,,False,1,2011-08-15 14:18:20
+21,4,Washing Expense,015,,False,1,2011-08-16 08:59:26
+22,4,Training Expense,016,,False,1,2011-08-16 09:00:58
+23,4,Internet Expense,017,,False,1,2011-08-16 09:02:47
+24,4,Gardning Expense,018,,False,1,2011-08-16 09:09:01
+25,4,Medical Expense,019,,False,1,2011-08-16 09:11:26
+26,4,Transport Expense,020,,False,1,2011-08-16 09:14:53
+27,4,Book Expense,027,,False,1,2013-03-18 18:38:28
+28,4,Rent Expense,028,Rent Expense Account,False,1,2013-03-21 12:51:43
+29,4,Entertainment Expense,023,,False,1,2011-08-16 09:24:51
+30,4,Insurance Expense,024,,False,1,2011-08-16 09:27:11
+31,4,Tax Motor Vehicle Expense,025,,False,1,2011-08-16 09:37:24
+32,5,Current Liabilities,001,,False,1,2011-08-17 11:38:16
+33,5,Refundable Fee,002,,False,1,2011-09-29 02:24:17
+34,6,Student Fee,001,Fee Accounts for Student Fee ,False,1,2011-09-29 00:30:06
+38,1,Equipment,004,,False,1,2011-08-18 09:20:13
+39,1,Other Fix Assets,006,,False,1,2011-08-18 10:33:22
+40,1,Furniture & Fixture,005,,False,1,2011-08-18 10:33:07
+42,2,Cash In Hand,002,,False,1,2011-09-29 00:28:38
+43,1,Contra Assets,007,,False,1,2011-08-18 11:14:44
+44,4,Depriciation Expense,026,,False,1,2011-08-18 11:58:41
+45,2,Account Receivable,003,,False,1,2011-09-29 00:29:09
+46,4,Sponserships,029,,,1,2013-03-29 10:38:10
+48,4,I.t Expense,030,Reapaing & Maintance Account For IT equipments.,,7,2013-04-01 15:54:08
+49,4,Petty Cash,031,,,1,2013-04-23 13:56:33
+50,6,Income Account,002,,,1,2013-04-27 12:15:39
+52,4,Board Expense,032,All board payment,False,7,2013-09-09 15:27:18
+53,4,Cie Fee,033,,False,7,2014-01-27 13:40:33
+54,5,Staff Salary A/p,003,,,7,2016-02-04 15:51:20
+55,5,Staff Salary A/p Deductions,004,,,7,2016-02-11 16:25:13

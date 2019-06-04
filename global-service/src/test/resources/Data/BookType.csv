@@ -1,0 +1,5 @@
+ID_BookType,Name,ID_User,UserTime,IconNo
+1,Issuable,1,2013-08-01 00:00:00,1
+2,Locked,1,2013-08-01 00:00:00,2
+3,Teachers_Only,1,2013-08-01 00:00:00,3
+4,Library_Only,1,2013-08-01 00:00:00,4

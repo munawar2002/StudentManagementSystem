@@ -237,6 +237,7 @@
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}"/>
+            <column name="IconNo" type="INT"/>
         </createTable>
     </changeSet>
 
@@ -290,6 +291,7 @@
             <column name="IsDeleted" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}"/>
+            <column name="Level" type="INT"/>
         </createTable>
     </changeSet>
 
@@ -338,7 +340,7 @@
             <column name="M07" type="VARCHAR(50)"/>
             <column name="M08" type="VARCHAR(50)"/>
             <column name="M09" type="VARCHAR(50)"/>
-            <column name="M010" type="VARCHAR(50)"/>
+            <column name="M10" type="VARCHAR(50)"/>
             <column name="Bank" type="VARCHAR(255)"/>
             <column name="BankAccount" type="VARCHAR(255)"/>
             <column name="VoucherFooter" type="VARCHAR(255)"/>
@@ -526,7 +528,7 @@
             <column name="email" type="VARCHAR(255)"/>
             <column name="OnProbation" type="${booleanType}"/>
             <column name="DOJ" type="DATE"/>
-            <column name="DOP" type="DATE"/>
+            <column name="DOB" type="DATE"/>
             <column name="IsLeft" type="${booleanType}"/>
             <column name="DOL" type="DATE"/>
             <column name="CauseOfLeaving" type="VARCHAR(255)"/>
@@ -866,7 +868,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-61">
         <createTable tableName="DS_LIBRARYMEMBERTYPE">
-            <column name="Id_LeaveType" type="INT" >
+            <column name="ID_LibraryMemberType" type="INT" >
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -1610,10 +1612,40 @@
             <column name="Id_Account" type="INT"/>
             <column name="OpeningBal" type="DOUBLE"/>
             <column name="IsDebit" type="${booleanType}"/>
+            <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}"/>
         </createTable>
     </changeSet>
 
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-111">
+        <createTable tableName="DS_V_SLIPFEE">
+            <column name="UID" type="INT" />
+            <column name="ID_Student" type="INT"/>
+            <column name="Id_StudentSec" type="INT"/>
+            <column name="ID_Slip" type="INT"/>
+            <column name="DATE" type="DATE"/>
+            <column name="Id_FeeChargedFor" type="INT"/>
+            <column name="FeeChargedFor" type="VARCHAR(100)"/>
+            <column name="Id_Account" type="INT"/>
+            <column name="Account" type="VARCHAR(255)"/>
+            <column name="Credit" type="DOUBLE"/>
+            <column name="Debit" type="DOUBLE"/>
+            <column name="Cancelled" type="VARCHAR(255)"/>
+            <column name="OrderNo" type="INT"/>
+            <column name="Concession" type="DOUBLE"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daltasoft" id="student-management-schema-0.0.1-112">
+        <createTable tableName="DS_V_SLIPFEELEDGER">
+            <column name="UID" type="INT" />
+            <column name="ID_Student" type="INT"/>
+            <column name="ID_Slip" type="INT"/>
+            <column name="DATE" type="DATE"/>
+            <column name="Credit" type="DOUBLE"/>
+            <column name="Debit" type="DOUBLE"/>
+        </createTable>
+    </changeSet>
 
 
 </databaseChangeLog>

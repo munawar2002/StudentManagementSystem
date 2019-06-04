@@ -1,0 +1,4 @@
+ID_BookCondition,Name,IconNo,ID_User,UserTime
+1,Good,1,1,2013-08-01 00:00:00
+2,Lost,2,1,2013-08-01 00:00:00
+4,Damaged,3,1,2013-08-01 00:00:00

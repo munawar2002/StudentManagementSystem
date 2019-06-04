@@ -19,7 +19,7 @@ public class SwaggerConfig {
 
     @Bean
     public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2).select().paths(PathSelectors.ant("/portfolios/**")).build()
+        return new Docket(DocumentationType.SWAGGER_2).select().paths(PathSelectors.ant("/sms/**")).build()
                 .apiInfo(apiInfo());
     }
 
