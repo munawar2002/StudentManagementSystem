@@ -1,6 +1,6 @@
 package com.myKidGoal.tenant;
 
-import com.myKidGoal.model.Asset;
+import com.myKidGoal.model.Student;
 import org.hibernate.MultiTenancyStrategy;
 import org.hibernate.cfg.Environment;
 import org.hibernate.context.spi.CurrentTenantIdentifierResolver;
@@ -44,7 +44,7 @@ public class MultiTenancyJpaConfiguration {
         hibernateProps.put(Environment.MULTI_TENANT_IDENTIFIER_RESOLVER, currentTenantIdentifierResolver);
         hibernateProps.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
 
-        return builder.dataSource(dataSource).packages(Asset.class.getPackage().getName()).properties(hibernateProps)
+        return builder.dataSource(dataSource).packages(Student.class.getPackage().getName()).properties(hibernateProps)
                 .jta(false).build();
     }
 }

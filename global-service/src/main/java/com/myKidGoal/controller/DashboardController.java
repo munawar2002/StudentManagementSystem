@@ -1,0 +1,46 @@
+package com.myKidGoal.controller;
+
+import com.myKidGoal.repository.StudentRepository;
+import com.myKidGoal.service.DashboardService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@RestController
+@RequestMapping("/sms/dashboard")
+public class DashboardController {
+
+    @Autowired
+    StudentRepository studentRepository;
+
+    @Autowired
+    DashboardService dashboardService;
+
+    @GetMapping("/counts")
+    public Map<String, Object> dashboardCount() {
+
+        Map<String, Object> response = new HashMap<>();
+
+        response.put("totalStudents", studentRepository.countByLeftSchoolIsFalse());
+        response.put("currentStudents", studentRepository.countByDolIsNull());
+        response.put("currentTeacher", studentRepository.countCurrentTeacher());
+        response.put("studentsWithDiscount", studentRepository.countStudentDiscount());
+        response.put("studentLeft", studentRepository.countStudentLeftSchool());
+        response.put("studentGraduated", studentRepository.countStudentGraduated());
+        response.put("studentsPerBranch", dashboardService.getStudentPerBranch());
+
+        return response;
+    }
+
+    @GetMapping("/test")
+    public void Test() {
+
+        dashboardService.getStudentPerBranch();
+
+    }
+
+}
