@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>schema-service</module>
-        <module>global-service</module>
+        <module>application-service</module>
         <module>application-server</module>
     </modules>
     <packaging>pom</packaging>

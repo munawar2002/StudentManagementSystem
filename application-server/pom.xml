@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>com.myKidGoal</groupId>
-            <artifactId>global-service</artifactId>
+            <artifactId>application-service</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
