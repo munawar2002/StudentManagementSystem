@@ -26,20 +26,19 @@ public class Student implements Serializable {
     public static final String LEFT_STUDENT_COUNT_QUERY = "left.school.count.query";
     public static final String STUDENT_GRADUATED_COUNT_QUERY = "student.graduated.count.query";
     public static final String CURRENT_TEACHER_COUNT_QUERY = "teacher.current.count.query";
-    public static final String BRANCH_STUDENT_COUNT_QUERY = "branch.student.count.query";
 
     private Integer id;
-    private Integer sectionId;
-    private Integer guardianId;
-    private Integer parentId;
-    private Integer placeOfBirthId;
-    private Integer lastSchoolId;
-    private Integer nationalityId;
-    private Integer religionId;
-    private Integer houseId;
+    private Section section;
+    private Guardian guardian;
+    private Guardian parent;
+    private PlaceOfBirth placeOfBirth;
+    private LastSchool lastSchool;
+    private Nationality nationality;
+    private Religion religion;
+    private House house;
     private Integer regNo;
     private LocalDate regDate;
-    private Boolean isAdmissioned;
+    private Boolean admissioned;
     private String name;
     private Integer grNo;
     private Boolean male;
@@ -67,84 +66,84 @@ public class Student implements Serializable {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "ID_Sec")
-    public Integer getSectionId() {
-        return sectionId;
+    @ManyToOne
+    @JoinColumn(name = "ID_Sec")
+    public Section getSection() {
+        return section;
     }
 
-    public void setSectionId(Integer sectionId) {
-        this.sectionId = sectionId;
+    public void setSection(Section section) {
+        this.section = section;
     }
 
-    @Basic
-    @Column(name = "Id_Guardian")
-    public Integer getGuardianId() {
-        return guardianId;
+    @ManyToOne
+    @JoinColumn(name = "Id_Guardian")
+    public Guardian getGuardian() {
+        return guardian;
     }
 
-    public void setGuardianId(Integer guardianId) {
-        this.guardianId = guardianId;
+    public void setGuardian(Guardian guardian) {
+        this.guardian = guardian;
     }
 
-    @Basic
-    @Column(name = "Id_Parent")
-    public Integer getParentId() {
-        return parentId;
+    @ManyToOne
+    @JoinColumn(name = "Id_Parent")
+    public Guardian getParent() {
+        return parent;
     }
 
-    public void setParentId(Integer parentId) {
-        this.parentId = parentId;
+    public void setParent(Guardian parent) {
+        this.parent = parent;
     }
 
-    @Basic
-    @Column(name = "Id_PlaceOfBirth")
-    public Integer getPlaceOfBirthId() {
-        return placeOfBirthId;
+    @ManyToOne
+    @JoinColumn(name = "Id_PlaceOfBirth")
+    public PlaceOfBirth getPlaceOfBirth() {
+        return placeOfBirth;
     }
 
-    public void setPlaceOfBirthId(Integer placeOfBirthId) {
-        this.placeOfBirthId = placeOfBirthId;
+    public void setPlaceOfBirth(PlaceOfBirth placeOfBirth) {
+        this.placeOfBirth = placeOfBirth;
     }
 
-    @Basic
-    @Column(name = "Id_LastSchool")
-    public Integer getLastSchoolId() {
-        return lastSchoolId;
+    @ManyToOne
+    @JoinColumn(name = "Id_LastSchool")
+    public LastSchool getLastSchool() {
+        return lastSchool;
     }
 
-    public void setLastSchoolId(Integer lastSchoolId) {
-        this.lastSchoolId = lastSchoolId;
+    public void setLastSchool(LastSchool lastSchool) {
+        this.lastSchool = lastSchool;
     }
 
-    @Basic
-    @Column(name = "Id_Nationality")
-    public Integer getNationalityId() {
-        return nationalityId;
+    @ManyToOne
+    @JoinColumn(name = "Id_Nationality")
+    public Nationality getNationality() {
+        return nationality;
     }
 
-    public void setNationalityId(Integer nationalityId) {
-        this.nationalityId = nationalityId;
+    public void setNationality(Nationality nationality) {
+        this.nationality = nationality;
     }
 
-    @Basic
-    @Column(name = "Id_Religion")
-    public Integer getReligionId() {
-        return religionId;
+    @ManyToOne
+    @JoinColumn(name = "Id_Religion")
+    public Religion getReligion() {
+        return religion;
     }
 
-    public void setReligionId(Integer religionId) {
-        this.religionId = religionId;
+    public void setReligion(Religion religion) {
+        this.religion = religion;
     }
 
-    @Basic
-    @Column(name = "Id_House")
-    public Integer getHouseId() {
-        return houseId;
+    @ManyToOne
+    @JoinColumn(name = "Id_House")
+    public House getHouse() {
+        return house;
     }
 
-    public void setHouseId(Integer houseId) {
-        this.houseId = houseId;
+    public void setHouse(House house) {
+        this.house = house;
     }
 
     @Basic
@@ -169,14 +168,14 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "IsAdmissioned")
-    public Boolean isAdmissioned() {
-        return isAdmissioned;
+    public void setAdmissioned(Boolean admissioned) {
+        this.admissioned = admissioned;
     }
 
     @Basic
     @Column(name = "IsAdmissioned")
-    public void setAdmissioned(Boolean admissioned) {
-        this.isAdmissioned = admissioned;
+    public Boolean getAdmissioned() {
+        return admissioned;
     }
 
     @Basic
@@ -201,7 +200,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "ISMALE")
-    public Boolean isMale() {
+    public Boolean getMale() {
         return male;
     }
 
@@ -243,7 +242,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "IsLeftSchool")
-    public Boolean isLeftSchool() {
+    public Boolean getLeftSchool() {
         return leftSchool;
     }
 
@@ -335,7 +334,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "IsFixedLateFine")
-    public Boolean isFixedLateFine() {
+    public Boolean getFixedLateFine() {
         return fixedLateFine;
     }
 
