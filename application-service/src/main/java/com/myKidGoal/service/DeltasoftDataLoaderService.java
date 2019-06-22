@@ -3,7 +3,9 @@ package com.myKidGoal.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.init.ScriptUtils;
 import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
@@ -65,6 +67,12 @@ public class DeltasoftDataLoaderService implements DataLoaderService {
 
                 }
             }
+
+            // executing post script
+            String postScriptPath = this.getClass().getClassLoader().getResource("ddl/postDataload.sql").getPath();
+
+            ScriptUtils.executeSqlScript(dataSource.getConnection(),new FileSystemResource(postScriptPath));
+
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Data loading process failed with message [" + e.getMessage() + "]");
