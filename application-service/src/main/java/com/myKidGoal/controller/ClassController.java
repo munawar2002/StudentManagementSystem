@@ -5,7 +5,9 @@ import com.myKidGoal.repository.ClassRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/sms/classes")
@@ -14,9 +16,13 @@ public class ClassController {
     @Autowired
     ClassRepository classRepository;
 
-    @GetMapping("/all")
-    public List<Class> allClasses() {
-        return classRepository.findAll();
+    @GetMapping("/search/all")
+    public Map<String,Object> allClasses() {
+        Map<String,Object> response = new HashMap<>();
+        Map<String,Object> res = new HashMap<>();
+        res.put("class",classRepository.findAll());
+        response.put("_embedded",res);
+        return response;
     }
 
     @PostMapping("/save")

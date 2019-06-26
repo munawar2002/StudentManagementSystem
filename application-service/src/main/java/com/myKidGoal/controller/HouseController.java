@@ -5,7 +5,9 @@ import com.myKidGoal.repository.HouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/sms/houses")
@@ -14,9 +16,14 @@ public class HouseController {
     @Autowired
     HouseRepository houseRepository;
 
-    @GetMapping("/all")
-    public List<House> allHouses() {
-        return houseRepository.findAll();
+    @GetMapping("/search/all")
+    public Map<String,Object> allHouses() {
+        Map<String,Object> response = new HashMap<>();
+        Map<String,Object> res = new HashMap<>();
+        res.put("houses",houseRepository.findAll());
+        response.put("_embedded",res);
+        return response;
+
     }
 
     @PostMapping("/save")

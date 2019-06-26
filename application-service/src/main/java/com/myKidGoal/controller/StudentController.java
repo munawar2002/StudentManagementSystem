@@ -5,7 +5,9 @@ import com.myKidGoal.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -15,12 +17,20 @@ public class StudentController {
     @Autowired
     StudentRepository studentRepository;
 
-    @GetMapping("/all")
-    public List<Student> allStudents() {
-        return studentRepository.findAll();
+    @GetMapping("/search/all")
+    public Map<String,Object> allStudents() {
+
+        Map<String,Object> response = new HashMap<>();
+
+        Map<String,Object> res = new HashMap<>();
+        res.put("users",studentRepository.findAll());
+
+        response.put("_embedded",res);
+
+        return response;
     }
 
-    @GetMapping("/details/{id}")
+    @GetMapping("/search/details/{id}")
     public Student oneStudent(@PathVariable(value = "id") int id) {
         Optional<Student> optionalStudent = studentRepository.findById(id);
 
