@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/sms/guardians")
+@RequestMapping("/sms/guardian")
 public class GuardianController {
 
     @Autowired
     GuardianRepository guardianRepository;
 
-    @GetMapping("/all")
+    @GetMapping("/search/all")
     public List<Guardian> allGuardians() {
         return guardianRepository.findAll();
     }
