@@ -65,13 +65,16 @@ public class DeltasoftDataLoaderService implements DataLoaderService {
 
                     template.execute(query);
 
+                } else if (file.isFile() && file.getName().endsWith(".sql")) {
+                    String filePath = file.getAbsolutePath().replace('\\', '/');
+                    ScriptUtils.executeSqlScript(dataSource.getConnection(), new FileSystemResource(filePath));
                 }
             }
 
             // executing post script
             String postScriptPath = this.getClass().getClassLoader().getResource("ddl/postDataload.sql").getPath();
 
-            ScriptUtils.executeSqlScript(dataSource.getConnection(),new FileSystemResource(postScriptPath));
+            ScriptUtils.executeSqlScript(dataSource.getConnection(), new FileSystemResource(postScriptPath));
 
         } catch (Exception e) {
             e.printStackTrace();

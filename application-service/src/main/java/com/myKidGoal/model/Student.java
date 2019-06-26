@@ -1,5 +1,6 @@
 package com.myKidGoal.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
@@ -68,6 +69,7 @@ public class Student implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "ID_Sec")
+    @JsonProperty("sec")
     public Section getSection() {
         return section;
     }
@@ -168,6 +170,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "IsAdmissioned")
+    @JsonProperty(value = "IsAdmissioned")
     public void setAdmissioned(Boolean admissioned) {
         this.admissioned = admissioned;
     }
@@ -200,6 +203,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "ISMALE")
+    @JsonProperty(value = "IsMale")
     public Boolean getMale() {
         return male;
     }
@@ -242,6 +246,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "IsLeftSchool")
+    @JsonProperty(value = "IsLeftSchool")
     public Boolean getLeftSchool() {
         return leftSchool;
     }
@@ -334,6 +339,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "IsFixedLateFine")
+    @JsonProperty(value = "IsFixedLateFine")
     public Boolean getFixedLateFine() {
         return fixedLateFine;
     }

@@ -1,20 +1,19 @@
 package com.myKidGoal.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.apache.commons.lang.builder.EqualsBuilder;
-import org.apache.commons.lang.builder.ToStringBuilder;
-import org.apache.commons.lang.builder.ToStringStyle;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name = "DS_SEC")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = false)
 public class Section extends BaseEntity {
 
     @Id
@@ -23,25 +22,11 @@ public class Section extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "Id_Class")
+    @JsonProperty("classes")
     private Class studentClass;
 
     @Basic
     @Column(name = "IsDeleted")
+    @JsonProperty("isDeleted")
     private Boolean deleted;
-
-    @Override
-    public boolean equals(Object o) {
-        return EqualsBuilder.reflectionEquals(this, o);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, studentClass.getId());
-    }
-
-    @Override
-    public String toString() {
-        return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
-    }
-
 }

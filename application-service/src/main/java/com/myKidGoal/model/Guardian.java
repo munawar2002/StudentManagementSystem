@@ -23,9 +23,9 @@ public class Guardian {
     @Column(name = "Id_Guardian")
     private Integer id;
 
-    @Basic
-    @Column(name = "Id_Profession")
-    private Integer professionId;
+    @ManyToOne
+    @JoinColumn(name = "Id_Profession")
+    private Profession profession;
 
     @Basic
     @Column(name = "Name")
@@ -63,9 +63,9 @@ public class Guardian {
     @Column(name = "UserTime")
     private LocalDateTime userTime;
 
-    @Basic
-    @Column(name = "Id_Area")
-    private Integer areaId;
+    @ManyToOne
+    @JoinColumn(name = "Id_Area")
+    private Area area;
 
     @Override
     public boolean equals(Object o) {

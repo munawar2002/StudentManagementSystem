@@ -1,7 +1,9 @@
 package com.myKidGoal.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -11,6 +13,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = false)
 public class Class extends BaseEntity {
 
     @Id
@@ -23,6 +26,7 @@ public class Class extends BaseEntity {
 
     @Basic
     @Column(name = "IsDeleted")
+    @JsonProperty("isDeleted")
     private Boolean deleted;
 
     @Basic
