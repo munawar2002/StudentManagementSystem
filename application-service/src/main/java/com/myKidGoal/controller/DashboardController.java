@@ -20,7 +20,7 @@ public class DashboardController {
     @Autowired
     DashboardService dashboardService;
 
-    @GetMapping("/counts")
+    @GetMapping("/admin/search/all")
     public Map<String, Object> dashboardCount() {
 
         Map<String, Object> response = new HashMap<>();
