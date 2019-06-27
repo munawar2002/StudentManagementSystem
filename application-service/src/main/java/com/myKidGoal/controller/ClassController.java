@@ -20,7 +20,7 @@ public class ClassController {
     public Map<String,Object> allClasses() {
         Map<String,Object> response = new HashMap<>();
         Map<String,Object> res = new HashMap<>();
-        res.put("class",classRepository.findAll());
+        res.put("classes",classRepository.findAll());
         response.put("_embedded",res);
         return response;
     }
