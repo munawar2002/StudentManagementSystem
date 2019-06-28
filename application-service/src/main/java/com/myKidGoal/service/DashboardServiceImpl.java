@@ -1,6 +1,7 @@
 package com.myKidGoal.service;
 
 import com.myKidGoal.dto.CategoryDto;
+import com.myKidGoal.dto.LastSchoolDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -42,5 +43,28 @@ public class DashboardServiceImpl implements DashboardService {
         }
 
         return categoryDtos;
+    }
+
+    @Override
+    public List<LastSchoolDto> getTopSixLastSchools() {
+        jdbcTemplate.setDataSource(dataSource);
+
+        List<Map<String, Object>> lastSchoolMapList = jdbcTemplate.queryForList(
+                "SELECT stdt.id_lastschool AS id, ls.name, COUNT(stdt.id_student) AS count FROM ds_student stdt \n"
+                        + "INNER JOIN ds_lastschool ls ON (stdt.id_lastschool = ls.id_lastschool) \n"
+                        + "WHERE stdt.id_lastschool NOT IN (538,554,553) \n" + "GROUP BY stdt.id_lastschool, ls.name \n"
+                        + "ORDER BY COUNT DESC \n" + "LIMIT 6");
+
+        List<LastSchoolDto> lastSchoolDtos = new ArrayList<>();
+
+        for (Map<String, Object> lastSchool : lastSchoolMapList) {
+            LastSchoolDto lastSchoolDto = new LastSchoolDto();
+            lastSchoolDto.setId((Integer) lastSchool.get("id"));
+            lastSchoolDto.setSchoolName((String) lastSchool.get("name"));
+            lastSchoolDto.setCount((Long) lastSchool.get("count"));
+            lastSchoolDtos.add(lastSchoolDto);
+        }
+
+        return lastSchoolDtos;
     }
 }

@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -17,11 +16,11 @@ public class LastSchoolController {
     LastSchoolRepository lastSchoolRepository;
 
     @GetMapping("/search/all")
-    public Map<String,Object> allLastSchools() {
-        Map<String,Object> response = new HashMap<>();
-        Map<String,Object> res = new HashMap<>();
-        res.put("lastschool",lastSchoolRepository.findAll());
-        response.put("_embedded",res);
+    public Map<String, Object> allLastSchools() {
+        Map<String, Object> response = new HashMap<>();
+        Map<String, Object> res = new HashMap<>();
+        res.put("lastschool", lastSchoolRepository.findAll());
+        response.put("_embedded", res);
         return response;
     }
 

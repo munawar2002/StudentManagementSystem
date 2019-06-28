@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -18,14 +17,14 @@ public class StudentController {
     StudentRepository studentRepository;
 
     @GetMapping("/search/all")
-    public Map<String,Object> allStudents() {
+    public Map<String, Object> allStudents() {
 
-        Map<String,Object> response = new HashMap<>();
+        Map<String, Object> response = new HashMap<>();
 
-        Map<String,Object> res = new HashMap<>();
-        res.put("users",studentRepository.findAll());
+        Map<String, Object> res = new HashMap<>();
+        res.put("users", studentRepository.findAll());
 
-        response.put("_embedded",res);
+        response.put("_embedded", res);
 
         return response;
     }
@@ -34,10 +33,10 @@ public class StudentController {
     public Student oneStudent(@PathVariable(value = "id") int id) {
         Optional<Student> optionalStudent = studentRepository.findById(id);
 
-        if(optionalStudent.isPresent()){
+        if (optionalStudent.isPresent()) {
             return studentRepository.findById(id).get();
-        }else {
-            throw new RuntimeException("Student not found with ID ["+id+"]");
+        } else {
+            throw new RuntimeException("Student not found with ID [" + id + "]");
         }
     }
 

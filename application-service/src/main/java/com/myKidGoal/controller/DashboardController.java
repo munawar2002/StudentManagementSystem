@@ -32,6 +32,7 @@ public class DashboardController {
         response.put("studentLeft", studentRepository.countStudentLeftSchool());
         response.put("studentGraduated", studentRepository.countStudentGraduated());
         response.put("studentsPerBranch", dashboardService.getStudentPerBranch());
+        response.put("lastTopSixSchoolsPerBranch", dashboardService.getTopSixLastSchools());
 
         return response;
     }
