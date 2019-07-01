@@ -48,6 +48,21 @@ public class GuardianController {
         }
     }
 
+
+    @GetMapping("/search/details/cnic/unique/{nic}")
+    public Map<String,Boolean> uniqueGuardian(@PathVariable(value = "nic") String nic) {
+
+        Optional<Guardian> optionalGuardian = guardianRepository.findByCnicWithoutDash(nic);
+
+        Map<String,Boolean> response = new HashMap<>();
+        if (optionalGuardian.isPresent()) {
+            response.put("isUnique",false);
+        } else {
+            response.put("isUnique",true);
+        }
+        return response;
+    }
+
     @PostMapping("/save")
     public void saveGuardian(@RequestBody Guardian guardian) {
         guardianRepository.save(guardian);
