@@ -34,7 +34,7 @@ public class StudentController {
         Optional<Student> optionalStudent = studentRepository.findById(id);
 
         if (optionalStudent.isPresent()) {
-            return studentRepository.findById(id).get();
+            return optionalStudent.get();
         } else {
             throw new RuntimeException("Student not found with ID [" + id + "]");
         }

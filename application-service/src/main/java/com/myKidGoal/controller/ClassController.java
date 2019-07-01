@@ -16,11 +16,11 @@ public class ClassController {
     ClassRepository classRepository;
 
     @GetMapping("/search/all")
-    public Map<String,Object> allClasses() {
-        Map<String,Object> response = new HashMap<>();
-        Map<String,Object> res = new HashMap<>();
-        res.put("classes",classRepository.findAll());
-        response.put("_embedded",res);
+    public Map<String, Object> allClasses() {
+        Map<String, Object> response = new HashMap<>();
+        Map<String, Object> res = new HashMap<>();
+        res.put("classes", classRepository.findAll());
+        response.put("_embedded", res);
         return response;
     }
 

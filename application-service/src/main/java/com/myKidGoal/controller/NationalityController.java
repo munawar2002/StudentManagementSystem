@@ -16,11 +16,11 @@ public class NationalityController {
     NationalityRepository nationalityRepository;
 
     @GetMapping("/search/all")
-    public Map<String,Object> allNationality() {
-        Map<String,Object> response = new HashMap<>();
-        Map<String,Object> res = new HashMap<>();
-        res.put("nationality",nationalityRepository.findAll());
-        response.put("_embedded",res);
+    public Map<String, Object> allNationality() {
+        Map<String, Object> response = new HashMap<>();
+        Map<String, Object> res = new HashMap<>();
+        res.put("nationality", nationalityRepository.findAll());
+        response.put("_embedded", res);
         return response;
 
     }

@@ -16,11 +16,11 @@ public class AreaController {
     AreaRepository areaRepository;
 
     @GetMapping("/search/all")
-    public Map<String,Object> allAreas() {
-        Map<String,Object> response = new HashMap<>();
-        Map<String,Object> res = new HashMap<>();
-        res.put("areas",areaRepository.findAll());
-        response.put("_embedded",res);
+    public Map<String, Object> allAreas() {
+        Map<String, Object> response = new HashMap<>();
+        Map<String, Object> res = new HashMap<>();
+        res.put("areas", areaRepository.findAll());
+        response.put("_embedded", res);
         return response;
 
     }

@@ -56,6 +56,7 @@ public class Student implements Serializable {
     private LocalDateTime userTime;
     private Integer fakeGrNo;
     private Boolean fixedLateFine;
+    private String email;
 
     @Id
     @Column(name = "ID_Student")
@@ -348,6 +349,16 @@ public class Student implements Serializable {
     @Column(name = "IsFixedLateFine")
     public void setFixedLateFine(Boolean fixedLateFine) {
         this.fixedLateFine = fixedLateFine;
+    }
+
+    @Basic
+    @Column(name = "Email")
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override

@@ -16,11 +16,11 @@ public class ReligionController {
     ReligionRepository religionRepository;
 
     @GetMapping("/search/all")
-    public Map<String,Object> allReligion() {
-        Map<String,Object> response = new HashMap<>();
-        Map<String,Object> res = new HashMap<>();
-        res.put("religion",religionRepository.findAll());
-        response.put("_embedded",res);
+    public Map<String, Object> allReligion() {
+        Map<String, Object> response = new HashMap<>();
+        Map<String, Object> res = new HashMap<>();
+        res.put("religion", religionRepository.findAll());
+        response.put("_embedded", res);
         return response;
 
     }

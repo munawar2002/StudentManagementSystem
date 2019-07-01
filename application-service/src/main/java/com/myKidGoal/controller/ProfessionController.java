@@ -16,11 +16,11 @@ public class ProfessionController {
     ProfessionRepository professionRepository;
 
     @GetMapping("/search/all")
-    public Map<String,Object> allProfession() {
-        Map<String,Object> response = new HashMap<>();
-        Map<String,Object> res = new HashMap<>();
-        res.put("profession",professionRepository.findAll());
-        response.put("_embedded",res);
+    public Map<String, Object> allProfession() {
+        Map<String, Object> response = new HashMap<>();
+        Map<String, Object> res = new HashMap<>();
+        res.put("profession", professionRepository.findAll());
+        response.put("_embedded", res);
         return response;
 
     }

@@ -16,11 +16,11 @@ public class PlaceOfBirthController {
     PlaceOfBirthRepository placeOfBirthRepository;
 
     @GetMapping("/search/all")
-    public Map<String,Object> allPlaceOfBirth() {
-        Map<String,Object> response = new HashMap<>();
-        Map<String,Object> res = new HashMap<>();
-        res.put("placeOfBirth",placeOfBirthRepository.findAll());
-        response.put("_embedded",res);
+    public Map<String, Object> allPlaceOfBirth() {
+        Map<String, Object> response = new HashMap<>();
+        Map<String, Object> res = new HashMap<>();
+        res.put("placeOfBirth", placeOfBirthRepository.findAll());
+        response.put("_embedded", res);
         return response;
 
     }

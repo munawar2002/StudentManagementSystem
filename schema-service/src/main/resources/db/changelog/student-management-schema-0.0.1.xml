@@ -1323,6 +1323,7 @@
             <column name="UserTime" type="${timestamp}"/>
             <column name="FakeGRNo" type="INT"/>
             <column name="IsFixedLateFine" type="${booleanType}"/>
+            <column name="email" type="VARCHAR(100)"/>
         </createTable>
     </changeSet>
 
