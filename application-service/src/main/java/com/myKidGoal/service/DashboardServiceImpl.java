@@ -1,6 +1,7 @@
 package com.myKidGoal.service;
 
 import com.myKidGoal.dto.CategoryDto;
+import com.myKidGoal.dto.IncomeExpenseDto;
 import com.myKidGoal.dto.LastSchoolDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -66,5 +68,56 @@ public class DashboardServiceImpl implements DashboardService {
         }
 
         return lastSchoolDtos;
+    }
+
+    @Override
+    public List<IncomeExpenseDto> getCreditDebitPerBranch(String columnName) {
+        jdbcTemplate.setDataSource(dataSource);
+
+        List<Map<String, Object>> debitMapList = jdbcTemplate.queryForList(
+                "SELECT cat.id_category, cat.name, SUM(sfl." + columnName + ") sum  FROM ds_v_slipfeeledger sfl \n"
+                        + "INNER JOIN ds_student st ON (sfl.id_student = st.id_student) \n"
+                        + "LEFT JOIN ds_sec sec ON (st.Id_Sec = sec.Id_sec) \n"
+                        + "INNER JOIN ds_class c ON (sec.id_class = c.id_class) \n"
+                        + "INNER JOIN ds_category cat ON (c.id_category = cat.id_category) \n"
+                        + "GROUP BY cat.id_category, cat.name");
+
+        List<IncomeExpenseDto> incomeExpenseDtos = new ArrayList<>();
+
+        for (Map<String, Object> debit : debitMapList) {
+            IncomeExpenseDto incomeExpenseDto = new IncomeExpenseDto();
+            incomeExpenseDto.setLabel((String) debit.get("name"));
+            List<Double> debitsList = new ArrayList<>();
+            debitsList.add((Double) debit.get("sum"));
+            incomeExpenseDto.setData(debitsList);
+            incomeExpenseDtos.add(incomeExpenseDto);
+        }
+
+        return incomeExpenseDtos;
+    }
+
+    @Override
+    public Map<String, Object> expensePerBranchResponse() {
+
+        Map<String, Object> response = new HashMap<>();
+
+        List<String> quarters = new ArrayList<>();
+        quarters.add("Overall");
+
+        response.put("datasets", getCreditDebitPerBranch("debit"));
+        response.put("labels", quarters);
+        return response;
+    }
+
+    @Override
+    public Map<String, Object> incomePerBranchResponse() {
+        Map<String, Object> response = new HashMap<>();
+
+        List<String> quarters = new ArrayList<>();
+        quarters.add("Overall");
+
+        response.put("datasets", getCreditDebitPerBranch("credit"));
+        response.put("labels", quarters);
+        return response;
     }
 }

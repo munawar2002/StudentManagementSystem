@@ -44,6 +44,12 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
     @Query(name = Student.CURRENT_TEACHER_COUNT_QUERY, nativeQuery = true)
     long countCurrentTeacher();
 
+    @Query(name = Student.TOTAL_DEBIT_QUERY, nativeQuery = true)
+    long totalDebit();
+
+    @Query(name = Student.TOTAL_CREDIT_QUERY, nativeQuery = true)
+    long totalCredit();
+
     @Query(value = "SELECT s.name as name FROM ds_category s ", nativeQuery = true)
     List<Student> findStudentPerBranch();
 

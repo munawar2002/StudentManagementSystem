@@ -18,7 +18,6 @@ public class MyTenantInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-        System.out.print("\\n\\nIn MyInterceptor.preHandle\\n\\n");
         String tenant = getTenantName(request.getParameter("tenant"));
 
         if (request.getRequestURI().contains("swagger")) {

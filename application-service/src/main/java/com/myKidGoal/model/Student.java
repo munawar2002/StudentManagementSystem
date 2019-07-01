@@ -20,13 +20,17 @@ import java.util.Objects;
         @NamedNativeQuery(name = Student.DISCOUNT_COUNT_QUERY, query = "SELECT COUNT(*) FROM ds_student WHERE discountpercentage > 0  "),
         @NamedNativeQuery(name = Student.LEFT_STUDENT_COUNT_QUERY, query = "SELECT COUNT(*) FROM ds_student WHERE dol IS NOT NULL "),
         @NamedNativeQuery(name = Student.STUDENT_GRADUATED_COUNT_QUERY, query = "SELECT COUNT(*) FROM ds_student WHERE TRIM(CauseOfRemoval) ='Pass Out' "),
-        @NamedNativeQuery(name = Student.CURRENT_TEACHER_COUNT_QUERY, query = "SELECT COUNT(*) FROM ds_employee WHERE dol IS NULL"), })
+        @NamedNativeQuery(name = Student.CURRENT_TEACHER_COUNT_QUERY, query = "SELECT COUNT(*) FROM ds_employee WHERE dol IS NULL"),
+        @NamedNativeQuery(name = Student.TOTAL_DEBIT_QUERY, query = "SELECT SUM(debit) FROM ds_v_slipfeeledger "),
+        @NamedNativeQuery(name = Student.TOTAL_CREDIT_QUERY, query = "SELECT SUM(credit) FROM ds_v_slipfeeledger "), })
 public class Student implements Serializable {
 
     public static final String DISCOUNT_COUNT_QUERY = "student.discount.count.query";
     public static final String LEFT_STUDENT_COUNT_QUERY = "left.school.count.query";
     public static final String STUDENT_GRADUATED_COUNT_QUERY = "student.graduated.count.query";
     public static final String CURRENT_TEACHER_COUNT_QUERY = "teacher.current.count.query";
+    public static final String TOTAL_DEBIT_QUERY = "total.debit.query";
+    public static final String TOTAL_CREDIT_QUERY = "total.credit.query";
 
     private Integer id;
     private Section section;
