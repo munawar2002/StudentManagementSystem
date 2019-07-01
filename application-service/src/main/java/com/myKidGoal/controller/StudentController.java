@@ -22,7 +22,7 @@ public class StudentController {
         Map<String, Object> response = new HashMap<>();
 
         Map<String, Object> res = new HashMap<>();
-        res.put("users", studentRepository.findAll());
+        res.put("students", studentRepository.findAll());
 
         response.put("_embedded", res);
 
