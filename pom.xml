@@ -64,8 +64,8 @@
         <test.db.admin.username>root</test.db.admin.username>
         <test.db.admin.password>str0ng</test.db.admin.password>
 
-        <spring.boot.server.port>8080</spring.boot.server.port>
-        <spring.boot.actuator.port>8081</spring.boot.actuator.port>
+        <spring.boot.server.port>9090</spring.boot.server.port>
+        <spring.boot.actuator.port>9091</spring.boot.actuator.port>
         <spring.resources.cache-period>3600</spring.resources.cache-period>
 
 	</properties>
