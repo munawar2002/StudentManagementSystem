@@ -1648,5 +1648,43 @@
         </createTable>
     </changeSet>
 
+    <changeSet author="mykidgoal" id="student-management-schema-0.0.1-113">
+        <createTable tableName="AUDIENCE">
+            <column name="ID" type="INT" />
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="ROLEID" type="INT"/>
+            <column name="BRANCHID" type="INT"/>
+            <column name="CLASSID" type="INT"/>
+            <column name="SECTIONID" type="INT"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="mykidgoal" id="student-management-schema-0.0.1-115">
+        <createTable tableName="NOTIFICATION">
+            <column name="ID" type="INT" />
+            <column name="TOPIC" type="VARCHAR(255)"/>
+            <column name="AUDIENCEID" type="INT"/>
+            <column name="MESSAGE" type="VARCHAR(255)"/>
+            <column name="POSTINGDATE" type="DATE"/>
+            <column name="EFFECTIVEDATE" type="DATE"/>
+            <column name="EXPIRYDATE" type="DATE"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="mykidgoal" id="student-management-schema-0.0.1-116">
+        <createTable tableName="NOTIFICATION_POPULATION">
+            <column name="ID" type="INT" />
+            <column name="NOTIFICATIONID" type="VARCHAR(255)"/>
+            <column name="SENT_TO" type="INT"/>
+            <column name="IS_DELIVERED" type="${booleanType}"/>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}"/>
+        </createTable>
+    </changeSet>
+
 
 </databaseChangeLog>

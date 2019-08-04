@@ -1,16 +1,17 @@
 package com.myKidGoal.tenant;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.core.io.Resource;
 
 import javax.sql.DataSource;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Properties;
 
@@ -18,22 +19,26 @@ import java.util.Properties;
 @EnableConfigurationProperties
 public class MultitenancyConfiguration {
 
-    private static final String TENANT_FOLDER = "tenant";
+    private static final String TENANT_FOLDER = "tenant/*";
+
+    private static final Logger logger = LoggerFactory.getLogger(MultitenancyConfiguration.class);
+
+    @Value("classpath:" + TENANT_FOLDER)
+    private Resource[] resources;
 
     @Bean(name = "multitenantProvider")
     public DataSourceBasedMultiTenantConnectionProviderImpl dataSourceBasedMultiTenantConnectionProvider()
             throws IOException {
         HashMap<String, DataSource> dataSources = new HashMap<String, DataSource>();
 
-        String pathString = this.getClass().getClassLoader().getResource(TENANT_FOLDER).getPath();
-        File tenantDirectory = new File(pathString);
+        logger.info("--- Total tenants are [" + resources.length + "]");
 
         String defaultTenant = null;
 
-        for (File file : tenantDirectory.listFiles()) {
+        for (Resource resource : resources) {
+            logger.info("Tenant file name [" + resource.getFilename() + "]");
             Properties prop = new Properties();
-            InputStream inputStream = new FileInputStream(file);
-            prop.load(inputStream);
+            prop.load(resource.getInputStream());
 
             DataSource dataSource = DataSourceBuilder.create()
                     .driverClassName(prop.getProperty("multitenant.driverClassName"))
