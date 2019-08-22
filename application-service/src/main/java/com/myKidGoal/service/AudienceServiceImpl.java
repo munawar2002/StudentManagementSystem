@@ -18,10 +18,6 @@ public class AudienceServiceImpl implements AudienceService {
     @Autowired
     private DataSource dataSource;
 
-    public List<String> getAudiencePopulation(Audience audience) {
-
-        return null;
-    }
 
     @Override
     public List<Student> getStudentAudience(Audience audience) {
@@ -30,17 +26,7 @@ public class AudienceServiceImpl implements AudienceService {
                 + "INNER JOIN ds_class cls ON (sec.id_class = cls.id_class) \n"
                 + "INNER JOIN ds_category branch ON (cls.id_category=branch.id_category) \n" + "WHERE 1=1 \n";
 
-        if (audience.getCategory() != null && audience.getCategory().getId() != null) {
-            query += "AND branch.id_category= " + audience.getCategory().getId() + " \n";
-        }
-
-        if (audience.getStudentClass() != null && audience.getStudentClass().getId() != null) {
-            query += "AND cls.id_class= " + audience.getStudentClass().getId() + " \n";
-        }
-
-        if (audience.getSection() != null && audience.getSection().getId() != null) {
-            query += "AND sec.id_sec= " + audience.getSection().getId() + " \n";
-        }
+        query += setQueryParameters(audience, query);
 
         List<Student> students;
 
@@ -59,6 +45,17 @@ public class AudienceServiceImpl implements AudienceService {
                 + "INNER JOIN ds_class cls ON (sec.id_class = cls.id_class) \n"
                 + "INNER JOIN ds_category branch ON (cls.id_category=branch.id_category) \n" + "WHERE 1=1 \n";
 
+        query += setQueryParameters(audience, query);
+
+        query += ") students \n" + "ON students.id_parent = guardian.id_guardian ";
+
+        JdbcTemplate template = new JdbcTemplate(dataSource);
+
+        RowMapper<Guardian> rowMapper = new BeanPropertyRowMapper<>(Guardian.class);
+        return template.query(query, rowMapper);
+    }
+
+    private String setQueryParameters(Audience audience, String query) {
         if (audience.getCategory() != null && audience.getCategory().getId() != null) {
             query += "AND branch.id_category= " + audience.getCategory().getId() + " \n";
         }
@@ -70,13 +67,7 @@ public class AudienceServiceImpl implements AudienceService {
         if (audience.getSection() != null && audience.getSection().getId() != null) {
             query += "AND sec.id_sec= " + audience.getSection().getId() + " \n";
         }
-
-        query += ") students \n" + "ON students.id_parent = guardian.id_guardian ";
-
-        JdbcTemplate template = new JdbcTemplate(dataSource);
-
-        RowMapper<Guardian> rowMapper = new BeanPropertyRowMapper<>(Guardian.class);
-        return template.query(query, rowMapper);
+        return query;
     }
 
 }

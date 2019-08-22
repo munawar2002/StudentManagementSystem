@@ -23,7 +23,7 @@ public class NotificationDetail extends BaseTimeEntity {
 
     @Basic
     @Column(name = "SENT_TO")
-    private int sentTo;
+    private String sentTo;
 
     @Basic
     @Column(name = "IS_DELIVERED")

@@ -4,6 +4,6 @@ import com.myKidGoal.model.Notification;
 
 public interface NotificationService {
 
-    boolean saveNotification(Notification notification);
+    boolean sendNotification(Notification notification);
 
 }

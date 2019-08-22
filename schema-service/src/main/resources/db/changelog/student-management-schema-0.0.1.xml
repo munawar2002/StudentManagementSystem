@@ -1679,10 +1679,10 @@
         <createTable tableName="NOTIFICATION_DETAIL">
             <column name="ID" type="BIGINT" />
             <column name="NOTIFICATIONID" type="INT"/>
-            <column name="SENT_TO" type="INT"/>
+            <column name="SENT_TO" type="VARCHAR(20)"/>
             <column name="IS_DELIVERED" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 

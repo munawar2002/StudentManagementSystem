@@ -8,8 +8,6 @@ import java.util.List;
 
 public interface AudienceService {
 
-    List<String> getAudiencePopulation(Audience audience);
-
     List<Student> getStudentAudience(Audience audience);
 
     List<Guardian> getStudentGuardianAudience(Audience audience);
