@@ -16,7 +16,7 @@
             <column name="Remarks" type="VARCHAR(200)"/>
             <column name="IsLocked" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -31,7 +31,7 @@
             <column name="Remarks" type="VARCHAR(200)"/>
             <column name="IsLocked" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -46,7 +46,7 @@
             <column name="Remarks" type="VARCHAR(200)"/>
             <column name="IsLocked" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -60,7 +60,7 @@
             <column name="OrderNo" type="INT"/>
             <column name="Color" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="Code" type="VARCHAR(2)"/>
         </createTable>
     </changeSet>
@@ -72,7 +72,7 @@
             </column>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -84,7 +84,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -95,7 +95,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -115,7 +115,7 @@
             <column name="Pages" type="INT"/>
             <column name="AgeLimit" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="Stars" type="INT"/>
         </createTable>
     </changeSet>
@@ -128,7 +128,7 @@
             <column name="Name" type="VARCHAR(255)"/>
             <column name="IconNo" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -145,7 +145,7 @@
             <column name="Remarks" type="VARCHAR(255)"/>
             <column name="StockOutDate" type="DATE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="ID_BookShelf" type="INT"/>
         </createTable>
     </changeSet>
@@ -157,7 +157,7 @@
             </column>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -168,7 +168,7 @@
             </column>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -179,7 +179,7 @@
             </column>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -190,7 +190,7 @@
             </column>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -202,7 +202,7 @@
             <column name="ID_BookGroup" type="INT"/>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -223,7 +223,7 @@
             <column name="FineIsPaid" type="${booleanType}"/>
             <column name="Remarks" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="IsRated" type="${booleanType}"/>
             <column name="Stars" type="INT"/>
         </createTable>
@@ -236,7 +236,7 @@
             </column>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="IconNo" type="INT"/>
         </createTable>
     </changeSet>
@@ -248,7 +248,7 @@
             </column>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -260,7 +260,7 @@
             <column name="Name" type="VARCHAR(50)"/>
             <column name="OrderNo" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="BankAccount" type="VARCHAR(255)"/>
             <column name="Short" type="VARCHAR(5)"/>
             <column name="code" type="INT"/>
@@ -276,7 +276,7 @@
             <column name="Short" type="VARCHAR(50)"/>
             <column name="OrderNo" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -290,7 +290,7 @@
             <column name="Name" type="VARCHAR(50)"/>
             <column name="IsDeleted" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="Level" type="INT"/>
         </createTable>
     </changeSet>
@@ -303,7 +303,7 @@
             <column name="Id_Class" type="INT"/>
             <column name="Id_Document" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -317,7 +317,7 @@
             <column name="Id_Class" type="INT"/>
             <column name="Fee" type="DOUBLE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -379,7 +379,7 @@
             <column name="Grade" type="VARCHAR(50)"/>
             <column name="IssueDate" type="DATE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -393,7 +393,7 @@
             <column name="IssueDate" type="DATE"/>
             <column name="Remarks" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -440,7 +440,7 @@
             <column name="Id_StudentSec" type="INT"/>
             <column name="Id_AttendanceStatus" type="INT"/>
              <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -455,7 +455,7 @@
             <column name="Date" type="DATE"/>
             <column name="IsHoliday" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -479,7 +479,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -492,7 +492,7 @@
             <column name="ID_Parent" type="INT"/>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -503,7 +503,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -533,7 +533,7 @@
             <column name="DOL" type="DATE"/>
             <column name="CauseOfLeaving" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -545,7 +545,7 @@
             <column name="Id_Employee" type="INT"/>
             <column name="Id_AttendanceStatus" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -559,7 +559,7 @@
             <column name="Duration" type="VARCHAR(255)"/>
             <column name="Organization" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -573,7 +573,7 @@
             <column name="ExpiryDate" type="DATE"/>
             <column name="IsExpired" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -590,7 +590,7 @@
             <column name="IsActive" type="${booleanType}"/>
             <column name="TaxDeduction" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -605,7 +605,7 @@
             <column name="IsEarned" type="${booleanType}"/>
             <column name="Days" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -620,7 +620,7 @@
             <column name="IsEarning" type="${booleanType}"/>
             <column name="IsPercent" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -633,7 +633,7 @@
             <column name="ID_Skill" type="INT"/>
             <column name="Details" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -644,7 +644,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="COLOR" type="INT"/>
         </createTable>
     </changeSet>
@@ -659,7 +659,7 @@
             <column name="Remarks" type="VARCHAR(50)"/>
             <column name="SideNote" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -673,7 +673,7 @@
             <column name="Name" type="VARCHAR(50)"/>
             <column name="IsActive" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -685,7 +685,7 @@
             <column name="Name" type="VARCHAR(50)"/>
             <column name="Level" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -698,7 +698,7 @@
             <column name="OrderNo" type="INT"/>
             <column name="Type" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -711,7 +711,7 @@
             <column name="From" type="DATE"/>
             <column name="To" type="DATE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -724,7 +724,7 @@
             <column name="FromDate" type="DATE"/>
             <column name="ToDate" type="DATE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -742,7 +742,7 @@
             <column name="Address" type="VARCHAR(255)"/>
             <column name="ToDate" type="DATE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="Id_Area" type="INT"/>
         </createTable>
     </changeSet>
@@ -754,7 +754,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -768,7 +768,7 @@
             <column name="ValidUpto" type="DATE"/>
             <column name="IsExpired" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -779,7 +779,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -795,7 +795,7 @@
             <column name="IsDebit" type="${booleanType}"/>
             <column name="ExpiryDate" type="DATE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="IsCashed" type="${booleanType}"/>
         </createTable>
     </changeSet>
@@ -807,7 +807,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -818,7 +818,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -835,7 +835,7 @@
             <column name="IsActive" type="${booleanType}"/>
             <column name="MaxBooks" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -873,7 +873,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -885,7 +885,7 @@
             <column name="Code" type="INT"/>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -896,7 +896,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -909,7 +909,7 @@
             <column name="Message" type="longtext"/>
             <column name="Remarks" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -925,7 +925,7 @@
             <column name="IsPromoted" type="${booleanType}"/>
             <column name="Attempted" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -939,7 +939,7 @@
             <column name="Remarks" type="VARCHAR(100)"/>
             <column name="cancelled" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -952,7 +952,7 @@
             <column name="Id_SlipFee" type="INT"/>
             <column name="Amount" type="DOUBLE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -966,7 +966,7 @@
             <column name="ProbationMonths" type="INT"/>
             <column name="AnnualIncrementRate" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -982,7 +982,7 @@
             <column name="Days" type="INT"/>
             <column name="ProbationDays" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -998,7 +998,7 @@
             <column name="IsEarning" type="${booleanType}"/>
             <column name="IsMain" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="IsPercent" type="${booleanType}"/>
         </createTable>
     </changeSet>
@@ -1013,7 +1013,7 @@
             <column name="ID_Subject" type="INT"/>
             <column name="ID_Teacher" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="Locked" type="${booleanType}"/>
         </createTable>
     </changeSet>
@@ -1026,7 +1026,7 @@
             <column name="ID_Subject" type="INT"/>
             <column name="Periods" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1041,7 +1041,7 @@
             <column name="DayNo" type="INT"/>
             <column name="TeacherIsRequired" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1052,7 +1052,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1063,7 +1063,7 @@
             </column>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1074,7 +1074,7 @@
             </column>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1085,7 +1085,7 @@
             </column>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1100,7 +1100,7 @@
             <column name="IsPrivate" type="${booleanType}"/>
             <column name="Finished" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1114,7 +1114,7 @@
             <column name="Id_Exam" type="INT"/>
             <column name="Rank" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1126,7 +1126,7 @@
             <column name="SalaryMonth" type="DATE"/>
             <column name="WorkingDays" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1143,7 +1143,7 @@
             <column name="Remarks" type="VARCHAR(255)"/>
             <column name="Cancelled" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="IsGenerated" type="${booleanType}"/>
             <column name="AbsenteeDeduction" type="DOUBLE"/>
             <column name="BasicSalary" type="DOUBLE"/>
@@ -1163,7 +1163,7 @@
             <column name="Amount" type="DOUBLE"/>
             <column name="IsEarning" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="IsMain" type="${booleanType}"/>
         </createTable>
     </changeSet>
@@ -1179,7 +1179,7 @@
             <column name="Amount" type="DOUBLE"/>
             <column name="Remarks" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="IsBankTransfer" type="${booleanType}"/>
         </createTable>
     </changeSet>
@@ -1193,7 +1193,7 @@
             <column name="Name" type="VARCHAR(50)"/>
             <column name="IsDeleted" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1206,7 +1206,7 @@
             <column name="From" type="DATE"/>
             <column name="To" type="DATE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1217,7 +1217,7 @@
             </column>
             <column name="Name" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1236,7 +1236,7 @@
             <column name="ValidUpto" type="DATE"/>
             <column name="Cancelled" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="LateFine" type="DOUBLE"/>
             <column name="IsInstallment" type="${booleanType}"/>
             <column name="InstallmentAmount" type="DOUBLE"/>
@@ -1256,7 +1256,7 @@
             <column name="Fee" type="DOUBLE"/>
             <column name="Concession" type="DOUBLE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1270,7 +1270,7 @@
             <column name="Id_DebitAccount" type="INT"/>
             <column name="Amount" type="DOUBLE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="Remarks" type="VARCHAR(255)"/>
             <column name="ID_Voucher" type="INT"/>
         </createTable>
@@ -1287,7 +1287,7 @@
             <column name="IsSent" type="${booleanType}"/>
             <column name="SentTime" type="DATE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1320,7 +1320,7 @@
             <column name="Freeze" type="INT"/>
             <column name="Boarding" type="INT"/>
             <column name="Id_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="FakeGRNo" type="INT"/>
             <column name="IsFixedLateFine" type="${booleanType}"/>
             <column name="email" type="VARCHAR(100)"/>
@@ -1336,7 +1336,7 @@
             <column name="Id_Document" type="INT"/>
             <column name="IsSubmit" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1351,7 +1351,7 @@
             <column name="Fee" type="DOUBLE"/>
             <column name="Discount" type="DOUBLE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1363,7 +1363,7 @@
             <column name="Id_Student" type="INT"/>
             <column name="Remarks" type="VARCHAR(255)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1378,7 +1378,7 @@
             <column name="ToDate" type="DATE"/>
             <column name="Id_Session" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1392,7 +1392,7 @@
             <column name="IsExtraActivity" type="${booleanType}"/>
             <column name="IsActive" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1403,7 +1403,7 @@
             </column>
             <column name="Title" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="Short" type="VARCHAR(50)"/>
             <column name="Color" type="INT"/>
         </createTable>
@@ -1421,7 +1421,7 @@
             <column name="Id_Exam" type="INT"/>
             <column name="DATE" type="DATE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1436,7 +1436,7 @@
             <column name="Progress" type="VARCHAR(50)"/>
             <column name="TCNo" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="MidTermGrade" type="VARCHAR(50)"/>
             <column name="MidTermDate" type="DATE"/>
             <column name="MidTermResult" type="VARCHAR(50)"/>
@@ -1469,7 +1469,7 @@
             <column name="DOL" type="DATE"/>
             <column name="IsTerminated" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1481,7 +1481,7 @@
             <column name="ID_Transport" type="INT"/>
             <column name="ID_Area" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1496,7 +1496,7 @@
             <column name="ExpiredOn" type="DATE"/>
             <column name="GRNo" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="IsActive" type="${booleanType}"/>
         </createTable>
     </changeSet>
@@ -1507,7 +1507,7 @@
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="IsActive" type="${booleanType}"/>
         </createTable>
     </changeSet>
@@ -1522,7 +1522,7 @@
             <column name="Cancelled" type="${booleanType}"/>
             <column name="AdminRights" type="${booleanType}"/>
              <column name="Id_DataUser" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1538,7 +1538,7 @@
             <column name="PrintRight" type="${booleanType}"/>
             <column name="DeleteRight" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1551,7 +1551,7 @@
             <column name="VNumber" type="VARCHAR(255)"/>
             <column name="Cancelled" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1571,7 +1571,7 @@
             <column name="ChqNo" type="VARCHAR(50)"/>
             <column name="ChqDate" type="DATE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="Posted" type="${booleanType}"/>
         </createTable>
     </changeSet>
@@ -1586,7 +1586,7 @@
             <column name="Amount" type="DOUBLE"/>
             <column name="IsDebit" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1598,7 +1598,7 @@
             <column name="Name" type="VARCHAR(50)"/>
             <column name="Short" type="VARCHAR(50)"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="OrderNo" type="INT"/>
         </createTable>
     </changeSet>
@@ -1614,7 +1614,7 @@
             <column name="OpeningBal" type="DOUBLE"/>
             <column name="IsDebit" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1657,7 +1657,7 @@
             <column name="CLASSID" type="INT"/>
             <column name="SECTIONID" type="INT"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
@@ -1671,7 +1671,7 @@
             <column name="EFFECTIVEDATE" type="DATE"/>
             <column name="EXPIRYDATE" type="DATE"/>
             <column name="ID_User" type="INT"/>
-            <column name="UserTime" type="${timestamp}"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
     </changeSet>
 
