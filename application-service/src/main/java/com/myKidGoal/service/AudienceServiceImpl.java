@@ -18,7 +18,6 @@ public class AudienceServiceImpl implements AudienceService {
     @Autowired
     private DataSource dataSource;
 
-
     @Override
     public List<Student> getStudentAudience(Audience audience) {
         String query = "SELECT stdt.* FROM ds_student stdt \n"
