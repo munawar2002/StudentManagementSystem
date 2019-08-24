@@ -26,7 +26,7 @@ public class Section extends BaseEntity {
     private Class studentClass;
 
     @Basic
-    @Column(name = "IsDeleted")
+    @Column(name = "Isdeleted")
     @JsonProperty("isDeleted")
     private Boolean deleted;
 }

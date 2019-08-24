@@ -18,11 +18,11 @@ public class Category extends BaseEntity {
     private Integer id;
 
     @Basic
-    @Column(name = "OrderNo")
+    @Column(name = "Orderno")
     private Integer orderNo;
 
     @Basic
-    @Column(name = "BankAccount")
+    @Column(name = "Bankaccount")
     private String bankAccount;
 
     @Basic

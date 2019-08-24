@@ -25,7 +25,7 @@ public class AudienceServiceImpl implements AudienceService {
                 + "INNER JOIN ds_class cls ON (sec.id_class = cls.id_class) \n"
                 + "INNER JOIN ds_category branch ON (cls.id_category=branch.id_category) \n" + "WHERE 1=1 \n";
 
-        query += setQueryParameters(audience, query);
+        query += setQueryParameters(audience);
 
         List<Student> students;
 
@@ -38,13 +38,13 @@ public class AudienceServiceImpl implements AudienceService {
 
     @Override
     public List<Guardian> getStudentGuardianAudience(Audience audience) {
-        String query = "ELECT guardian.* FROM ds_guardian guardian \n" + "INNER JOIN ( \n"
+        String query = "SELECT guardian.* FROM ds_guardian guardian \n" + "INNER JOIN ( \n"
                 + "SELECT stdt.id_parent FROM ds_student stdt \n"
                 + "INNER JOIN ds_sec sec ON (stdt.id_sec = sec.id_sec) \n"
                 + "INNER JOIN ds_class cls ON (sec.id_class = cls.id_class) \n"
                 + "INNER JOIN ds_category branch ON (cls.id_category=branch.id_category) \n" + "WHERE 1=1 \n";
 
-        query += setQueryParameters(audience, query);
+        query += setQueryParameters(audience);
 
         query += ") students \n" + "ON students.id_parent = guardian.id_guardian ";
 
@@ -54,7 +54,8 @@ public class AudienceServiceImpl implements AudienceService {
         return template.query(query, rowMapper);
     }
 
-    private String setQueryParameters(Audience audience, String query) {
+    private String setQueryParameters(Audience audience) {
+        String query = "";
         if (audience.getCategory() != null && audience.getCategory().getId() != null) {
             query += "AND branch.id_category= " + audience.getCategory().getId() + " \n";
         }

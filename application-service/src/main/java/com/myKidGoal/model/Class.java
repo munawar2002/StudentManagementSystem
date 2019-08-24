@@ -25,7 +25,7 @@ public class Class extends BaseEntity {
     private Category category;
 
     @Basic
-    @Column(name = "IsDeleted")
+    @Column(name = "Isdeleted")
     @JsonProperty("isDeleted")
     private Boolean deleted;
 
