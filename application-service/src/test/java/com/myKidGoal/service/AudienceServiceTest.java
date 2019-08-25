@@ -2,10 +2,9 @@ package com.myKidGoal.service;
 
 import com.myKidGoal.TestApplication;
 import com.myKidGoal.TestInputFileLoader;
-import com.myKidGoal.model.Audience;
-import com.myKidGoal.model.Guardian;
-import com.myKidGoal.model.Student;
+import com.myKidGoal.model.*;
 import com.myKidGoal.repository.AudienceRepository;
+import com.myKidGoal.repository.NotificationDetailRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,6 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -35,6 +35,12 @@ public class AudienceServiceTest {
     @Autowired
     DataSource dataSource;
 
+    @Autowired
+    NotificationService notificationService;
+
+    @Autowired
+    NotificationDetailRepository notificationDetailRepository;
+
     @Before
     public void before() throws SQLException {
         List<String> sqlFileNames = new ArrayList();
@@ -44,42 +50,22 @@ public class AudienceServiceTest {
     }
 
     @Test
-    public void allStudentAudienceTest() {
+    public void studentAudienceTest() {
 
-        Optional<Audience> allStudentsAudience = audienceRepository.findById(1);
-
-        List<Student> students = audienceService.getStudentAudience(allStudentsAudience.get());
-
+        Optional<Audience> audience = audienceRepository.findById(1);
+        List<Student> students = audienceService.getStudentAudience(audience.get());
         Assert.assertEquals(9, students.size());
-    }
 
-    @Test
-    public void class2StudentAudienceTest() {
-
-        Optional<Audience> class2StudentsAudience = audienceRepository.findById(2);
-
-        List<Student> students = audienceService.getStudentAudience(class2StudentsAudience.get());
-
+        audience = audienceRepository.findById(2);
+        students = audienceService.getStudentAudience(audience.get());
         Assert.assertEquals(5, students.size());
-    }
 
-    @Test
-    public void class2SecAStudentAudienceTest() {
-
-        Optional<Audience> class2SecAStudentsAudience = audienceRepository.findById(3);
-
-        List<Student> students = audienceService.getStudentAudience(class2SecAStudentsAudience.get());
-
+        audience = audienceRepository.findById(3);
+        students = audienceService.getStudentAudience(audience.get());
         Assert.assertEquals(3, students.size());
-    }
 
-    @Test
-    public void class3SecBStudentAudienceTest() {
-
-        Optional<Audience> class3SecBStudentsAudience = audienceRepository.findById(4);
-
-        List<Student> students = audienceService.getStudentAudience(class3SecBStudentsAudience.get());
-
+        audience = audienceRepository.findById(4);
+        students = audienceService.getStudentAudience(audience.get());
         Assert.assertEquals(2, students.size());
     }
 
@@ -101,6 +87,30 @@ public class AudienceServiceTest {
         audience = audienceRepository.findById(4);
         guardians = audienceService.getStudentGuardianAudience(audience.get());
         Assert.assertEquals(2, guardians.size());
+
+    }
+
+    @Test
+    public void sendNotificationTest() {
+
+        Optional<Audience> audience = audienceRepository.findById(2);
+
+        Notification notification = new Notification();
+        notification.setAudience(audience.get());
+        notification.setEffectiveDate(LocalDate.now());
+        notification.setExpiryDate(LocalDate.now());
+        notification.setMessage("Sending message to students");
+        notification.setPostingDate(LocalDate.now());
+        notification.setTopic("Notification Send Test");
+
+        boolean success = notificationService.sendNotification(notification);
+        Assert.assertTrue(success);
+
+        List<NotificationDetail> notifications = notificationDetailRepository.findBySentToOrderByUserTimeDesc("2");
+        Assert.assertEquals(1, notifications.size());
+
+        notifications = notificationDetailRepository.findBySentToOrderByUserTimeDesc("42101-3357588-3");
+        Assert.assertEquals(1, notifications.size());
 
     }
 

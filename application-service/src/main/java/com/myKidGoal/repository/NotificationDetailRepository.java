@@ -24,5 +24,5 @@ public interface NotificationDetailRepository extends JpaRepository<Notification
     void deleteAll();
 
     @RestResource(path = "userNotifications")
-    List<NotificationDetail> findBySentToOrderByUserTimeDesc(int userId);
+    List<NotificationDetail> findBySentToOrderByUserTimeDesc(String userId);
 }

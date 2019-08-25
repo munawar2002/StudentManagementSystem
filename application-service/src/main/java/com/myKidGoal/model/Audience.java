@@ -15,7 +15,8 @@ public class Audience extends BaseEntity {
 
     @Id
     @Column(name = "ID")
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @Basic
     @Column(name = "ROLEID")

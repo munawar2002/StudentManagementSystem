@@ -51,7 +51,7 @@ public class NotificationController {
     }
 
     @GetMapping("/search/user/{id}")
-    public Map<String, Object> allUserNotifications(@PathVariable(value = "id") int userId) {
+    public Map<String, Object> allUserNotifications(@PathVariable(value = "id") String userId) {
         Map<String, Object> response = new HashMap<>();
         Map<String, Object> res = new HashMap<>();
         res.put("notifications", notificationDetailRepository.findBySentToOrderByUserTimeDesc(userId));

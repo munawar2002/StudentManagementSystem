@@ -8,6 +8,7 @@ import com.myKidGoal.repository.NotificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +32,7 @@ public class NotificationServiceImpl implements NotificationService {
     public boolean sendNotification(Notification notification) {
 
         Optional<Audience> optionalAudience = Optional.empty();
-        if (notification.getAudience() != null && notification.getAudience().getId() != null) {
+        if (notification.getAudience() != null) {
             optionalAudience = audienceRepository.findById(notification.getAudience().getId());
         }
 
@@ -67,6 +68,7 @@ public class NotificationServiceImpl implements NotificationService {
             notificationDetail.setSentTo("" + student.getGrNo());
             notificationDetail.setNotification(notification);
             notificationDetail.setDelivered(false);
+            notificationDetail.setUserTime(LocalDateTime.now());
             notificationDetails.add(notificationDetail);
         }
 
@@ -78,9 +80,10 @@ public class NotificationServiceImpl implements NotificationService {
 
         for (Guardian guardian : guardians) {
             NotificationDetail notificationDetail = new NotificationDetail();
-            notificationDetail.setSentTo("" + guardian.getCnic());
+            notificationDetail.setSentTo("" + guardian.getNicno());
             notificationDetail.setNotification(notification);
             notificationDetail.setDelivered(false);
+            notificationDetail.setUserTime(LocalDateTime.now());
             notificationDetails.add(notificationDetail);
         }
 

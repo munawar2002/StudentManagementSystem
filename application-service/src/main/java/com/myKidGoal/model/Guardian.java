@@ -36,8 +36,8 @@ public class Guardian {
     private String name;
 
     @Basic
-    @Column(name = "NICNo")
-    private String cnic;
+    @Column(name = "nicno")
+    private String nicno;
 
     @Basic
     @Column(name = "Contact1")

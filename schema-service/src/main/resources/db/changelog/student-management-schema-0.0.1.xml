@@ -1650,7 +1650,9 @@
 
     <changeSet author="mykidgoal" id="student-management-schema-0.0.1-113">
         <createTable tableName="AUDIENCE">
-            <column name="ID" type="INT" />
+            <column name="ID" type="INT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
             <column name="NAME" type="VARCHAR(255)"/>
             <column name="ROLEID" type="INT"/>
             <column name="BRANCHID" type="INT"/>
@@ -1663,7 +1665,9 @@
 
     <changeSet author="mykidgoal" id="student-management-schema-0.0.1-114">
         <createTable tableName="NOTIFICATION">
-            <column name="ID" type="INT" />
+            <column name="ID" type="INT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
             <column name="TOPIC" type="VARCHAR(255)"/>
             <column name="AUDIENCEID" type="INT"/>
             <column name="MESSAGE" type="VARCHAR(255)"/>
@@ -1677,7 +1681,9 @@
 
     <changeSet author="mykidgoal" id="student-management-schema-0.0.1-115">
         <createTable tableName="NOTIFICATION_DETAIL">
-            <column name="ID" type="BIGINT" />
+            <column name="ID" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
             <column name="NOTIFICATIONID" type="INT"/>
             <column name="SENT_TO" type="VARCHAR(20)"/>
             <column name="IS_DELIVERED" type="${booleanType}"/>

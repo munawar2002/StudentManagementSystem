@@ -15,6 +15,7 @@ public class NotificationDetail extends BaseTimeEntity {
 
     @Id
     @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
