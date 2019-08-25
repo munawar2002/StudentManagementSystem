@@ -32,7 +32,7 @@ public class Student implements Serializable {
     public static final String TOTAL_DEBIT_QUERY = "total.debit.query";
     public static final String TOTAL_CREDIT_QUERY = "total.credit.query";
 
-    private Integer id;
+    private int id;
     private Section section;
     private Guardian guardian;
     private Guardian parent;
@@ -64,7 +64,8 @@ public class Student implements Serializable {
 
     @Id
     @Column(name = "ID_Student")
-    public Integer getId() {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public int getId() {
         return id;
     }
 

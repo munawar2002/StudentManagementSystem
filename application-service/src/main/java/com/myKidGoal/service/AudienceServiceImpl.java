@@ -56,15 +56,15 @@ public class AudienceServiceImpl implements AudienceService {
 
     private String setQueryParameters(Audience audience) {
         String query = "";
-        if (audience.getCategory() != null && audience.getCategory().getId() != null) {
+        if (audience.getCategory() != null) {
             query += "AND branch.id_category= " + audience.getCategory().getId() + " \n";
         }
 
-        if (audience.getStudentClass() != null && audience.getStudentClass().getId() != null) {
+        if (audience.getStudentClass() != null) {
             query += "AND cls.id_class= " + audience.getStudentClass().getId() + " \n";
         }
 
-        if (audience.getSection() != null && audience.getSection().getId() != null) {
+        if (audience.getSection() != null) {
             query += "AND sec.id_sec= " + audience.getSection().getId() + " \n";
         }
         return query;

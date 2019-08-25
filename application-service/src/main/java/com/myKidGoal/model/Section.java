@@ -18,7 +18,8 @@ public class Section extends BaseEntity {
 
     @Id
     @Column(name = "Id_Sec")
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "Id_Class")

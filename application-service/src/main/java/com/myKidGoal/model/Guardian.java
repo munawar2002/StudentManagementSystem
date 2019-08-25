@@ -25,7 +25,8 @@ public class Guardian {
 
     @Id
     @Column(name = "Id_Guardian")
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "Id_Profession")

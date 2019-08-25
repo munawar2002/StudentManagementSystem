@@ -7,7 +7,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-1">
         <createTable tableName="DS_ACCOUNT">
-            <column name="Id_Account" type="INT" >
+            <column name="Id_Account" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_AccountSubGroup" type="INT"/>
@@ -22,7 +22,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-2">
         <createTable tableName="DS_ACCOUNTGROUP">
-            <column name="Id_AccountGroup" type="INT" >
+            <column name="Id_AccountGroup" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_AccountType" type="INT"/>
@@ -37,7 +37,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-3">
         <createTable tableName="DS_ACCOUNTSUBGROUP">
-            <column name="Id_AccountSubGroup" type="INT" >
+            <column name="Id_AccountSubGroup" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_AccountGroup" type="INT"/>
@@ -53,7 +53,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-4">
         <createTable tableName="DS_ACCOUNTTYPE">
-            <column name="Id_AccountType" type="INT" >
+            <column name="Id_AccountType" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -67,7 +67,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-5">
         <createTable tableName="DS_AREA">
-            <column name="ID_Area" type="INT" >
+            <column name="ID_Area" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -79,7 +79,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-6">
         <createTable tableName="DS_ATTENDANCESTATUS">
-            <column name="Id_AttendanceStatus" type="INT" >
+            <column name="Id_AttendanceStatus" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -90,7 +90,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-7">
         <createTable tableName="DS_BANK">
-            <column name="Id_Bank" type="INT" >
+            <column name="Id_Bank" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -101,7 +101,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-8">
         <createTable tableName="DS_BOOK">
-            <column name="ID_Book" type="INT" >
+            <column name="ID_Book" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_BookLanguage" type="INT"/>
@@ -122,7 +122,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-9">
         <createTable tableName="DS_BOOKCONDITION">
-            <column name="ID_BookCondition" type="INT" >
+            <column name="ID_BookCondition" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -134,7 +134,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-10">
         <createTable tableName="DS_BOOKCOPY">
-            <column name="ID_BookCopy" type="INT" >
+            <column name="ID_BookCopy" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_Book" type="INT"/>
@@ -152,7 +152,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-11">
         <createTable tableName="DS_BOOKGROUP">
-            <column name="ID_BookGroup" type="INT" >
+            <column name="ID_BookGroup" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -163,7 +163,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-12">
         <createTable tableName="DS_BOOKLANGUAGE">
-            <column name="ID_BookLanguage" type="INT" >
+            <column name="ID_BookLanguage" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -174,7 +174,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-13">
         <createTable tableName="DS_BOOKPUBLISHER">
-            <column name="ID_BookPublisher" type="INT" >
+            <column name="ID_BookPublisher" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -185,7 +185,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-14">
         <createTable tableName="DS_BOOKSHELF">
-            <column name="ID_BookShelf" type="INT" >
+            <column name="ID_BookShelf" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -196,7 +196,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-15">
         <createTable tableName="DS_BOOKSUBGROUP">
-            <column name="ID_BookSubGroup" type="INT" >
+            <column name="ID_BookSubGroup" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_BookGroup" type="INT"/>
@@ -208,7 +208,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-16">
         <createTable tableName="DS_BOOKTRANSACTION">
-            <column name="ID_BookTransaction" type="INT" >
+            <column name="ID_BookTransaction" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_BookCopy" type="INT"/>
@@ -231,7 +231,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-17">
         <createTable tableName="DS_BOOKTYPE">
-            <column name="ID_BookType" type="INT" >
+            <column name="ID_BookType" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -243,7 +243,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-18">
         <createTable tableName="DS_CALENDAR">
-            <column name="Id_Calendar" type="INT" >
+            <column name="Id_Calendar" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -254,7 +254,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-19">
         <createTable tableName="DS_CATEGORY">
-            <column name="ID_Category" type="INT" >
+            <column name="ID_Category" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -269,7 +269,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-20">
         <createTable tableName="DS_CHEQUETYPE">
-            <column name="Id_ChequeType" type="INT" >
+            <column name="Id_ChequeType" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -283,7 +283,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-21">
         <createTable tableName="DS_CLASS">
-            <column name="ID_Class" type="INT" >
+            <column name="ID_Class" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_Category" type="INT"/>
@@ -297,7 +297,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-22">
         <createTable tableName="DS_CLASSDOCUMENT">
-            <column name="Id_ClassDocument" type="INT" >
+            <column name="Id_ClassDocument" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Class" type="INT"/>
@@ -309,7 +309,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-23">
         <createTable tableName="DS_CLASSFEE">
-            <column name="Id_ClassFee" type="INT" >
+            <column name="Id_ClassFee" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_FeeChargedFor" type="INT"/>
@@ -349,7 +349,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-25">
         <createTable tableName="DS_CLIENTPICS">
-            <column name="Id_Pic" type="INT" >
+            <column name="Id_Pic" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -366,7 +366,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-27">
         <createTable tableName="DS_CRT_PROVISIONAL">
-            <column name="Id_Crt_Provisional" type="INT" >
+            <column name="Id_Crt_Provisional" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Student" type="INT"/>
@@ -385,7 +385,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-28">
         <createTable tableName="DS_CRT_TWIMC">
-            <column name="Id_Crt_TWIMC" type="INT" >
+            <column name="Id_Crt_TWIMC" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Student" type="INT"/>
@@ -433,7 +433,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-30">
         <createTable tableName="DS_DAYATTENDANCE">
-            <column name="Id_DayAttendance" type="INT" >
+            <column name="Id_DayAttendance" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_DayEvent" type="INT"/>
@@ -447,7 +447,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-31">
         <createTable tableName="DS_DAYEVENT">
-            <column name="Id_DayEvent" type="INT" >
+            <column name="Id_DayEvent" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Calendar" type="INT"/>
@@ -461,7 +461,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-32">
         <createTable tableName="DS_DELETELOG">
-            <column name="ID_DeleteLog" type="INT" >
+            <column name="ID_DeleteLog" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_User" type="INT"/>
@@ -474,7 +474,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-33">
         <createTable tableName="DS_DEPARTMENT">
-            <column name="Id_Department" type="INT" >
+            <column name="Id_Department" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -485,7 +485,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-34">
         <createTable tableName="DS_DESIGNATION">
-            <column name="Id_Designation" type="INT" >
+            <column name="Id_Designation" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_Department" type="INT"/>
@@ -498,7 +498,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-35">
         <createTable tableName="DS_DOCUMENT">
-            <column name="ID_Document" type="INT" >
+            <column name="ID_Document" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -509,7 +509,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-36">
         <createTable tableName="DS_EMPLOYEE">
-            <column name="Id_Employee" type="INT" >
+            <column name="Id_Employee" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Qualification" type="INT"/>
@@ -539,7 +539,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-37">
         <createTable tableName="DS_EMPLOYEEATTENDANCE">
-            <column name="Id_EmployeeAttendance" type="INT" >
+            <column name="Id_EmployeeAttendance" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Employee" type="INT"/>
@@ -551,7 +551,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-38">
         <createTable tableName="DS_EMPLOYEEEXPERIENCE">
-            <column name="ID_EmployeeExperience" type="INT" >
+            <column name="ID_EmployeeExperience" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Employee" type="INT"/>
@@ -565,7 +565,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-39">
         <createTable tableName="DS_EMPLOYEEIDCARD">
-            <column name="Id_EmployeeIDCard" type="INT" >
+            <column name="Id_EmployeeIDCard" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_EmployeeJob" type="INT"/>
@@ -580,7 +580,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-40">
         <createTable tableName="DS_EMPLOYEEJOB">
-            <column name="Id_EmployeeJob" type="INT" >
+            <column name="Id_EmployeeJob" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_Employee" type="INT"/>
@@ -596,7 +596,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-41">
         <createTable tableName="DS_EMPLOYEELEAVE">
-            <column name="Id_EmployeeLeave" type="INT" >
+            <column name="Id_EmployeeLeave" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_EmployeeJob" type="INT"/>
@@ -611,7 +611,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-42">
         <createTable tableName="DS_EMPLOYEESALARY">
-            <column name="Id_EmployeeSalary" type="INT" >
+            <column name="Id_EmployeeSalary" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_EmployeeJob" type="INT"/>
@@ -626,7 +626,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-43">
         <createTable tableName="DS_EMPLOYEESKILL">
-            <column name="ID_EmployeeSkill" type="INT" >
+            <column name="ID_EmployeeSkill" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_Employee" type="INT"/>
@@ -639,7 +639,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-44">
         <createTable tableName="DS_EVENTTITLE">
-            <column name="Id_EventTitle" type="INT" >
+            <column name="Id_EventTitle" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -651,7 +651,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-45">
         <createTable tableName="DS_EXAM">
-            <column name="Id_Exam" type="INT" >
+            <column name="Id_Exam" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_ExamTitle" type="INT"/>
@@ -666,7 +666,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-46">
         <createTable tableName="DS_EXAMTITLE">
-            <column name="Id_ExamTitle" type="INT" >
+            <column name="Id_ExamTitle" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_ExamType" type="INT"/>
@@ -679,7 +679,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-47">
         <createTable tableName="DS_EXAMTYPE">
-            <column name="Id_ExamType" type="INT" >
+            <column name="Id_ExamType" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -691,7 +691,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-48">
         <createTable tableName="DS_FEECHARGEDFOR">
-            <column name="Id_FeeChargedFor" type="INT" >
+            <column name="Id_FeeChargedFor" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -704,7 +704,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-49">
         <createTable tableName="DS_FEEPERIOD">
-            <column name="Id_FeePeriod" type="INT" >
+            <column name="Id_FeePeriod" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -717,7 +717,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-50">
         <createTable tableName="DS_FINANCIALYEAR">
-            <column name="Id_FinancialYear" type="INT" >
+            <column name="Id_FinancialYear" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -730,7 +730,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-51">
         <createTable tableName="DS_GUARDIAN">
-            <column name="Id_Guardian" type="INT" >
+            <column name="Id_Guardian" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Profession" type="INT"/>
@@ -749,7 +749,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-52">
         <createTable tableName="DS_HOUSE">
-            <column name="Id_House" type="INT" >
+            <column name="Id_House" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -760,7 +760,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-53">
         <createTable tableName="DS_IDCARD">
-            <column name="Id_IDCard" type="INT" >
+            <column name="Id_IDCard" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_StudentSec" type="INT"/>
@@ -774,7 +774,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-54">
         <createTable tableName="DS_LASTSCHOOL">
-            <column name="Id_LastSchool" type="INT" >
+            <column name="Id_LastSchool" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -785,7 +785,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-55">
         <createTable tableName="DS_LEAVELEDGER">
-            <column name="Id_LeaveLedger" type="INT" >
+            <column name="Id_LeaveLedger" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_SalarySlip" type="INT"/>
@@ -802,7 +802,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-56">
         <createTable tableName="DS_LEAVETIME">
-            <column name="Id_LeaveTime" type="INT" >
+            <column name="Id_LeaveTime" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -813,7 +813,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-57">
         <createTable tableName="DS_LEAVETYPE">
-            <column name="Id_LeaveType" type="INT" >
+            <column name="Id_LeaveType" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -824,7 +824,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-58">
         <createTable tableName="DS_LIBRARYCARD">
-            <column name="ID_LibraryCard" type="INT" >
+            <column name="ID_LibraryCard" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_LibraryMemberType" type="INT"/>
@@ -852,7 +852,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-60">
         <createTable tableName="DS_LIBRARYMEMBER">
-            <column name="ID_LibraryMember" type="INT" >
+            <column name="ID_LibraryMember" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="MCode" type="INT"/>
@@ -868,7 +868,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-61">
         <createTable tableName="DS_LIBRARYMEMBERTYPE">
-            <column name="ID_LibraryMemberType" type="INT" >
+            <column name="ID_LibraryMemberType" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -879,7 +879,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-62">
         <createTable tableName="DS_MODULE">
-            <column name="ID_Module" type="INT" >
+            <column name="ID_Module" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Code" type="INT"/>
@@ -891,7 +891,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-63">
         <createTable tableName="DS_NATIONALITY">
-            <column name="Id_Nationality" type="INT" >
+            <column name="Id_Nationality" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -902,7 +902,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-64">
         <createTable tableName="DS_NOTICE">
-            <column name="Id_Notice" type="INT" >
+            <column name="Id_Notice" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Date" type="DATE"/>
@@ -915,7 +915,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-65">
         <createTable tableName="DS_OBTAINEDMARKS">
-            <column name="Id_ObtainedMarks" type="INT" >
+            <column name="Id_ObtainedMarks" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_ResultCard" type="INT"/>
@@ -931,7 +931,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-66">
         <createTable tableName="DS_PAIDSLIP">
-            <column name="Id_PaidSlip" type="INT" >
+            <column name="Id_PaidSlip" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Slip" type="INT"/>
@@ -945,7 +945,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-67">
         <createTable tableName="DS_PAYMENTCHUNK">
-            <column name="Id_PaymentChunk" type="INT" >
+            <column name="Id_PaymentChunk" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_SlipPayment" type="INT"/>
@@ -958,7 +958,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-68">
         <createTable tableName="DS_PAYSCALE">
-            <column name="Id_PayScale" type="INT" >
+            <column name="Id_PayScale" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -972,7 +972,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-69">
         <createTable tableName="DS_PAYSCALELEAVE">
-            <column name="Id_PayScaleLeave" type="INT" >
+            <column name="Id_PayScaleLeave" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_PayScale" type="INT"/>
@@ -988,7 +988,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-70">
         <createTable tableName="DS_PAYSCALESALARY">
-            <column name="Id_PayScaleSalary" type="INT" >
+            <column name="Id_PayScaleSalary" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_PayScale" type="INT"/>
@@ -1005,7 +1005,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-71">
         <createTable tableName="DS_PERIOD">
-            <column name="ID_Period" type="INT" >
+            <column name="ID_Period" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_PeriodTime" type="INT"/>
@@ -1020,7 +1020,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-72">
         <createTable tableName="DS_PERIODSPERWEEK">
-            <column name="ID_PeriodsPerWeek" type="INT" >
+            <column name="ID_PeriodsPerWeek" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_Subject" type="INT"/>
@@ -1032,7 +1032,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-73">
         <createTable tableName="DS_PERIODTIME">
-            <column name="ID_PeriodTime" type="INT" >
+            <column name="ID_PeriodTime" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Title" type="VARCHAR(255)"/>
@@ -1047,7 +1047,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-74">
         <createTable tableName="DS_PLACEOFBIRTH">
-            <column name="Id_PlaceOfBirth" type="INT" >
+            <column name="Id_PlaceOfBirth" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -1058,7 +1058,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-75">
         <createTable tableName="DS_PROFESSION">
-            <column name="ID_Profession" type="INT" >
+            <column name="ID_Profession" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -1069,7 +1069,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-76">
         <createTable tableName="DS_QUALIFICATION">
-            <column name="Id_Qualification" type="INT" >
+            <column name="Id_Qualification" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -1080,7 +1080,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-77">
         <createTable tableName="DS_RELIGION">
-            <column name="Id_Religion" type="INT" >
+            <column name="Id_Religion" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -1091,7 +1091,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-78">
         <createTable tableName="DS_REMINDER">
-            <column name="ID_Reminder" type="INT" >
+            <column name="ID_Reminder" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Message" type="VARCHAR(255)"/>
@@ -1106,7 +1106,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-79">
         <createTable tableName="DS_RESULTCARD">
-            <column name="Id_ResultCard" type="INT" >
+            <column name="Id_ResultCard" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_StudentSec" type="INT"/>
@@ -1120,7 +1120,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-80">
         <createTable tableName="DS_SALARYPERIOD">
-            <column name="Id_SalaryPeriod" type="INT" >
+            <column name="Id_SalaryPeriod" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="SalaryMonth" type="DATE"/>
@@ -1132,7 +1132,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-81">
         <createTable tableName="DS_SALARYSLIP">
-            <column name="ID_SalarySlip" type="INT" >
+            <column name="ID_SalarySlip" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_SalaryPeriod" type="INT"/>
@@ -1155,7 +1155,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-82">
         <createTable tableName="DS_SALARYSLIPDETAIL">
-            <column name="Id_SalarySlipDetail" type="INT" >
+            <column name="Id_SalarySlipDetail" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_SalarySlip" type="INT"/>
@@ -1170,7 +1170,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-83">
         <createTable tableName="DS_SALARYSLIPPAYMENT">
-            <column name="Id_SalarySlipPayment" type="INT" >
+            <column name="Id_SalarySlipPayment" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_SalarySlip" type="INT"/>
@@ -1186,7 +1186,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-84">
         <createTable tableName="DS_SEC">
-            <column name="Id_Sec" type="INT" >
+            <column name="Id_Sec" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Class" type="INT"/>
@@ -1199,7 +1199,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-85">
         <createTable tableName="DS_SESSIONINFO">
-            <column name="Id_Session" type="INT" >
+            <column name="Id_Session" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -1212,7 +1212,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-86">
         <createTable tableName="DS_SKILL">
-            <column name="ID_Skill" type="INT" >
+            <column name="ID_Skill" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(255)"/>
@@ -1223,7 +1223,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-87">
         <createTable tableName="DS_SLIP">
-            <column name="ID_Slip" type="INT" >
+            <column name="ID_Slip" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_FeePeriod" type="INT"/>
@@ -1247,7 +1247,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-88">
         <createTable tableName="DS_SLIPFEE">
-            <column name="Id_SlipFee" type="INT" >
+            <column name="Id_SlipFee" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Slip" type="INT"/>
@@ -1262,7 +1262,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-89">
         <createTable tableName="DS_SLIPPAYMENT">
-            <column name="Id_SlipPayment" type="INT" >
+            <column name="Id_SlipPayment" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Slip" type="INT"/>
@@ -1279,7 +1279,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-90">
         <createTable tableName="DS_SMS">
-            <column name="ID_SMS" type="INT" >
+            <column name="ID_SMS" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Message" type="VARCHAR(255)"/>
@@ -1293,7 +1293,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-91">
         <createTable tableName="DS_STUDENT">
-            <column name="ID_Student" type="INT" >
+            <column name="ID_Student" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_Sec" type="INT"/>
@@ -1329,7 +1329,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-92">
         <createTable tableName="DS_STUDENTDOCUMENT">
-            <column name="Id_StudentDocument" type="INT" >
+            <column name="Id_StudentDocument" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Student" type="INT"/>
@@ -1342,7 +1342,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-93">
         <createTable tableName="DS_STUDENTFEE">
-            <column name="Id_StudentFee" type="INT" >
+            <column name="Id_StudentFee" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Student" type="INT"/>
@@ -1357,7 +1357,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-94">
         <createTable tableName="DS_STUDENTREMARKS">
-            <column name="Id_StudentRemarks" type="INT" >
+            <column name="Id_StudentRemarks" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Student" type="INT"/>
@@ -1369,7 +1369,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-95">
         <createTable tableName="DS_STUDENTSEC">
-            <column name="Id_StudentSec" type="INT" >
+            <column name="Id_StudentSec" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_Sec" type="INT"/>
@@ -1384,7 +1384,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-96">
         <createTable tableName="DS_SUBJECT">
-            <column name="Id_Subject" type="INT" >
+            <column name="Id_Subject" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Class" type="INT"/>
@@ -1398,7 +1398,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-97">
         <createTable tableName="DS_SUBJECTTITLE">
-            <column name="Id_SubjectTitle" type="INT" >
+            <column name="Id_SubjectTitle" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Title" type="VARCHAR(50)"/>
@@ -1411,7 +1411,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-98">
         <createTable tableName="DS_TEST">
-            <column name="Id_Test" type="INT" >
+            <column name="Id_Test" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Subject" type="VARCHAR(50)"/>
@@ -1427,7 +1427,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-99">
         <createTable tableName="DS_TRANSFERCERTIFICATE">
-            <column name="Id_TransferCertificate" type="INT" >
+            <column name="Id_TransferCertificate" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_StudentSec" type="INT"/>
@@ -1449,7 +1449,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-100">
         <createTable tableName="DS_TRANSPORT">
-            <column name="ID_Transport" type="INT" >
+            <column name="ID_Transport" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="DriverName" type="VARCHAR(50)"/>
@@ -1475,7 +1475,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-101">
         <createTable tableName="DS_TRANSPORTAREA">
-            <column name="ID_TransportArea" type="INT" >
+            <column name="ID_TransportArea" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_Transport" type="INT"/>
@@ -1487,7 +1487,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-102">
         <createTable tableName="DS_TRANSPORTCARDSTUDENT">
-            <column name="ID_TransportCardStudent" type="INT" >
+            <column name="ID_TransportCardStudent" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="ID_Transport" type="INT"/>
@@ -1503,7 +1503,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-103">
         <createTable tableName="DS_TRANSPORTTYPE">
-            <column name="ID_TransportType" type="INT" >
+            <column name="ID_TransportType" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -1514,7 +1514,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-104">
         <createTable tableName="DS_USER">
-            <column name="Id_User" type="INT" >
+            <column name="Id_User" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="UserID" type="VARCHAR(50)"/>
@@ -1528,7 +1528,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-105">
         <createTable tableName="DS_USERRIGHTS">
-            <column name="ID_UserRights" type="INT" >
+            <column name="ID_UserRights" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="UserID" type="INT"/>
@@ -1544,7 +1544,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-106">
         <createTable tableName="DS_VEHICLE">
-            <column name="ID_Vehicle" type="INT" >
+            <column name="ID_Vehicle" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Title" type="VARCHAR(255)"/>
@@ -1557,7 +1557,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-107">
         <createTable tableName="DS_VOUCHER">
-            <column name="Id_Voucher" type="INT" >
+            <column name="Id_Voucher" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_VoucherType" type="INT"/>
@@ -1578,7 +1578,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-108">
         <createTable tableName="DS_VOUCHERDETAIL">
-            <column name="ID_VoucherDetail" type="INT" >
+            <column name="ID_VoucherDetail" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_Voucher" type="INT"/>
@@ -1592,7 +1592,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-109">
         <createTable tableName="DS_VOUCHERTYPE">
-            <column name="Id_VoucherType" type="INT" >
+            <column name="Id_VoucherType" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
@@ -1606,7 +1606,7 @@
 
     <changeSet author="daltasoft" id="student-management-schema-0.0.1-110">
         <createTable tableName="DS_YEARACCOUNT">
-            <column name="Id_YearAccount" type="INT" >
+            <column name="Id_YearAccount" type="INT" autoIncrement="true" >
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Id_FinancialYear" type="INT"/>

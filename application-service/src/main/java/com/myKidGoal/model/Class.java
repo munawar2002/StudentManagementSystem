@@ -18,7 +18,8 @@ public class Class extends BaseEntity {
 
     @Id
     @Column(name = "Id_Class")
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "Id_Category")
