@@ -1414,7 +1414,7 @@
             <column name="Id_Test" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
-            <column name="Id_Subject" type="VARCHAR(50)"/>
+            <column name="Id_Subject" type="INT"/>
             <column name="MaxMarks" type="DOUBLE"/>
             <column name="PassingMarks" type="DOUBLE"/>
             <column name="MonthlyTestsMarks" type="INT"/>
