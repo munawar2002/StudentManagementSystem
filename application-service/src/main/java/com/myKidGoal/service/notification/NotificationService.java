@@ -1,6 +1,6 @@
-package com.myKidGoal.service;
+package com.myKidGoal.service.notification;
 
-import com.myKidGoal.model.Notification;
+import com.myKidGoal.model.notification.Notification;
 
 public interface NotificationService {
 

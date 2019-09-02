@@ -1,9 +1,9 @@
 package com.myKidGoal.controller;
 
-import com.myKidGoal.model.Notification;
-import com.myKidGoal.repository.NotificationDetailRepository;
-import com.myKidGoal.repository.NotificationRepository;
-import com.myKidGoal.service.NotificationService;
+import com.myKidGoal.model.notification.Notification;
+import com.myKidGoal.repository.notification.NotificationDetailRepository;
+import com.myKidGoal.repository.notification.NotificationRepository;
+import com.myKidGoal.service.notification.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,5 +1,6 @@
-package com.myKidGoal.model;
+package com.myKidGoal.model.notification;
 
+import com.myKidGoal.model.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

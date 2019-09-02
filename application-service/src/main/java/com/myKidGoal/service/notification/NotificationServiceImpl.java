@@ -1,10 +1,13 @@
-package com.myKidGoal.service;
+package com.myKidGoal.service.notification;
 
 import com.myKidGoal.exception.ApplicationException;
 import com.myKidGoal.model.*;
-import com.myKidGoal.repository.AudienceRepository;
-import com.myKidGoal.repository.NotificationDetailRepository;
-import com.myKidGoal.repository.NotificationRepository;
+import com.myKidGoal.model.notification.Audience;
+import com.myKidGoal.model.notification.Notification;
+import com.myKidGoal.model.notification.NotificationDetail;
+import com.myKidGoal.repository.notification.AudienceRepository;
+import com.myKidGoal.repository.notification.NotificationDetailRepository;
+import com.myKidGoal.repository.notification.NotificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

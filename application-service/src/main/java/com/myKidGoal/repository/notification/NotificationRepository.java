@@ -1,6 +1,6 @@
-package com.myKidGoal.repository;
+package com.myKidGoal.repository.notification;
 
-import com.myKidGoal.model.Notification;
+import com.myKidGoal.model.notification.Notification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;

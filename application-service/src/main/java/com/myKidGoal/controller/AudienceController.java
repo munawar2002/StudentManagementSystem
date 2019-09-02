@@ -1,7 +1,7 @@
 package com.myKidGoal.controller;
 
-import com.myKidGoal.model.Audience;
-import com.myKidGoal.repository.AudienceRepository;
+import com.myKidGoal.model.notification.Audience;
+import com.myKidGoal.repository.notification.AudienceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

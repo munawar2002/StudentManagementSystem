@@ -1,5 +1,9 @@
-package com.myKidGoal.model;
+package com.myKidGoal.model.notification;
 
+import com.myKidGoal.model.BaseEntity;
+import com.myKidGoal.model.Category;
+import com.myKidGoal.model.Class;
+import com.myKidGoal.model.Section;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

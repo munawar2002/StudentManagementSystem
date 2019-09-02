@@ -1,6 +1,6 @@
-package com.myKidGoal.service;
+package com.myKidGoal.service.notification;
 
-import com.myKidGoal.model.Audience;
+import com.myKidGoal.model.notification.Audience;
 import com.myKidGoal.model.Guardian;
 import com.myKidGoal.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
