@@ -1692,5 +1692,25 @@
         </createTable>
     </changeSet>
 
+    <changeSet author="mykidgoal" id="student-management-schema-0.0.1-116">
+        <insert tableName="DS_EXAMTYPE">
+            <column name="ID_ExamType"  value="1"/>
+            <column name="NAME"  value="Assessment"/>
+            <column name="LEVEL"  value="1"/>
+            <column name="ID_USER"  value="-1"/>
+        </insert>
+        <insert tableName="DS_EXAMTYPE">
+            <column name="ID_ExamType"  value="2"/>
+            <column name="NAME"  value="Mid Term"/>
+            <column name="LEVEL"  value="1"/>
+            <column name="ID_USER"  value="-1"/>
+        </insert>
+        <insert tableName="DS_EXAMTYPE">
+            <column name="ID_ExamType"  value="3"/>
+            <column name="NAME"  value="Final"/>
+            <column name="LEVEL"  value="1"/>
+            <column name="ID_USER"  value="-1"/>
+        </insert>
+    </changeSet>
 
 </databaseChangeLog>
