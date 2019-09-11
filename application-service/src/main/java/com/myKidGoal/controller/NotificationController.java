@@ -34,9 +34,9 @@ public class NotificationController {
         return response;
     }
 
-    @PostMapping("/save")
-    public void saveNotification(@RequestBody Notification notification) {
-        notificationRepository.save(notification);
+    @PostMapping("/send")
+    public void sendNotification(@RequestBody Notification notification) {
+        notificationService.sendNotification(notification);
     }
 
     @GetMapping("/search/details/{id}")
