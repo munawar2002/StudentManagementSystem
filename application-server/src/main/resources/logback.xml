@@ -52,14 +52,14 @@
          based on size of the file, which by default is 10MB.  Once rolled
          its configured to automatically zip the older log file. -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${FILE_DIR}/realxdata.log</file>
+        <file>${FILE_DIR}/sms.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>${pattern}</pattern>
         </encoder>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
             <fileNamePattern>
-                ${FILE_DIR}/realxdata.%i.log.zip
+                ${FILE_DIR}/sms.%i.log.zip
             </fileNamePattern>
             <minIndex>${FILE_MIN_INDEX}</minIndex>
             <maxIndex>${FILE_MAX_INDEX}</maxIndex>

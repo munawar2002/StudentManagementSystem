@@ -31,6 +31,16 @@ public class AudienceController {
         audienceRepository.save(audience);
     }
 
+    @PostMapping("/update")
+    public void updateAudience(@RequestBody Audience audience) {
+        if (audience.getId() == 0) {
+            throw new EntityNotFoundException(
+                    "Audience can't be updated before saving. First save the audience and then try updating!");
+        }
+
+        audienceRepository.save(audience);
+    }
+
     @GetMapping("/search/details/{id}")
     public Audience oneStudent(@PathVariable(value = "id") int id) {
         Optional<Audience> optionalAudience = audienceRepository.findById(id);
@@ -41,4 +51,21 @@ public class AudienceController {
             throw new EntityNotFoundException("Audience not found with ID [" + id + "]");
         }
     }
+
+    @GetMapping(value = "/isUniqueAudienceName/{name}/{id}")
+    public Map<String, String> isUniqueAudienceName(@PathVariable(value = "name") String name,
+            @PathVariable(value = "id") int id) {
+
+        Boolean isAudienceExists;
+        if (id == 0) {
+            isAudienceExists = !audienceRepository.existsByNameIgnoreCaseAndDeletedIsFalse(name);
+        } else {
+            isAudienceExists = !audienceRepository.existsByNameIgnoreCaseAndDeletedIsFalseAndIdNot(name, id);
+        }
+
+        Map<String, String> response = new HashMap<>();
+        response.put("isUnique", String.valueOf(isAudienceExists));
+        return response;
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.myKidGoal.model.notification;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.myKidGoal.model.BaseEntity;
 import com.myKidGoal.model.Category;
 import com.myKidGoal.model.Class;
@@ -32,7 +33,12 @@ public class Audience extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "CLASSID")
+    @JsonProperty("classes")
     private Class studentClass;
+
+    @Basic
+    @Column(name = "ISDELETED")
+    private boolean deleted;
 
     @ManyToOne
     @JoinColumn(name = "SECTIONID")

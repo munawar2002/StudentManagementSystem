@@ -29,8 +29,8 @@ insert into ds_Student (ID_Student, ID_Sec, Id_Guardian, Id_Parent, Id_PlaceOfBi
 insert into ds_Student (ID_Student, ID_Sec, Id_Guardian, Id_Parent, Id_PlaceOfBirth, Id_LastSchool, Id_Nationality, Id_Religion, Id_House, RegNo, RegDate, IsAdmissioned, GRNo, Name, IsMale, DOB, DOA, DOL, IsLeftSchool, CauseOfRemoval, DiscountPercentage, DiscountReason, Freeze, Boarding, Id_User, UserTime, FakeGRNo, IsFixedLateFine, email) values('9','4','1503','1503','60','670','3','4','4','9','2012-04-01','0','9','Mehar Fatima','0','1996-03-10','2012-04-01','2014-03-30','0','Pass Out ','0','','0','0','7','2018-02-07 11:44:00','2421','0',NULL);
 
 
-INSERT INTO audience (id,NAME,roleid,branchId, classId,sectionId) VALUES (1,'All-Students',1,1,NULL,NULL);
-INSERT INTO audience (id,NAME,roleid,branchId, classId,sectionId) VALUES (2,'Class-2 Students',1,1,1,NULL);
-INSERT INTO audience (id,NAME,roleid,branchId, classId,sectionId) VALUES (3,'Class-2 Sec-A Students',1,1,1,1);
-INSERT INTO audience (id,NAME,roleid,branchId, classId,sectionId) VALUES (4,'Class-3 Sec-B Students',1,1,2,4);
+INSERT INTO audience (id,NAME,roleid,branchId, classId,sectionId,isdeleted) VALUES (1,'All-Students',1,1,NULL,NULL,0);
+INSERT INTO audience (id,NAME,roleid,branchId, classId,sectionId,isdeleted) VALUES (2,'Class-2 Students',1,1,1,NULL,0);
+INSERT INTO audience (id,NAME,roleid,branchId, classId,sectionId,isdeleted) VALUES (3,'Class-2 Sec-A Students',1,1,1,1,0);
+INSERT INTO audience (id,NAME,roleid,branchId, classId,sectionId,isdeleted) VALUES (4,'Class-3 Sec-B Students',1,1,2,4,0);
 
