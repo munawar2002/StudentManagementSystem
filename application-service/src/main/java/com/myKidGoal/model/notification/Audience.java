@@ -42,6 +42,7 @@ public class Audience extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "SECTIONID")
+    @JsonProperty("sec")
     private Section section;
 
 }
