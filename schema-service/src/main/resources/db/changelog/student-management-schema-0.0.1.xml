@@ -1658,7 +1658,7 @@
             <column name="BRANCHID" type="INT"/>
             <column name="CLASSID" type="INT"/>
             <column name="SECTIONID" type="INT"/>
-            <column name="ISDELETED" type="${booleanType}"/>
+            <column name="ISDELETED" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
