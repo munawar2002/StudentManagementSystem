@@ -119,4 +119,28 @@ public class AudienceServiceTest {
 
     }
 
+    @Test
+    public void deleteNotificationTest() {
+
+        Optional<Audience> audience = audienceRepository.findById(2);
+
+        Notification notification = new Notification();
+        notification.setAudience(audience.get());
+        notification.setEffectiveDate(LocalDate.now());
+        notification.setExpiryDate(LocalDate.now());
+        notification.setMessage("Sending message to students");
+        notification.setPostingDate(LocalDate.now());
+        notification.setTopic("Notification Send Test");
+
+        boolean success = notificationService.sendNotification(notification);
+        Assert.assertTrue(success);
+
+        success = notificationService.deleteNotification(notification);
+        Assert.assertTrue(success);
+
+        List<NotificationDetail> notificationDetails = notificationDetailRepository.findByNotification(notification);
+        Assert.assertTrue(notificationDetails.isEmpty());
+
+    }
+
 }

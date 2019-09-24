@@ -58,4 +58,16 @@ public class NotificationController {
         response.put("_embedded", res);
         return response;
     }
+
+    @DeleteMapping("/delete/{id}")
+    public boolean deleteNotification(@PathVariable int id) {
+
+        Optional<Notification> optionalNotification = notificationRepository.findById(id);
+
+        if (!optionalNotification.isPresent()) {
+            throw new EntityNotFoundException("Notification not found with id [" + id + "]");
+        }
+
+        return notificationService.deleteNotification(optionalNotification.get());
+    }
 }

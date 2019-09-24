@@ -1,5 +1,6 @@
 package com.myKidGoal.repository.notification;
 
+import com.myKidGoal.model.notification.Notification;
 import com.myKidGoal.model.notification.NotificationDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
@@ -25,4 +26,9 @@ public interface NotificationDetailRepository extends JpaRepository<Notification
 
     @RestResource(path = "userNotifications")
     List<NotificationDetail> findBySentToOrderByUserTimeDesc(String userId);
+
+    List<NotificationDetail> deleteByNotification(Notification notification);
+
+    List<NotificationDetail> findByNotification(Notification notification);
+
 }

@@ -43,4 +43,8 @@ public class Notification extends BaseTimeEntity {
     @Basic
     @Column(name = "EXPIRYDATE")
     private LocalDate expiryDate;
+
+    @Basic
+    @Column(name = "ISDELETED")
+    private boolean deleted;
 }

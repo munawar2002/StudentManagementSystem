@@ -6,4 +6,6 @@ public interface NotificationService {
 
     boolean sendNotification(Notification notification);
 
+    boolean deleteNotification(Notification notification);
+
 }

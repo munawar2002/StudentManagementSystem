@@ -10,6 +10,7 @@ import com.myKidGoal.repository.notification.NotificationDetailRepository;
 import com.myKidGoal.repository.notification.NotificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -61,6 +62,16 @@ public class NotificationServiceImpl implements NotificationService {
         } catch (Exception ex) {
             throw new ApplicationException("Failed while sending notification [" + notification.getTopic() + "]");
         }
+    }
+
+    @Override
+    @Transactional
+    public boolean deleteNotification(Notification notification) {
+        notification.setDeleted(true);
+        notificationRepository.save(notification);
+
+        notificationDetailRepository.deleteByNotification(notification);
+        return true;
     }
 
     private void sentNotificationToStudents(List<Student> students, Notification notification) {

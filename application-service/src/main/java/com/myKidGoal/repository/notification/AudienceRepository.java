@@ -6,6 +6,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 
+import java.util.List;
+
 @RepositoryRestResource(collectionResourceRel = "audiences", path = "audiences")
 public interface AudienceRepository extends JpaRepository<Audience, Integer> {
 
@@ -39,4 +41,7 @@ public interface AudienceRepository extends JpaRepository<Audience, Integer> {
      * @return <TRUE>If exist</TRUE>
      */
     boolean existsByNameIgnoreCaseAndDeletedIsFalseAndIdNot(@Param("name") String name, @Param("id") int id);
+
+    @RestResource(path = "all")
+    List<Audience> findAudienceByDeletedIsFalseOrderByIdDesc();
 }

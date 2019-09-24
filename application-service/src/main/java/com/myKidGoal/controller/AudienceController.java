@@ -21,7 +21,7 @@ public class AudienceController {
     public Map<String, Object> allAudiences() {
         Map<String, Object> response = new HashMap<>();
         Map<String, Object> res = new HashMap<>();
-        res.put("audiences", audienceRepository.findAll());
+        res.put("audiences", audienceRepository.findAudienceByDeletedIsFalseOrderByIdDesc());
         response.put("_embedded", res);
         return response;
     }
