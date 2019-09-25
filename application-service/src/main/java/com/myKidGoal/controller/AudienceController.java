@@ -31,7 +31,7 @@ public class AudienceController {
         audienceRepository.save(audience);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public void updateAudience(@RequestBody Audience audience) {
         if (audience.getId() == 0) {
             throw new EntityNotFoundException(
