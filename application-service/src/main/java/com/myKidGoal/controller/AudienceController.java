@@ -52,7 +52,7 @@ public class AudienceController {
         }
     }
 
-    @GetMapping(value = "/isUniqueAudienceName/{name}/{id}")
+    @GetMapping(value = "/isUnique/{name}/{id}")
     public Map<String, String> isUniqueAudienceName(@PathVariable(value = "name") String name,
             @PathVariable(value = "id") int id) {
 
