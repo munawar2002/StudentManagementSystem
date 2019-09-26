@@ -40,6 +40,10 @@ public class Audience extends BaseEntity {
     @Column(name = "ISDELETED")
     private boolean deleted;
 
+    @Basic
+    @Column(name = "ISACTIVE")
+    private boolean active;
+
     @ManyToOne
     @JoinColumn(name = "SECTIONID")
     @JsonProperty("sec")
