@@ -33,6 +33,7 @@ public class NotificationServiceImpl implements NotificationService {
     private NotificationRepository notificationRepository;
 
     @Override
+    @Transactional
     public boolean sendNotification(Notification notification) {
 
         Optional<Audience> optionalAudience = Optional.empty();
@@ -87,7 +88,10 @@ public class NotificationServiceImpl implements NotificationService {
             notificationDetails.add(notificationDetail);
         }
 
-        notificationDetailRepository.saveAll(notificationDetails);
+        if(!notificationDetails.isEmpty()){
+            notificationDetailRepository.saveAll(notificationDetails);
+        }
+
     }
 
     private void sentNotificationToGuardians(List<Guardian> guardians, Notification notification) {
@@ -102,6 +106,8 @@ public class NotificationServiceImpl implements NotificationService {
             notificationDetails.add(notificationDetail);
         }
 
-        notificationDetailRepository.saveAll(notificationDetails);
+        if(!notificationDetails.isEmpty()){
+            notificationDetailRepository.saveAll(notificationDetails);
+        }
     }
 }
