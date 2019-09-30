@@ -49,19 +49,26 @@ public class GuardianController {
         }
     }
 
-    @GetMapping("/search/details/cnic/unique/{nic}")
-    public Map<String, Boolean> uniqueGuardian(@PathVariable(value = "nic") String nic) {
+    @GetMapping(value = "/isUnique/{cnic}/{id}")
+    public Map<String, String> isUniqueAudienceName(@PathVariable(value = "cnic") String cnic,
+                                                    @PathVariable(value = "id") int id) {
 
-        Optional<Guardian> optionalGuardian = guardianRepository.findByCnicWithoutDash(nic);
-
-        Map<String, Boolean> response = new HashMap<>();
-        if (optionalGuardian.isPresent()) {
-            response.put("isUnique", false);
+        Boolean isAudienceExists = false;
+        if (id == 0) {
+            if(guardianRepository.findByCnicWithoutDash(cnic).isPresent()) {
+                isAudienceExists = true;
+            }
         } else {
-            response.put("isUnique", true);
+            if(guardianRepository.findByCnicAndIdWithoutDash(cnic,id).isPresent()){
+                isAudienceExists = true;
+            }
         }
+
+        Map<String, String> response = new HashMap<>();
+        response.put("isUnique", String.valueOf(isAudienceExists));
         return response;
     }
+
 
     @PostMapping("/save")
     public void saveGuardian(@RequestBody Guardian guardian) {
