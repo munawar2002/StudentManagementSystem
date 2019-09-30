@@ -44,4 +44,7 @@ public interface AudienceRepository extends JpaRepository<Audience, Integer> {
 
     @RestResource(path = "all")
     List<Audience> findAudienceByDeletedIsFalseOrderByIdDesc();
+
+    @RestResource(path = "active")
+    List<Audience> findByDeletedIsFalseAndActiveIsTrueOrderByIdDesc();
 }

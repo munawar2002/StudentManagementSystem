@@ -26,6 +26,15 @@ public class AudienceController {
         return response;
     }
 
+    @GetMapping("/search/all/active")
+    public Map<String, Object> allActiveAudiences() {
+        Map<String, Object> response = new HashMap<>();
+        Map<String, Object> res = new HashMap<>();
+        res.put("audiences", audienceRepository.findByDeletedIsFalseAndActiveIsTrueOrderByIdDesc());
+        response.put("_embedded", res);
+        return response;
+    }
+
     @PostMapping("/save")
     public void saveClass(@RequestBody Audience audience) {
         audienceRepository.save(audience);
