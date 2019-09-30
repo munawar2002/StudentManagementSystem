@@ -2,6 +2,7 @@ package com.myKidGoal.controller;
 
 import com.myKidGoal.model.notification.Audience;
 import com.myKidGoal.repository.notification.AudienceRepository;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,7 +39,7 @@ public class AudienceController {
     @PostMapping("/save")
     public void saveClass(@RequestBody Audience audience) {
 
-        if (audience.getName().isEmpty()) {
+        if (StringUtils.isEmpty(audience.getName())) {
             throw new RuntimeException("Audience can't be saved with name [NULL]");
         }
 
