@@ -37,6 +37,11 @@ public class AudienceController {
 
     @PostMapping("/save")
     public void saveClass(@RequestBody Audience audience) {
+
+        if (audience.getName().isEmpty()) {
+            throw new RuntimeException("Audience can't be saved with name [NULL]");
+        }
+
         audienceRepository.save(audience);
     }
 
