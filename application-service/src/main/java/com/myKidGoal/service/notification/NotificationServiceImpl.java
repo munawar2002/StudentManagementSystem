@@ -88,7 +88,7 @@ public class NotificationServiceImpl implements NotificationService {
             notificationDetails.add(notificationDetail);
         }
 
-        if(!notificationDetails.isEmpty()){
+        if (!notificationDetails.isEmpty()) {
             notificationDetailRepository.saveAll(notificationDetails);
         }
 
@@ -106,7 +106,7 @@ public class NotificationServiceImpl implements NotificationService {
             notificationDetails.add(notificationDetail);
         }
 
-        if(!notificationDetails.isEmpty()){
+        if (!notificationDetails.isEmpty()) {
             notificationDetailRepository.saveAll(notificationDetails);
         }
     }

@@ -68,6 +68,10 @@ public class Guardian {
     @Column(name = "UserTime")
     private LocalDateTime userTime;
 
+    @Basic
+    @Column(name = "ISDELETED")
+    private boolean deleted;
+
     @ManyToOne
     @JoinColumn(name = "Id_Area")
     private Area area;
