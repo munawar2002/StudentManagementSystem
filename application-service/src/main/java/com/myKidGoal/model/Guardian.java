@@ -18,7 +18,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @NamedNativeQueries(value = {
-        @NamedNativeQuery(name = Guardian.SELECT_BY_NICNO, query = "SELECT * FROM ds_guardian WHERE REPLACE(NICNO,'-','') = REPLACE(:cnic,'-','')", resultClass = Guardian.class) })
+        @NamedNativeQuery(name = Guardian.SELECT_BY_NICNO, query = "SELECT * FROM ds_guardian WHERE REPLACE(NICNO,'-','') = REPLACE(:cnic,'-','') and IsDeleted=0", resultClass = Guardian.class) })
 public class Guardian {
 
     public static final String SELECT_BY_NICNO = "Guardian.Select.By.NICNO";
