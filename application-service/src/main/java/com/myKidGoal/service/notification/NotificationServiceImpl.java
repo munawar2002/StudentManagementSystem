@@ -60,7 +60,8 @@ public class NotificationServiceImpl implements NotificationService {
 
             return true;
         } catch (Exception ex) {
-            throw new ApplicationException("Failed while sending notification [" + notification.getTopic() + "]");
+            ex.printStackTrace();
+            throw new ApplicationException("Failed while sending notification [" + notification.getTopic() + "] ");
         }
     }
 
