@@ -13,7 +13,7 @@ import java.util.Map;
 public class CategoryController {
 
     @Autowired
-    CategoryRepository categoryRepository;
+    private CategoryRepository categoryRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allCategories() {

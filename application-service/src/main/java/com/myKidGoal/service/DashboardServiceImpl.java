@@ -17,10 +17,10 @@ import java.util.Map;
 public class DashboardServiceImpl implements DashboardService {
 
     @Autowired
-    JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
     @Autowired
-    DataSource dataSource;
+    private DataSource dataSource;
 
     @Override
     public List<CategoryDto> getStudentPerBranch() {

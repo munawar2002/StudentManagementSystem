@@ -13,7 +13,7 @@ import java.util.Map;
 public class SectionController {
 
     @Autowired
-    SectionRepository sectionRepository;
+    private SectionRepository sectionRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allSections() {

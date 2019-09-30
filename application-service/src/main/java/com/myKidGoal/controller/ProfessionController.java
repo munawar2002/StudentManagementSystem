@@ -13,7 +13,7 @@ import java.util.Map;
 public class ProfessionController {
 
     @Autowired
-    ProfessionRepository professionRepository;
+    private ProfessionRepository professionRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allProfession() {

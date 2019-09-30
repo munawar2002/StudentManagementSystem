@@ -13,7 +13,7 @@ import java.util.Map;
 public class ReligionController {
 
     @Autowired
-    ReligionRepository religionRepository;
+    private ReligionRepository religionRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allReligion() {

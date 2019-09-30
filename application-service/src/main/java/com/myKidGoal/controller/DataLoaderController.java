@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class DataLoaderController {
 
     @Autowired
-    DataLoaderService dataLoaderService;
+    private DataLoaderService dataLoaderService;
 
     @PostMapping("/deltasoft")
     public boolean loadData(@RequestParam String folderPath) {

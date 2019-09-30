@@ -15,7 +15,7 @@ import java.util.Optional;
 public class AudienceController {
 
     @Autowired
-    AudienceRepository audienceRepository;
+    private AudienceRepository audienceRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allAudiences() {

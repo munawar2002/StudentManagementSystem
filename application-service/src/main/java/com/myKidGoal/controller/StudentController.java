@@ -14,7 +14,7 @@ import java.util.Optional;
 public class StudentController {
 
     @Autowired
-    StudentRepository studentRepository;
+    private StudentRepository studentRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allStudents() {

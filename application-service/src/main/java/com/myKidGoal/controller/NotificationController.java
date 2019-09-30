@@ -17,13 +17,13 @@ import java.util.Optional;
 public class NotificationController {
 
     @Autowired
-    NotificationRepository notificationRepository;
+    private NotificationRepository notificationRepository;
 
     @Autowired
-    NotificationDetailRepository notificationDetailRepository;
+    private NotificationDetailRepository notificationDetailRepository;
 
     @Autowired
-    NotificationService notificationService;
+    private NotificationService notificationService;
 
     @GetMapping("/search/all")
     public Map<String, Object> allNotifications() {

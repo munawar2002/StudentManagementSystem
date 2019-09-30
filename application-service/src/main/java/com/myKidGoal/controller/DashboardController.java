@@ -15,10 +15,10 @@ import java.util.Map;
 public class DashboardController {
 
     @Autowired
-    StudentRepository studentRepository;
+    private StudentRepository studentRepository;
 
     @Autowired
-    DashboardService dashboardService;
+    private DashboardService dashboardService;
 
     @GetMapping("/admin/search/all")
     public Map<String, Object> dashboardCount() {

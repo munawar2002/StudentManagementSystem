@@ -13,7 +13,7 @@ import java.util.Map;
 public class PlaceOfBirthController {
 
     @Autowired
-    PlaceOfBirthRepository placeOfBirthRepository;
+    private PlaceOfBirthRepository placeOfBirthRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allPlaceOfBirth() {

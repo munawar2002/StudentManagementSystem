@@ -14,7 +14,7 @@ import java.util.Optional;
 public class GuardianController {
 
     @Autowired
-    GuardianRepository guardianRepository;
+    private GuardianRepository guardianRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allGuardians() {

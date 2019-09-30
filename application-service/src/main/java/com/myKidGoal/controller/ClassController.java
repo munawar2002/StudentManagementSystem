@@ -13,7 +13,7 @@ import java.util.Map;
 public class ClassController {
 
     @Autowired
-    ClassRepository classRepository;
+    private ClassRepository classRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allClasses() {

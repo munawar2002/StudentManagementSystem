@@ -21,16 +21,16 @@ import java.util.Optional;
 public class NotificationServiceImpl implements NotificationService {
 
     @Autowired
-    AudienceService audienceService;
+    private AudienceService audienceService;
 
     @Autowired
-    AudienceRepository audienceRepository;
+    private AudienceRepository audienceRepository;
 
     @Autowired
-    NotificationDetailRepository notificationDetailRepository;
+    private NotificationDetailRepository notificationDetailRepository;
 
     @Autowired
-    NotificationRepository notificationRepository;
+    private NotificationRepository notificationRepository;
 
     @Override
     public boolean sendNotification(Notification notification) {

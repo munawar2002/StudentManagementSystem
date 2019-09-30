@@ -13,7 +13,7 @@ import java.util.Map;
 public class LastSchoolController {
 
     @Autowired
-    LastSchoolRepository lastSchoolRepository;
+    private LastSchoolRepository lastSchoolRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allLastSchools() {

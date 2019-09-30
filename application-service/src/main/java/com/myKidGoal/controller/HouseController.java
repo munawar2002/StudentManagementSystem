@@ -13,7 +13,7 @@ import java.util.Map;
 public class HouseController {
 
     @Autowired
-    HouseRepository houseRepository;
+    private HouseRepository houseRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allHouses() {

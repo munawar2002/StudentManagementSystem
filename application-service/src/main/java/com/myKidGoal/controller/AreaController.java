@@ -13,7 +13,7 @@ import java.util.Map;
 public class AreaController {
 
     @Autowired
-    AreaRepository areaRepository;
+    private AreaRepository areaRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allAreas() {

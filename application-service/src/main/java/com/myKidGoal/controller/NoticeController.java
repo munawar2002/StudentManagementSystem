@@ -13,7 +13,7 @@ import java.util.Map;
 public class NoticeController {
 
     @Autowired
-    NoticeRepository noticeRepository;
+    private NoticeRepository noticeRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allNotices() {
