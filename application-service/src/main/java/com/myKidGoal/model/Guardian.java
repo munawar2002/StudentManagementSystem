@@ -19,13 +19,11 @@ import java.util.Objects;
 @AllArgsConstructor
 @NamedNativeQueries(value = {
         @NamedNativeQuery(name = Guardian.SELECT_BY_NICNO, query = "SELECT * FROM ds_guardian WHERE REPLACE(NICNO,'-','') = REPLACE(:cnic,'-','') and IsDeleted=0", resultClass = Guardian.class),
-        @NamedNativeQuery(name = Guardian.SELECT_BY_NICNO_AND_ID, query = "SELECT * FROM ds_guardian WHERE REPLACE(NICNO,'-','') = REPLACE(:cnic,'-','') and IsDeleted=0 and Id_Guardian=:id", resultClass = Guardian.class),
-})
+        @NamedNativeQuery(name = Guardian.SELECT_BY_NICNO_AND_ID, query = "SELECT * FROM ds_guardian WHERE REPLACE(NICNO,'-','') = REPLACE(:cnic,'-','') and IsDeleted=0 and Id_Guardian=:id", resultClass = Guardian.class), })
 public class Guardian {
 
     public static final String SELECT_BY_NICNO = "Guardian.Select.By.NICNO";
     public static final String SELECT_BY_NICNO_AND_ID = "Guardian.Select.By.NICNO_And_ID";
-
 
     @Id
     @Column(name = "Id_Guardian")

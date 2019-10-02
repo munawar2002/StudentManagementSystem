@@ -1,5 +1,6 @@
 package com.myKidGoal.repository;
 
+import com.myKidGoal.model.Guardian;
 import com.myKidGoal.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -50,8 +51,8 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
     @Query(name = Student.TOTAL_CREDIT_QUERY, nativeQuery = true)
     long totalCredit();
 
-    @Query(value = "SELECT s.name as name FROM ds_category s ", nativeQuery = true)
-    List<Student> findStudentPerBranch();
-
     List<Student> findByLeftSchoolIsFalse();
+
+    @RestResource(path = "all")
+    List<Guardian> findByDeletedIsFalse();
 }

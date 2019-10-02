@@ -51,15 +51,15 @@ public class GuardianController {
 
     @GetMapping(value = "/isUnique/{cnic}/{id}")
     public Map<String, String> isUniqueAudienceName(@PathVariable(value = "cnic") String cnic,
-                                                    @PathVariable(value = "id") int id) {
+            @PathVariable(value = "id") int id) {
 
         Boolean isAudienceExists = false;
         if (id == 0) {
-            if(guardianRepository.findByCnicWithoutDash(cnic).isPresent()) {
+            if (guardianRepository.findByCnicWithoutDash(cnic).isPresent()) {
                 isAudienceExists = true;
             }
         } else {
-            if(guardianRepository.findByCnicAndIdWithoutDash(cnic,id).isPresent()){
+            if (guardianRepository.findByCnicAndIdWithoutDash(cnic, id).isPresent()) {
                 isAudienceExists = true;
             }
         }
@@ -68,7 +68,6 @@ public class GuardianController {
         response.put("isUnique", String.valueOf(isAudienceExists));
         return response;
     }
-
 
     @PostMapping("/save")
     public void saveGuardian(@RequestBody Guardian guardian) {

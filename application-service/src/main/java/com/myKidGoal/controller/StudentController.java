@@ -5,6 +5,7 @@ import com.myKidGoal.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -22,7 +23,7 @@ public class StudentController {
         Map<String, Object> response = new HashMap<>();
 
         Map<String, Object> res = new HashMap<>();
-        res.put("students", studentRepository.findAll());
+        res.put("students", studentRepository.findByDeletedIsFalse());
 
         response.put("_embedded", res);
 
@@ -42,6 +43,16 @@ public class StudentController {
 
     @PostMapping("/save")
     public void saveStudent(@RequestBody Student student) {
+        studentRepository.save(student);
+    }
+
+    @PutMapping("/update")
+    public void updateStudent(@RequestBody Student student) {
+        if (student.getId() == 0) {
+            throw new EntityNotFoundException(
+                    "Student can't be updated before saving. First save the student and then try updating!");
+        }
+
         studentRepository.save(student);
     }
 

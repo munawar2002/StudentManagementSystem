@@ -61,6 +61,7 @@ public class Student implements Serializable {
     private Integer fakeGrNo;
     private Boolean fixedLateFine;
     private String email;
+    private boolean deleted;
 
     @Id
     @Column(name = "ID_Student")
@@ -364,6 +365,18 @@ public class Student implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Basic
+    @Column(name = "ISDELETED")
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    @Basic
+    @Column(name = "ISDELETED")
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
     }
 
     @Override

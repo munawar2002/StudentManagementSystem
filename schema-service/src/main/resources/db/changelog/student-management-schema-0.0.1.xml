@@ -1325,6 +1325,7 @@
             <column name="FakeGRNo" type="INT"/>
             <column name="IsFixedLateFine" type="${booleanType}"/>
             <column name="email" type="VARCHAR(100)"/>
+            <column name="ISDELETED" type="${booleanType}" defaultValueBoolean="false"/>
         </createTable>
     </changeSet>
 

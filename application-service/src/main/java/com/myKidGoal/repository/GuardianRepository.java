@@ -30,8 +30,7 @@ public interface GuardianRepository extends JpaRepository<Guardian, Integer> {
     Optional<Guardian> findByCnicWithoutDash(@Param("cnic") String cnic);
 
     @Query(name = Guardian.SELECT_BY_NICNO_AND_ID, nativeQuery = true)
-    Optional<Guardian> findByCnicAndIdWithoutDash(@Param("cnic") String cnic,@Param("id") int id);
-
+    Optional<Guardian> findByCnicAndIdWithoutDash(@Param("cnic") String cnic, @Param("id") int id);
 
     @RestResource(path = "all")
     List<Guardian> findByDeletedIsFalse();
