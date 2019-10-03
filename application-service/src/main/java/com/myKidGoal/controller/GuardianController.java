@@ -49,9 +49,9 @@ public class GuardianController {
         }
     }
 
-    @GetMapping(value = "/isUnique/{cnic}/{id}")
-    public Map<String, String> isUniqueAudienceName(@PathVariable(value = "cnic") String cnic,
-            @PathVariable(value = "id") int id) {
+    @GetMapping(value = "/isUnique/cnic/{cnic}/{id}")
+    public Map<String, String> isUniqueCnic(@PathVariable(value = "cnic") String cnic,
+                                                    @PathVariable(value = "id") int id) {
 
         Boolean isAudienceExists = false;
         if (id == 0) {
@@ -60,6 +60,26 @@ public class GuardianController {
             }
         } else {
             if (guardianRepository.findByCnicAndIdWithoutDash(cnic, id).isPresent()) {
+                isAudienceExists = true;
+            }
+        }
+
+        Map<String, String> response = new HashMap<>();
+        response.put("isUnique", String.valueOf(isAudienceExists));
+        return response;
+    }
+
+    @GetMapping(value = "/isUnique/email/{email}/{id}")
+    public Map<String, String> isUniqueEmail(@PathVariable(value = "email") String email,
+                                                    @PathVariable(value = "id") int id) {
+
+        Boolean isAudienceExists = false;
+        if (id == 0) {
+            if (guardianRepository.findByCnicWithoutDash(email).isPresent()) {
+                isAudienceExists = true;
+            }
+        } else {
+            if (guardianRepository.findByCnicAndIdWithoutDash(email, id).isPresent()) {
                 isAudienceExists = true;
             }
         }
