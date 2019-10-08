@@ -30,27 +30,27 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
     @RestResource(exported = false)
     void deleteAll();
 
-    long countByLeftSchoolIsFalse();
+    Long countByLeftSchoolIsFalse();
 
-    long countByDolIsNull();
+    Long countByDolIsNull();
 
     @Query(name = Student.DISCOUNT_COUNT_QUERY, nativeQuery = true)
-    long countStudentDiscount();
+    Long countStudentDiscount();
 
     @Query(name = Student.LEFT_STUDENT_COUNT_QUERY, nativeQuery = true)
-    long countStudentLeftSchool();
+    Long countStudentLeftSchool();
 
     @Query(name = Student.STUDENT_GRADUATED_COUNT_QUERY, nativeQuery = true)
-    long countStudentGraduated();
+    Long countStudentGraduated();
 
     @Query(name = Student.CURRENT_TEACHER_COUNT_QUERY, nativeQuery = true)
-    long countCurrentTeacher();
+    Long countCurrentTeacher();
 
     @Query(name = Student.TOTAL_DEBIT_QUERY, nativeQuery = true)
-    long totalDebit();
+    Long totalDebit();
 
     @Query(name = Student.TOTAL_CREDIT_QUERY, nativeQuery = true)
-    long totalCredit();
+    Long totalCredit();
 
     List<Student> findByLeftSchoolIsFalse();
 
