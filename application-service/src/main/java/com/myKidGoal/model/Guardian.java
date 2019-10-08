@@ -59,6 +59,10 @@ public class Guardian {
     private String address;
 
     @Basic
+    @Column(name = "EMAIL")
+    private String email;
+
+    @Basic
     @Column(name = "ToDate")
     private LocalDate toDate;
 

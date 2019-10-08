@@ -54,7 +54,7 @@ public class Student implements Serializable {
     private String causeOfRemoval;
     private Double discountPercentage;
     private String discountReason;
-    private Integer freeze;
+    private Boolean freeze;
     private Integer boarding;
     private Integer userId;
     private LocalDateTime userTime;
@@ -296,11 +296,11 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "Freeze")
-    public Integer getFreeze() {
+    public Boolean getFreeze() {
         return freeze;
     }
 
-    public void setFreeze(Integer freeze) {
+    public void setFreeze(Boolean freeze) {
         this.freeze = freeze;
     }
 

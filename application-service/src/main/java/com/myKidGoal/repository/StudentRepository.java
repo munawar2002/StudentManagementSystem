@@ -1,13 +1,14 @@
 package com.myKidGoal.repository;
 
-import com.myKidGoal.model.Guardian;
 import com.myKidGoal.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 
 import java.util.List;
+import java.util.Optional;
 
 /*
     The student repository, contains all curd methods. *These methods are also exposed*. You can see all exposed api's to Hal browser
@@ -54,5 +55,8 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
     List<Student> findByLeftSchoolIsFalse();
 
     @RestResource(path = "all")
-    List<Guardian> findByDeletedIsFalse();
+    List<Student> findByDeletedIsFalse();
+
+    Optional<Student> findByEmail(@Param("email") String email);
+    Optional<Student> findByEmailAndId(@Param("email") String email,@Param("id") int id);
 }

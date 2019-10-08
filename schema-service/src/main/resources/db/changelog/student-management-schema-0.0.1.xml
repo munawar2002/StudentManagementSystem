@@ -742,6 +742,7 @@
             <column name="Address" type="VARCHAR(255)"/>
             <column name="ToDate" type="DATE"/>
             <column name="Id_Area" type="INT"/>
+            <column name="email" type="VARCHAR(100)"/>
             <column name="ISDELETED" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
@@ -1318,7 +1319,7 @@
             <column name="CauseOfRemoval" type="VARCHAR(255)"/>
             <column name="DiscountPercentage" type="DOUBLE"/>
             <column name="DiscountReason" type="VARCHAR(255)"/>
-            <column name="Freeze" type="INT"/>
+            <column name="Freeze" type="${booleanType}" defaultValueBoolean="false" />
             <column name="Boarding" type="INT"/>
             <column name="Id_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>

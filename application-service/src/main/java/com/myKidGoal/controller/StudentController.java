@@ -56,4 +56,24 @@ public class StudentController {
         studentRepository.save(student);
     }
 
+    @GetMapping(value = "/isUnique/email/{email}/{id}")
+    public Map<String, String> isUniqueEmail(@PathVariable(value = "email") String email,
+                                             @PathVariable(value = "id") int id) {
+
+        Boolean isEmailExists = false;
+        if (id == 0) {
+            if (studentRepository.findByEmail(email).isPresent()) {
+                isEmailExists = true;
+            }
+        } else {
+            if (studentRepository.findByEmailAndId(email, id).isPresent()) {
+                isEmailExists = true;
+            }
+        }
+
+        Map<String, String> response = new HashMap<>();
+        response.put("isUnique", String.valueOf(isEmailExists));
+        return response;
+    }
+
 }
