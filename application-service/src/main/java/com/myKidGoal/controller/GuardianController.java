@@ -49,7 +49,7 @@ public class GuardianController {
         }
     }
 
-    @GetMapping(value = "/isUnique/cnic/{cnic}/{id}")
+    @GetMapping(value = "/unique/cnic/{cnic}/{id}")
     public Map<String, String> isUniqueCnic(@PathVariable(value = "cnic") String cnic,
             @PathVariable(value = "id") int id) {
 
@@ -69,7 +69,7 @@ public class GuardianController {
         return response;
     }
 
-    @GetMapping(value = "/isUnique/email/{email}/{id}")
+    @GetMapping(value = "/unique/email/{email}/{id}")
     public Map<String, String> isUniqueEmail(@PathVariable(value = "email") String email,
             @PathVariable(value = "id") int id) {
 
