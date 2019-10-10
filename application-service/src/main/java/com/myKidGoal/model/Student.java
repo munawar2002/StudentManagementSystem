@@ -55,7 +55,7 @@ public class Student implements Serializable {
     private Double discountPercentage;
     private String discountReason;
     private Boolean freeze;
-    private Integer boarding;
+    private Boolean boarding;
     private Integer userId;
     private LocalDateTime userTime;
     private Integer fakeGrNo;
@@ -306,11 +306,11 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "Boarding")
-    public Integer getBoarding() {
+    public Boolean getBoarding() {
         return boarding;
     }
 
-    public void setBoarding(Integer boarding) {
+    public void setBoarding(Boolean boarding) {
         this.boarding = boarding;
     }
 
