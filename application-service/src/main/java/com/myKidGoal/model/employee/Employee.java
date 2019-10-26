@@ -26,7 +26,6 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "Isdeleted")
-    @JsonProperty("isDeleted")
     private Boolean deleted;
 
     @Basic
@@ -110,7 +109,6 @@ public class Employee extends BaseEntity {
     private String causeOfLeaving;
 
     @Basic
-    @JsonProperty("ISACTIVE")
     @Column(name = "ISACTIVE")
     private boolean active;
 

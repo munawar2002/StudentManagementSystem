@@ -40,12 +40,10 @@ public class EmployeeJob extends BaseTimeEntity {
     private LocalDate fromDate;
 
     @Basic
-    @JsonProperty("ISACTIVE")
     @Column(name = "ISACTIVE")
     private boolean active;
 
     @Basic
-    @JsonProperty("TAXDEDUCTION")
     @Column(name = "TAXDEDUCTION")
     private boolean taxDeduction;
 

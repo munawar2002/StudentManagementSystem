@@ -31,7 +31,7 @@ public class DepartmentController {
         departmentRepository.save(department);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public void updateDepartment(@RequestBody Department department) {
         if (department.getId() == 0) {
             throw new EntityNotFoundException(

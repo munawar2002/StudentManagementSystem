@@ -31,7 +31,7 @@ public class DesignationController {
         designationRepository.save(designation);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public void updateDesignation(@RequestBody Designation designation) {
         if (designation.getId() == 0) {
             throw new EntityNotFoundException(

@@ -1,7 +1,6 @@
 package com.myKidGoal.model.employee;
 
 import com.myKidGoal.model.BaseEntity;
-import com.myKidGoal.model.Guardian;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -28,5 +27,5 @@ public class Designation extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "ID_Parent")
-    private Guardian parent;
+    private Department parent;
 }
