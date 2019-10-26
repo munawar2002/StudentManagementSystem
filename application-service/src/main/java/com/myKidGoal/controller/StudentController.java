@@ -58,7 +58,7 @@ public class StudentController {
 
     @GetMapping(value = "/isUnique/email/{email}/{id}")
     public Map<String, String> isUniqueEmail(@PathVariable(value = "email") String email,
-                                             @PathVariable(value = "id") int id) {
+            @PathVariable(value = "id") int id) {
 
         Boolean isEmailExists = false;
         if (id == 0) {

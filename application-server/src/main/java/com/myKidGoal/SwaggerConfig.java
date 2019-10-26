@@ -2,6 +2,9 @@ package com.myKidGoal;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
@@ -15,6 +18,7 @@ import java.util.List;
 
 @Configuration
 @EnableSwagger2
+@EnableWebMvc
 public class SwaggerConfig {
 
     @Bean
@@ -31,4 +35,15 @@ public class SwaggerConfig {
                 "termsOfServiceUrl", owner, "license", "licenseUrl", vendorExtensions);
     }
 
+    @Bean
+    public WebMvcConfigurer webMvcConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addResourceHandlers(ResourceHandlerRegistry registry) {
+                registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
+                registry.addResourceHandler("/webjars/**")
+                        .addResourceLocations("classpath:/META-INF/resources/webjars/");
+            }
+        };
+    }
 }

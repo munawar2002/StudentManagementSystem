@@ -58,5 +58,6 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
     List<Student> findByDeletedIsFalse();
 
     Optional<Student> findByEmail(@Param("email") String email);
-    Optional<Student> findByEmailAndId(@Param("email") String email,@Param("id") int id);
+
+    Optional<Student> findByEmailAndId(@Param("email") String email, @Param("id") int id);
 }

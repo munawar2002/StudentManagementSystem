@@ -532,6 +532,8 @@
             <column name="IsLeft" type="${booleanType}"/>
             <column name="DOL" type="DATE"/>
             <column name="CauseOfLeaving" type="VARCHAR(255)"/>
+            <column name="ISDELETED" type="${booleanType}" defaultValueBoolean="false"/>
+            <column name="ISACTIVE" type="${booleanType}" defaultValueBoolean="true"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
@@ -587,8 +589,8 @@
             <column name="ID_Designation" type="INT"/>
             <column name="ID_PayScale" type="INT"/>
             <column name="FromDate" type="DATE"/>
-            <column name="IsActive" type="${booleanType}"/>
-            <column name="TaxDeduction" type="${booleanType}"/>
+            <column name="IsActive" type="${booleanType}" defaultValueBoolean="true"/>
+            <column name="TaxDeduction" type="${booleanType}" defaultValueBoolean="true"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>

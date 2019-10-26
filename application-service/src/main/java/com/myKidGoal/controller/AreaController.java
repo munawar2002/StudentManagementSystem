@@ -30,4 +30,9 @@ public class AreaController {
         areaRepository.save(area);
     }
 
+    @PutMapping("/update")
+    public void updateArea(@RequestBody Area area) {
+        areaRepository.save(area);
+    }
+
 }
