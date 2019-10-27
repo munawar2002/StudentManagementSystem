@@ -512,6 +512,7 @@
             <column name="Id_Employee" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
+            <column name="ISTEACHER" type="${booleanType}"/>
             <column name="Id_Qualification" type="INT"/>
             <column name="ID_Area" type="INT"/>
             <column name="ECode" type="INT"/>
@@ -1209,6 +1210,8 @@
             <column name="Name" type="VARCHAR(50)"/>
             <column name="From" type="DATE"/>
             <column name="To" type="DATE"/>
+            <column name="IsClosed" type="${booleanType}" defaultValueBoolean="false" />
+            <column name="IsFinalized" type="${booleanType}" defaultValueBoolean="false" />
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
@@ -1717,6 +1720,40 @@
             <column name="ID_ExamType"  value="3"/>
             <column name="NAME"  value="Final"/>
             <column name="LEVEL"  value="1"/>
+            <column name="ID_USER"  value="-1"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet author="mykidgoal" id="student-management-schema-0.0.1-117">
+        <insert tableName="DS_QUALIFICATION">
+            <column name="ID_QUALIFICATION"  value="1"/>
+            <column name="NAME"  value="Secondary School Certificate (SSC)"/>
+            <column name="ID_USER"  value="-1"/>
+        </insert>
+        <insert tableName="DS_QUALIFICATION">
+            <column name="ID_QUALIFICATION"  value="2"/>
+            <column name="NAME"  value="Higher Secondary School Certificate (HSSC)"/>
+            <column name="ID_USER"  value="-1"/>
+        </insert>
+        <insert tableName="DS_QUALIFICATION">
+            <column name="ID_QUALIFICATION"  value="3"/>
+            <column name="NAME"  value="Bachelor"/>
+            <column name="ID_USER"  value="-1"/>
+        </insert>
+        <insert tableName="DS_QUALIFICATION">
+            <column name="ID_QUALIFICATION"  value="4"/>
+            <column name="NAME"  value="Master"/>
+            <column name="ID_USER"  value="-1"/>
+        </insert>
+        <insert tableName="DS_QUALIFICATION">
+            <column name="ID_QUALIFICATION"  value="5"/>
+            <column name="NAME"  value="Doctoral"/>
+            <column name="ID_USER"  value="-1"/>
+        </insert>
+        <insert tableName="DS_QUALIFICATION">
+            <column name="ID_QUALIFICATION"  value="6"/>
+            <column name="NAME"  value="Associate Ordinary Bachelor"/>
             <column name="ID_USER"  value="-1"/>
         </insert>
     </changeSet>
