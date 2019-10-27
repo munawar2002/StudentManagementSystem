@@ -1,6 +1,9 @@
 package com.myKidGoal.controller;
 
 import com.myKidGoal.model.notification.Audience;
+import com.myKidGoal.repository.GuardianRepository;
+import com.myKidGoal.repository.StudentRepository;
+import com.myKidGoal.repository.employee.EmployeeRepository;
 import com.myKidGoal.repository.notification.AudienceRepository;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +20,15 @@ public class AudienceController {
 
     @Autowired
     private AudienceRepository audienceRepository;
+
+    @Autowired
+    private EmployeeRepository employeeRepository;
+
+    @Autowired
+    private StudentRepository studentRepository;
+
+    @Autowired
+    private GuardianRepository guardianRepository;
 
     @GetMapping("/search/all")
     public Map<String, Object> allAudiences() {
@@ -80,6 +92,33 @@ public class AudienceController {
 
         Map<String, String> response = new HashMap<>();
         response.put("isUnique", String.valueOf(isAudienceExists));
+        return response;
+    }
+
+    @GetMapping(value = "/all/isUnique/email/{email}")
+    public Map<String, String> isUniqueEmail(@PathVariable(value = "email") String email) {
+
+        int emailCount = 0;
+        if (employeeRepository.findByEmail(email).isPresent()) {
+            emailCount++;
+        }
+
+        if (studentRepository.findByEmail(email).isPresent()) {
+            emailCount++;
+        }
+
+        if (guardianRepository.findByEmail(email).isPresent()) {
+            emailCount++;
+        }
+
+        Map<String, String> response = new HashMap<>();
+
+        if (emailCount > 1) {
+            response.put("isUnique", "false");
+        } else {
+            response.put("isUnique", "true");
+        }
+
         return response;
     }
 

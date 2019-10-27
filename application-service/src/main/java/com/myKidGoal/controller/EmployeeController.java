@@ -86,6 +86,26 @@ public class EmployeeController {
         return response;
     }
 
+    @GetMapping(value = "/isUnique/cnic/{cnic}/{id}")
+    public Map<String, String> isUniqueCnic(@PathVariable(value = "cnic") String cnic,
+            @PathVariable(value = "id") int id) {
+
+        Boolean isCnicExists = false;
+        if (id == 0) {
+            if (employeeRepository.findByNICNo(cnic).isPresent()) {
+                isCnicExists = true;
+            }
+        } else {
+            if (employeeRepository.findByNICNoAndId(cnic, id).isPresent()) {
+                isCnicExists = true;
+            }
+        }
+
+        Map<String, String> response = new HashMap<>();
+        response.put("isUnique", String.valueOf(isCnicExists));
+        return response;
+    }
+
     @GetMapping("{id}/experience/search/all")
     public Map<String, Object> allEmployeeExperience(@PathVariable(value = "id") int id) {
 

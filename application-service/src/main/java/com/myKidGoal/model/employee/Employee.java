@@ -112,4 +112,8 @@ public class Employee extends BaseEntity {
     @Column(name = "ISACTIVE")
     private boolean active;
 
+    @Basic
+    @Column(name = "ISTEACHER")
+    private Boolean isTeacher;
+
 }

@@ -26,4 +26,12 @@ public class Session extends BaseEntity {
     @Basic
     @Column(name = "To")
     private LocalDate to;
+
+    @Basic
+    @Column(name = "ISCLOSED")
+    private boolean isClosed;
+
+    @Basic
+    @Column(name = "ISFINALIZED")
+    private boolean isFinalized;
 }
