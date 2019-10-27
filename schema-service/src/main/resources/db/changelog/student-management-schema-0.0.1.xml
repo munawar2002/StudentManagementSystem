@@ -1723,5 +1723,5 @@
             <column name="ID_USER"  value="-1"/>
         </insert>
     </changeSet>
-    
+
 </databaseChangeLog>
