@@ -26,7 +26,7 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "Isdeleted")
-    private Boolean deleted;
+    private boolean deleted;
 
     @Basic
     @Column(name = "Id_Qualification")
@@ -114,6 +114,6 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "ISTEACHER")
-    private Boolean isTeacher;
+    private boolean isTeacher;
 
 }

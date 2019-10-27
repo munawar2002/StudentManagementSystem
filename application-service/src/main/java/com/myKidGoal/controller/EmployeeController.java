@@ -52,8 +52,8 @@ public class EmployeeController {
     }
 
     @PostMapping("/save")
-    public void saveEmployee(@RequestBody Employee employee) {
-        employeeRepository.save(employee);
+    public Employee saveEmployee(@RequestBody Employee employee) {
+        return employeeRepository.save(employee);
     }
 
     @PutMapping("/update")
