@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Table(name = "DS_EMPLOYEE")
@@ -28,13 +28,13 @@ public class Employee extends BaseEntity {
     @Column(name = "Isdeleted")
     private boolean deleted;
 
-    @Basic
-    @Column(name = "Id_Qualification")
-    private Integer qualificationId;
+    @ManyToOne
+    @JoinColumn(name = "Id_Qualification")
+    private Qualification qualification;
 
     @ManyToOne
     @JoinColumn(name = "Id_Area")
-    private Area area;
+    private Area areas;
 
     @Basic
     @Column(name = "ECode")
@@ -60,7 +60,7 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "NICEXPIREDON")
-    private LocalDate nICExpiredOn;
+    private Date nICExpiredOn;
 
     @Basic
     @Column(name = "CONTACT1")
@@ -89,11 +89,11 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "DOJ")
-    private LocalDate doj;
+    private Date doj;
 
     @Basic
     @Column(name = "DOB")
-    private LocalDate dob;
+    private Date dob;
 
     @Basic
     @Column(name = "ISLEFT")
@@ -102,7 +102,7 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "DOL")
-    private LocalDate dol;
+    private Date dol;
 
     @Basic
     @Column(name = "CAUSEOFLEAVING")
@@ -114,6 +114,7 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "ISTEACHER")
-    private boolean isTeacher;
+    @JsonProperty("ISTEACHER")
+    private Boolean isTeacher;
 
 }
