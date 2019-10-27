@@ -1,6 +1,5 @@
 package com.myKidGoal.model.employee;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.myKidGoal.model.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
