@@ -1,5 +1,6 @@
 package com.myKidGoal.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -64,6 +65,7 @@ public class Guardian {
 
     @Basic
     @Column(name = "ToDate")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate toDate;
 
     @Basic
@@ -72,6 +74,7 @@ public class Guardian {
 
     @Basic
     @Column(name = "UserTime")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime userTime;
 
     @Basic

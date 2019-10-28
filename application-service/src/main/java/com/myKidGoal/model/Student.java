@@ -1,5 +1,6 @@
 package com.myKidGoal.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
@@ -167,6 +168,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "RegDate")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     public LocalDate getRegDate() {
         return regDate;
     }
@@ -223,6 +225,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "DOB")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     public LocalDate getDob() {
         return dob;
     }
@@ -233,6 +236,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "DOA")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     public LocalDate getDoa() {
         return doa;
     }
@@ -243,6 +247,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "DOL")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     public LocalDate getDol() {
         return dol;
     }
@@ -326,6 +331,7 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "UserTime")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     public LocalDateTime getUserTime() {
         return userTime;
     }

@@ -1,5 +1,6 @@
 package com.myKidGoal.model.examination;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.myKidGoal.model.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -37,6 +38,7 @@ public class Test extends BaseTimeEntity {
 
     @Basic
     @Column(name = "Date")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
 
     @JoinColumn(name = "Id_Subject")

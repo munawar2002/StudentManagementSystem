@@ -1,5 +1,6 @@
 package com.myKidGoal.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.myKidGoal.model.examination.Session;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,10 +32,12 @@ public class StudentSection extends BaseTimeEntity {
 
     @Basic
     @Column(name = "TransferDate")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate transferDate;
 
     @Basic
     @Column(name = "ToDate")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate toDate;
 
     @ManyToOne

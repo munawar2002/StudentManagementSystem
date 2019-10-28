@@ -1,5 +1,6 @@
 package com.myKidGoal.model.employee;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.myKidGoal.model.Area;
 import com.myKidGoal.model.BaseEntity;
@@ -9,7 +10,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "DS_EMPLOYEE")
@@ -42,12 +43,12 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "ISMALE")
-    @JsonProperty("ISMALE")
+    @JsonProperty("isMale")
     private Boolean male;
 
     @Basic
     @Column(name = "ISMARRIED")
-    @JsonProperty("ISMARRIED")
+    @JsonProperty("isMarried")
     private Boolean isMarried;
 
     @Basic
@@ -60,7 +61,8 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "NICEXPIREDON")
-    private Date nICExpiredOn;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate nicExpiredOn;
 
     @Basic
     @Column(name = "CONTACT1")
@@ -84,25 +86,28 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "ONPROBATION")
-    @JsonProperty("ONPROBATION")
-    private Boolean OnProbation;
+    @JsonProperty("onProbation")
+    private Boolean onProbation;
 
     @Basic
     @Column(name = "DOJ")
-    private Date doj;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate doj;
 
     @Basic
     @Column(name = "DOB")
-    private Date dob;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate dob;
 
     @Basic
     @Column(name = "ISLEFT")
-    @JsonProperty("ISLEFT")
+    @JsonProperty("isLeft")
     private Boolean isLeft;
 
     @Basic
     @Column(name = "DOL")
-    private Date dol;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate dol;
 
     @Basic
     @Column(name = "CAUSEOFLEAVING")
@@ -114,7 +119,7 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "ISTEACHER")
-    @JsonProperty("ISTEACHER")
+    @JsonProperty("isTeacher")
     private Boolean isTeacher;
 
 }

@@ -54,10 +54,10 @@ public class SessionController {
 
         Optional<Session> optionalSession = sessionRepository.findById(session.getId());
 
-        if (optionalSession.isPresent() ) {
+        if (optionalSession.isPresent()) {
             session = optionalSession.get();
-            if(session.isDeleted()){
-                throw new RuntimeException("Deleted session ["+session.getName()+"] can't be updated.");
+            if (session.isDeleted()) {
+                throw new RuntimeException("Deleted session [" + session.getName() + "] can't be updated.");
             }
         }
 

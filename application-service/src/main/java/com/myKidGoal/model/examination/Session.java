@@ -1,5 +1,6 @@
 package com.myKidGoal.model.examination;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.myKidGoal.model.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,10 +22,12 @@ public class Session extends BaseEntity {
 
     @Basic
     @Column(name = "From")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate from;
 
     @Basic
     @Column(name = "To")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate to;
 
     @Basic
