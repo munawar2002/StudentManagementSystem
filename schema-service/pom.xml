@@ -63,6 +63,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>sql-maven-plugin</artifactId>
+                <version>1.5</version>
                 <dependencies>
                     <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
                     <dependency>
@@ -99,6 +100,7 @@
             <plugin>
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-maven-plugin</artifactId>
+                <version>3.6.2</version>
                 <configuration>
                     <driver>${test.db.driver}</driver>
                     <url>${test.db.url}?useSSL=true</url>
