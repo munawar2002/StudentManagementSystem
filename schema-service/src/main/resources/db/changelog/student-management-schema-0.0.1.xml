@@ -1212,6 +1212,7 @@
             <column name="To" type="DATE"/>
             <column name="IsClosed" type="${booleanType}" defaultValueBoolean="false" />
             <column name="IsFinalized" type="${booleanType}" defaultValueBoolean="false" />
+            <column name="ISDELETED" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>

@@ -34,4 +34,8 @@ public class Session extends BaseEntity {
     @Basic
     @Column(name = "ISFINALIZED")
     private boolean isFinalized;
+
+    @Basic
+    @Column(name = "ISDELETED")
+    private boolean deleted;
 }
