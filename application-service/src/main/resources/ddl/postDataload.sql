@@ -10,7 +10,7 @@ UPDATE ds_guardian SET id_area =9 WHERE id_area IN (2017,2016,2015,2014,2013,201
 UPDATE ds_area SET usertime = '2018-02-09 10:21:29' WHERE usertime = '0000-00-00 00:00:00';
 UPDATE ds_profession SET usertime = '2018-02-09 10:21:29' WHERE usertime = '0000-00-00 00:00:00';
 UPDATE ds_GUARDIAN SET NICNO = SUBSTRING(NICNO,1,15) WHERE LENGTH(NICNO) > 20;
-UPDATE ds_employee SET usertime = '2018-02-09 10:21:29' and dol=null WHERE usertime = '0000-00-00 00:00:00';
+UPDATE ds_employee SET usertime = '2018-02-09 10:21:29' , dol=NULL WHERE usertime = '0000-00-00 00:00:00';
 
 COMMIT;
 
