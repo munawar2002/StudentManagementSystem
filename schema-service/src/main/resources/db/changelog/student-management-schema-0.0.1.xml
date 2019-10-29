@@ -530,6 +530,7 @@
             <column name="OnProbation" type="${booleanType}"/>
             <column name="DOJ" type="DATE"/>
             <column name="DOB" type="DATE"/>
+            <column name="DOP" type="DATE"/>
             <column name="IsLeft" type="${booleanType}"/>
             <column name="DOL" type="DATE"/>
             <column name="CauseOfLeaving" type="VARCHAR(255)"/>

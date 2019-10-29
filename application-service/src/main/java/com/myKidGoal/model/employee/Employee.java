@@ -100,6 +100,11 @@ public class Employee extends BaseEntity {
     private LocalDate dob;
 
     @Basic
+    @Column(name = "DOP")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate dop;
+
+    @Basic
     @Column(name = "ISLEFT")
     @JsonProperty("isLeft")
     private Boolean isLeft;
