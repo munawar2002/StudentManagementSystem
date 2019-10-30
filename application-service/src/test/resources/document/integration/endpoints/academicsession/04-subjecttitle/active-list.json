@@ -1,0 +1,26 @@
+{
+    "_embedded": {
+        "subjecttitles": [
+            {
+                "id" : 1,
+                "title" : "English",
+                "userId" : null,
+                "userTime" : null,
+                "short" : "KI",
+                "color" : "RED",
+                "active": true,
+                "delete":false
+            },
+			{
+                "id" : 1,
+                "title" : "Mathematics",
+                "userId" : null,
+                "userTime" : null,
+                "short" : "Math",
+                "color" : "RED",
+                "active": true,
+                "delete":false
+            }
+        ]
+    }
+}
