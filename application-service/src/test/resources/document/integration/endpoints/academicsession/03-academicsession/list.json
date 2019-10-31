@@ -1,0 +1,301 @@
+{
+    "_embedded": {
+        "academicsession": [{
+            "sessioninfo": {
+                "name": "Session 2018-2019",
+                "startPeriod": "2012-12-18T02:52:40",
+                "endPeriod": "2012-12-18T02:52:40",
+                "active": true,
+                "deleted": false,
+                "category": [
+                    {
+                        "name": "Junior 1",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:25",
+                        "id": 1,
+                        "orderNo": 1,
+                        "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                        "shortAccount": "J.1",
+                        "code": 2
+                    },
+                    {
+                        "name": "Johar",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:25",
+                        "id": 2,
+                        "orderNo": 3,
+                        "bankAccount": "             UNITED BANK LIMITED                              (All Branches in Karachi & Hyderabad)                             Collection AC # 219692562",
+                        "shortAccount": "JH1",
+                        "code": 0
+                    },
+                    {
+                        "name": "Nazimabad Branch",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:25",
+                        "id": 3,
+                        "orderNo": 7,
+                        "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                        "shortAccount": "NZB",
+                        "code": 2
+                    },
+                    {
+                        "name": "Hyderabad Sr",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:25",
+                        "id": 4,
+                        "orderNo": 13,
+                        "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                        "shortAccount": "H.S",
+                        "code": 1
+                    },
+                    {
+                        "name": "Junior 2",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:25",
+                        "id": 5,
+                        "orderNo": 2,
+                        "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                        "shortAccount": "J.2",
+                        "code": 2
+                    },
+                    {
+                        "name": "Senior Girls ",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:25",
+                        "id": 6,
+                        "orderNo": 8,
+                        "bankAccount": "          Askari Bank Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC# 2330100000342",
+                        "shortAccount": "S.G",
+                        "code": 1
+                    },
+                    {
+                        "name": "Hyderabad Jr",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:25",
+                        "id": 7,
+                        "orderNo": 12,
+                        "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                        "shortAccount": "H.J",
+                        "code": 1
+                    },
+                    {
+                        "name": "A Level",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:26",
+                        "id": 8,
+                        "orderNo": 10,
+                        "bankAccount": "          Askari Bank Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC# 2330100000342",
+                        "shortAccount": "A.L",
+                        "code": 1
+                    },
+                    {
+                        "name": "Senior Boys ",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:26",
+                        "id": 9,
+                        "orderNo": 9,
+                        "bankAccount": "          Askari Bank Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC# 2330100000342",
+                        "shortAccount": "S.B",
+                        "code": 1
+                    },
+                    {
+                        "name": "Kindergarten",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:26",
+                        "id": 10,
+                        "orderNo": 6,
+                        "bankAccount": "             UNITED BANK LIMITED                              (All Branches in Karachi & Hyderabad)                             Collection AC # 219692562",
+                        "shortAccount": "KGT",
+                        "code": 0
+                    },
+                    {
+                        "name": "Prep",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:26",
+                        "id": 11,
+                        "orderNo": 5,
+                        "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                        "shortAccount": "PRP",
+                        "code": 1
+                    },
+                    {
+                        "name": "Johar 2",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:26",
+                        "id": 12,
+                        "orderNo": 4,
+                        "bankAccount": "             UNITED BANK LIMITED                              (All Branches in Karachi & Hyderabad)                             Collection AC # 219692562",
+                        "shortAccount": "JH2",
+                        "code": 0
+                    },
+                    {
+                        "name": "Matric Khi",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:26",
+                        "id": 13,
+                        "orderNo": 11,
+                        "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                        "shortAccount": "MKH",
+                        "code": 2
+                    },
+                    {
+                        "name": "JOHAR CAMPUS 2",
+                        "userId": 7,
+                        "userTime": "2013-02-06T14:35:23",
+                        "id": 14,
+                        "orderNo": 14,
+                        "bankAccount": "             UNITED BANK LIMITED                              (All Branches in Karachi & Hyderabad)                             Collection AC # 219692562",
+                        "shortAccount": "JR2",
+                        "code": 0
+                    },
+                    {
+                        "name": "Dummy Bank",
+                        "userId": 7,
+                        "userTime": "2013-02-06T14:35:23",
+                        "id": 15,
+                        "orderNo": 14,
+                        "bankAccount": "DummyBank",
+                        "shortAccount": "DUM",
+                        "code": 0
+                    }
+                ],
+                "isExecuted":false,
+                "status":"Executed"
+            },
+            "exam": [
+                {
+                    "name": "First Assessment",
+                    "type": "Assessment",
+                    "remarks": "",
+                    "description": ""
+                },
+                {
+                    "name": "Second Assessment",
+                    "type": "Assessment",
+                    "remarks": "",
+                    "description": ""
+                },
+                {
+                    "name": "Mid Term 1",
+                    "type": "Mid",
+                    "remarks": "",
+                    "description": ""
+                },
+                {
+                    "name": "Final Examination",
+                    "type": "Final",
+                    "remarks": "",
+                    "description": ""
+                }
+            ],
+            "subject": [
+                {
+                    "Junior 1": [
+                        {
+                            "category": {
+                                "name": "Junior 1",
+                                "userId": 7,
+                                "userTime": "2012-12-18T02:57:25",
+                                "id": 1,
+                                "orderNo": 1,
+                                "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                                "shortAccount": "J.1",
+                                "code": 2
+                            },
+                            "classes": {
+                                "id": 1,
+                                "category": {
+                                    "id": 1,
+                                    "name": "A Level",
+                                    "orderNo": "0001",
+                                    "user": null,
+                                    "userTime": null,
+                                    "bankAccount": null,
+                                    "short": "A1",
+                                    "code": 1
+                                },
+                                "name": "VII",
+                                "deleted": false,
+                                "user": null,
+                                "userTime": null,
+                                "level": 1
+                            },
+                            "subjectTitle": [
+                                {
+                                    "id": 1,
+                                    "title": "Mathematics",
+                                    "userId": null,
+                                    "userTime": null,
+                                    "color": "RED",
+                                    "isActive": true
+                                },
+                                {
+                                    "id": 1,
+                                    "title": "English",
+                                    "userId": null,
+                                    "userTime": null,
+                                    "color": "RED",
+                                    "isActive": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "assessmentschedule": [
+                {
+                    "Junior 1": [
+                        {
+                            "category": {
+                                "name": "Junior 1",
+                                "userId": 7,
+                                "userTime": "2012-12-18T02:57:25",
+                                "id": 1,
+                                "orderNo": 1,
+                                "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                                "shortAccount": "J.1",
+                                "code": 2
+                            },
+                            "classes": {
+                                "id": 1,
+                                "category": {
+                                    "id": 1,
+                                    "name": "A Level",
+                                    "orderNo": "0001",
+                                    "user": null,
+                                    "userTime": null,
+                                    "bankAccount": null,
+                                    "short": "A1",
+                                    "code": 1
+                                },
+                                "name": "VII",
+                                "deleted": false,
+                                "user": null,
+                                "userTime": null,
+                                "level": 1
+                            },
+                            "subjectTitle": [
+                                {
+                                    "id": 1,
+                                    "title": "Mathematics",
+                                    "userId": null,
+                                    "userTime": null,
+                                    "color": "RED",
+                                    "isActive": true
+                                },
+                                {
+                                    "id": 1,
+                                    "title": "English",
+                                    "userId": null,
+                                    "userTime": null,
+                                    "color": "RED",
+                                    "isActive": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }]
+    }
+}
