@@ -267,16 +267,50 @@
                 "description": ""
             },
             "courses": {
-                "isExtraActivity": false,
-                "active": true,
-                "subjectTitle": {
+                "category": {
+                    "name": "Junior 1",
+                    "userId": 7,
+                    "userTime": "2012-12-18T02:57:25",
                     "id": 1,
-                    "title": "Mathematics",
+                    "orderNo": 1,
+                    "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                    "shortAccount": "J.1",
+                    "code": 2
+                },
+                "classes": {
+                    "id": 1,
+                    "category": null,
+                    "name": "VII",
                     "userId": null,
                     "userTime": null,
-                    "color": "RED",
-                    "isActive": true
-                }
+                    "level": 1
+                },
+                "subjects": [
+                    {
+                        "isExtraActivity": false,
+                        "active": true,
+                        "subjectTitle": {
+                            "id": 1,
+                            "title": "Mathematics",
+                            "userId": null,
+                            "userTime": null,
+                            "color": "RED",
+                            "isActive": true
+                        }
+                    },
+                    {
+                        "isExtraActivity": false,
+                        "active": true,
+                        "subjectTitle": {
+                            "id": 1,
+                            "title": "English",
+                            "userId": null,
+                            "userTime": null,
+                            "color": "RED",
+                            "isActive": true
+                        }
+                    }
+                ]
             },
             "examDate": "2012-12-18T02:57:25",
             "maxMarks":50,
