@@ -161,33 +161,37 @@
         "isExecuted": false,
         "status": "Executed"
     },
-    "assessment": [
+    "assessments": [
         {
+            "id": 1,
             "name": "First Assessment",
             "type": "Assessment",
             "remarks": "",
             "description": ""
         },
         {
+            "id": 2,
             "name": "Second Assessment",
             "type": "Assessment",
             "remarks": "",
             "description": ""
         },
         {
+            "id": 3,
             "name": "Mid Term 1",
             "type": "Mid",
             "remarks": "",
             "description": ""
         },
         {
+            "id": 4,
             "name": "Final Examination",
             "type": "Final",
             "remarks": "",
             "description": ""
         }
     ],
-    "subject": [
+    "courses": [
         {
             "category": {
                 "name": "Junior 1",
@@ -201,43 +205,41 @@
             },
             "classes": {
                 "id": 1,
-                "category": {
-                    "id": 1,
-                    "name": "A Level",
-                    "orderNo": "0001",
-                    "user": null,
-                    "userTime": null,
-                    "bankAccount": null,
-                    "short": "A1",
-                    "code": 1
-                },
+                "category": null,
                 "name": "VII",
-                "deleted": false,
-                "user": null,
+                "userId": null,
                 "userTime": null,
                 "level": 1
             },
-            "subjectTitle": [
+            "subjects": [
                 {
-                    "id": 1,
-                    "title": "Mathematics",
-                    "userId": null,
-                    "userTime": null,
-                    "color": "RED",
-                    "isActive": true
+                    "isExtraActivity": false,
+                    "active": true,
+                    "subjectTitle": {
+                        "id": 1,
+                        "title": "Mathematics",
+                        "userId": null,
+                        "userTime": null,
+                        "color": "RED",
+                        "isActive": true
+                    }
                 },
                 {
-                    "id": 1,
-                    "title": "English",
-                    "userId": null,
-                    "userTime": null,
-                    "color": "RED",
-                    "isActive": true
+                    "isExtraActivity": false,
+                    "active": true,
+                    "subjectTitle": {
+                        "id": 1,
+                        "title": "English",
+                        "userId": null,
+                        "userTime": null,
+                        "color": "RED",
+                        "isActive": true
+                    }
                 }
             ]
         }
     ],
-    "assessmentschedule": [
+    "assessmentschedules": [
         {
             "category": {
                 "name": "Junior 1",
@@ -251,40 +253,34 @@
             },
             "classes": {
                 "id": 1,
-                "category": {
-                    "id": 1,
-                    "name": "A Level",
-                    "orderNo": "0001",
-                    "user": null,
-                    "userTime": null,
-                    "bankAccount": null,
-                    "short": "A1",
-                    "code": 1
-                },
+                "category": null,
                 "name": "VII",
-                "deleted": false,
-                "user": null,
+                "userId": null,
                 "userTime": null,
                 "level": 1
             },
-            "subjectTitle": [
-                {
+            "assessments" : {
+                "id": 1,
+                "name": "First Assessment",
+                "type": "Assessment",
+                "remarks": "",
+                "description": ""
+            },
+            "courses": {
+                "isExtraActivity": false,
+                "active": true,
+                "subjectTitle": {
                     "id": 1,
                     "title": "Mathematics",
                     "userId": null,
                     "userTime": null,
                     "color": "RED",
                     "isActive": true
-                },
-                {
-                    "id": 1,
-                    "title": "English",
-                    "userId": null,
-                    "userTime": null,
-                    "color": "RED",
-                    "isActive": true
                 }
-            ]
+            },
+            "examDate": "2012-12-18T02:57:25",
+            "maxMarks":50,
+            "minMarks":20
         }
     ]
 }
