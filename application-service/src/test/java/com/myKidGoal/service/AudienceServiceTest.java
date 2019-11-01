@@ -58,19 +58,19 @@ public class AudienceServiceTest {
     public void studentAudienceTest() {
 
         Optional<Audience> audience = audienceRepository.findById(1);
-        List<Student> students = audienceService.getStudentAudience(audience.get());
+        List<Student> students = audienceService.getStudentAudience(audience.orElse(null));
         Assert.assertEquals(9, students.size());
 
         audience = audienceRepository.findById(2);
-        students = audienceService.getStudentAudience(audience.get());
+        students = audienceService.getStudentAudience(audience.orElse(null));
         Assert.assertEquals(5, students.size());
 
         audience = audienceRepository.findById(3);
-        students = audienceService.getStudentAudience(audience.get());
+        students = audienceService.getStudentAudience(audience.orElse(null));
         Assert.assertEquals(3, students.size());
 
         audience = audienceRepository.findById(4);
-        students = audienceService.getStudentAudience(audience.get());
+        students = audienceService.getStudentAudience(audience.orElse(null));
         Assert.assertEquals(2, students.size());
     }
 
@@ -82,15 +82,15 @@ public class AudienceServiceTest {
         Assert.assertEquals(9, guardians.size());
 
         audience = audienceRepository.findById(2);
-        guardians = audienceService.getStudentGuardianAudience(audience.get());
+        guardians = audienceService.getStudentGuardianAudience(audience.orElse(null));
         Assert.assertEquals(5, guardians.size());
 
         audience = audienceRepository.findById(3);
-        guardians = audienceService.getStudentGuardianAudience(audience.get());
+        guardians = audienceService.getStudentGuardianAudience(audience.orElse(null));
         Assert.assertEquals(3, guardians.size());
 
         audience = audienceRepository.findById(4);
-        guardians = audienceService.getStudentGuardianAudience(audience.get());
+        guardians = audienceService.getStudentGuardianAudience(audience.orElse(null));
         Assert.assertEquals(2, guardians.size());
 
     }
@@ -101,7 +101,7 @@ public class AudienceServiceTest {
         Optional<Audience> audience = audienceRepository.findById(2);
 
         Notification notification = new Notification();
-        notification.setAudience(audience.get());
+        notification.setAudience(audience.orElse(null));
         notification.setEffectiveDate(LocalDate.now());
         notification.setExpiryDate(LocalDate.now());
         notification.setMessage("Sending message to students");
@@ -125,7 +125,7 @@ public class AudienceServiceTest {
         Optional<Audience> audience = audienceRepository.findById(2);
 
         Notification notification = new Notification();
-        notification.setAudience(audience.get());
+        notification.setAudience(audience.orElse(null));
         notification.setEffectiveDate(LocalDate.now());
         notification.setExpiryDate(LocalDate.now());
         notification.setMessage("Sending message to students");

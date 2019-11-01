@@ -4,6 +4,7 @@ import com.myKidGoal.model.BaseTimeEntity;
 import com.myKidGoal.model.Class;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 public class Subject extends BaseTimeEntity {
 
     @Id

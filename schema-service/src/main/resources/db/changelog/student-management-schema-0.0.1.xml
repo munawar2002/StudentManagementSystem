@@ -675,7 +675,8 @@
             </column>
             <column name="Id_ExamType" type="INT"/>
             <column name="Name" type="VARCHAR(50)"/>
-            <column name="IsActive" type="${booleanType}"/>
+            <column name="IsActive" type="${booleanType}" defaultValueBoolean="true"/>
+            <column name="IsDeleted" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
@@ -688,6 +689,8 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="Level" type="INT"/>
+            <column name="IsActive" type="${booleanType}" defaultValueBoolean="true"/>
+            <column name="IsDeleted" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>

@@ -3,6 +3,7 @@ package com.myKidGoal.model.examination;
 import com.myKidGoal.model.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 public class ExamType extends BaseEntity {
 
     @Id
@@ -21,5 +23,13 @@ public class ExamType extends BaseEntity {
     @Basic
     @Column(name = "Level")
     private Integer level;
+
+    @Basic
+    @Column(name = "ISACTIVE")
+    private boolean active;
+
+    @Basic
+    @Column(name = "ISDELETED")
+    private boolean deleted;
 
 }

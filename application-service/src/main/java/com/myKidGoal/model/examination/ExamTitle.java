@@ -3,6 +3,7 @@ package com.myKidGoal.model.examination;
 import com.myKidGoal.model.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 public class ExamTitle extends BaseEntity {
 
     @Id
@@ -19,8 +21,12 @@ public class ExamTitle extends BaseEntity {
     private Integer id;
 
     @Basic
-    @Column(name = "IsActive")
+    @Column(name = "ISACTIVE")
     private boolean active;
+
+    @Basic
+    @Column(name = "ISDELETED")
+    private boolean deleted;
 
     @JoinColumn(name = "Id_ExamType")
     @ManyToOne
