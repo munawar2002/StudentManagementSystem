@@ -2,10 +2,11 @@
     "_embedded": {
         "academicsession": [
             {
+
                 "id": 1,
                 "name": "Session 2018-2019",
-                "startPeriod": "2012-12-18T02:52:40",
-                "endPeriod": "2012-12-18T02:52:40",
+                "from": "2012-12-18T02:52:40",
+                "to": "2012-12-18T02:52:40",
                 "active": true,
                 "deleted": false,
                 "category": [
@@ -162,38 +163,113 @@
                 ],
                 "isExecuted": false,
                 "status": "Executed",
-                "assessments": [
-                    {
+            
+            "assessments": [
+                {
+                    "id": 1,
+                    "name": "First Assessment",
+                    "type": "Assessment",
+                    "remarks": "",
+                    "description": ""
+                },
+                {
+                    "id": 2,
+                    "name": "Second Assessment",
+                    "type": "Assessment",
+                    "remarks": "",
+                    "description": ""
+                },
+                {
+                    "id": 3,
+                    "name": "Mid Term 1",
+                    "type": "Mid",
+                    "remarks": "",
+                    "description": ""
+                },
+                {
+                    "id": 4,
+                    "name": "Final Examination",
+                    "type": "Final",
+                    "remarks": "",
+                    "description": ""
+                }
+            ],
+            "courses": [
+                {
+                    "category": {
+                        "name": "Junior 1",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:25",
+                        "id": 1,
+                        "orderNo": 1,
+                        "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                        "shortAccount": "J.1",
+                        "code": 2
+                    },
+                    "classes": {
+                        "id": 1,
+                        "category": null,
+                        "name": "VII",
+                        "userId": null,
+                        "userTime": null,
+                        "level": 1
+                    },
+                    "subjects": [
+                        {
+                            "isExtraActivity": false,
+                            "active": true,
+                            "subjectTitle": {
+                                "id": 1,
+                                "title": "Mathematics",
+                                "userId": null,
+                                "userTime": null,
+                                "color": "RED",
+                                "isActive": true
+                            }
+                        },
+                        {
+                            "isExtraActivity": false,
+                            "active": true,
+                            "subjectTitle": {
+                                "id": 1,
+                                "title": "English",
+                                "userId": null,
+                                "userTime": null,
+                                "color": "RED",
+                                "isActive": true
+                            }
+                        }
+                    ]
+                }
+            ],
+            "assessmentschedules": [
+                {
+                    "category": {
+                        "name": "Junior 1",
+                        "userId": 7,
+                        "userTime": "2012-12-18T02:57:25",
+                        "id": 1,
+                        "orderNo": 1,
+                        "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
+                        "shortAccount": "J.1",
+                        "code": 2
+                    },
+                    "classes": {
+                        "id": 1,
+                        "category": null,
+                        "name": "VII",
+                        "userId": null,
+                        "userTime": null,
+                        "level": 1
+                    },
+                    "assessments" : {
                         "id": 1,
                         "name": "First Assessment",
                         "type": "Assessment",
                         "remarks": "",
                         "description": ""
                     },
-                    {
-                        "id": 2,
-                        "name": "Second Assessment",
-                        "type": "Assessment",
-                        "remarks": "",
-                        "description": ""
-                    },
-                    {
-                        "id": 3,
-                        "name": "Mid Term 1",
-                        "type": "Mid",
-                        "remarks": "",
-                        "description": ""
-                    },
-                    {
-                        "id": 4,
-                        "name": "Final Examination",
-                        "type": "Final",
-                        "remarks": "",
-                        "description": ""
-                    }
-                ],
-                "courses": [
-                    {
+                    "courses": {
                         "category": {
                             "name": "Junior 1",
                             "userId": 7,
@@ -238,86 +314,12 @@
                                 }
                             }
                         ]
-                    }
-                ],
-                "assessmentschedules": [
-                    {
-                        "category": {
-                            "name": "Junior 1",
-                            "userId": 7,
-                            "userTime": "2012-12-18T02:57:25",
-                            "id": 1,
-                            "orderNo": 1,
-                            "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
-                            "shortAccount": "J.1",
-                            "code": 2
-                        },
-                        "classes": {
-                            "id": 1,
-                            "category": null,
-                            "name": "VII",
-                            "userId": null,
-                            "userTime": null,
-                            "level": 1
-                        },
-                        "assessments": {
-                            "id": 1,
-                            "name": "First Assessment",
-                            "type": "Assessment",
-                            "remarks": "",
-                            "description": ""
-                        },
-                        "courses": {
-                            "category": {
-                                "name": "Junior 1",
-                                "userId": 7,
-                                "userTime": "2012-12-18T02:57:25",
-                                "id": 1,
-                                "orderNo": 1,
-                                "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
-                                "shortAccount": "J.1",
-                                "code": 2
-                            },
-                            "classes": {
-                                "id": 1,
-                                "category": null,
-                                "name": "VII",
-                                "userId": null,
-                                "userTime": null,
-                                "level": 1
-                            },
-                            "subjects": [
-                                {
-                                    "isExtraActivity": false,
-                                    "active": true,
-                                    "subjectTitle": {
-                                        "id": 1,
-                                        "title": "Mathematics",
-                                        "userId": null,
-                                        "userTime": null,
-                                        "color": "RED",
-                                        "isActive": true
-                                    }
-                                },
-                                {
-                                    "isExtraActivity": false,
-                                    "active": true,
-                                    "subjectTitle": {
-                                        "id": 1,
-                                        "title": "English",
-                                        "userId": null,
-                                        "userTime": null,
-                                        "color": "RED",
-                                        "isActive": true
-                                    }
-                                }
-                            ]
-                        },
-                        "examDate": "2012-12-18T02:57:25",
-                        "maxMarks": 50,
-                        "minMarks": 20
-                    }
-                ]
+                    },
+                    "examDate": "2012-12-18T02:57:25",
+                    "maxMarks":50,
+                    "minMarks":20
+                }
+            ]
             }
         ]
     }
