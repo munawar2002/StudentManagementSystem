@@ -3,6 +3,7 @@ package com.myKidGoal.model.notification;
 import com.myKidGoal.model.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 public class NotificationDetail extends BaseTimeEntity {
 
     @Id

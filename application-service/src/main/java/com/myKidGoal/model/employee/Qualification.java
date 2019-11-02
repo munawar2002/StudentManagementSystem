@@ -3,6 +3,7 @@ package com.myKidGoal.model.employee;
 import com.myKidGoal.model.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 public class Qualification extends BaseEntity {
 
     @Id

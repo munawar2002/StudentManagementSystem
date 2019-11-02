@@ -675,7 +675,8 @@
             </column>
             <column name="Id_ExamType" type="INT"/>
             <column name="Name" type="VARCHAR(50)"/>
-            <column name="IsActive" type="${booleanType}"/>
+            <column name="IsActive" type="${booleanType}" defaultValueBoolean="true"/>
+            <column name="IsDeleted" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
@@ -688,6 +689,8 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="Level" type="INT"/>
+            <column name="IsActive" type="${booleanType}" defaultValueBoolean="true"/>
+            <column name="IsDeleted" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
@@ -1211,8 +1214,9 @@
             <column name="Name" type="VARCHAR(50)"/>
             <column name="From" type="DATE"/>
             <column name="To" type="DATE"/>
-            <column name="IsClosed" type="${booleanType}" defaultValueBoolean="false" />
-            <column name="IsFinalized" type="${booleanType}" defaultValueBoolean="false" />
+            <column name="Status" type="VARCHAR(50)"/>
+            <column name="IsExecuted" type="${booleanType}" defaultValueBoolean="false" />
+            <column name="IsActive" type="${booleanType}" defaultValueBoolean="true" />
             <column name="ISDELETED" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
@@ -1724,6 +1728,19 @@
             <column name="LEVEL"  value="1"/>
             <column name="ID_USER"  value="-1"/>
         </insert>
+    </changeSet>
+
+    <changeSet author="mykidgoal" id="student-management-schema-0.0.1-117">
+        <createTable tableName="BRANCH_SESSION">
+            <column name="Id_Session" type="INT" >
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="Id_Category" type="INT" >
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="ID_User" type="INT"/>
+            <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
     </changeSet>
 
 </databaseChangeLog>
