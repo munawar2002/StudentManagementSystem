@@ -1,13 +1,14 @@
 package com.myKidGoal.controller;
 
+import com.myKidGoal.model.enums.SessionStatus;
 import com.myKidGoal.model.examination.Session;
 import com.myKidGoal.repository.examination.SessionRepository;
+import com.myKidGoal.service.SessionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.EntityNotFoundException;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -19,20 +20,14 @@ public class SessionController {
     @Autowired
     private SessionRepository sessionRepository;
 
-    // @GetMapping("title/search/all")
-    // public Map<String, Object> allExamTitles() {
-    // Map<String, Object> response = new HashMap<>();
-    // Map<String, Object> res = new HashMap<>();
-    // res.put("examtitles", examTitleRepository.findByDeletedIsFalse());
-    // response.put("_embedded", res);
-    // return response;
-    // }
-    //
-    // @PostMapping("/title/save")
-    // public void saveArea(@RequestBody ExamTitle examTitle) {
-    // examTitleRepository.save(examTitle);
-    // }
-    //
+    @Autowired
+    private SessionService sessionService;
+
+    @PostMapping("/save")
+    public void saveSession(@RequestBody Session session) {
+        sessionRepository.save(session);
+    }
+
     @GetMapping("/search/details/{id}")
     public Session oneSession(@PathVariable(value = "id") int id) {
         Optional<Session> optionalSession = sessionRepository.findById(id);
@@ -43,15 +38,35 @@ public class SessionController {
             throw new RuntimeException("Session not found with ID [" + id + "]");
         }
     }
-    //
-    // @GetMapping("/title/search/all/active")
-    // public Map<String, Object> allExamTitlesActive() {
-    // Map<String, Object> response = new HashMap<>();
-    // Map<String, Object> res = new HashMap<>();
-    // res.put("examtitles", examTitleRepository.findByDeletedIsFalseAndActiveIsTrue());
-    // response.put("_embedded", res);
-    // return response;
-    // }
+
+    @PostMapping("/execute")
+    public Session executeSession(@RequestBody Session sessionRequest, HttpServletResponse response) {
+
+        Session session = sessionRepository.findByName(sessionRequest.getName());
+
+        try {
+            if (session == null
+                    || session != null && session.getStatus().equalsIgnoreCase(SessionStatus.SAVED.name())) {
+                session = sessionService.executeSession(session);
+
+                response.setStatus(HttpServletResponse.SC_CREATED);
+            }
+        } catch (Exception ex) {
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            throw new RuntimeException(
+                    "Unable to execute session creation process, For more details check the logs" + ex);
+        }
+        return session;
+    }
+
+    @GetMapping("/search/all")
+    public Map<String, Object> allSessions() {
+        Map<String, Object> response = new HashMap<>();
+        Map<String, Object> res = new HashMap<>();
+        res.put("academicsession", sessionRepository.findByDeletedIsFalseAndActiveIsTrue());
+        response.put("_embedded", res);
+        return response;
+    }
 
     @GetMapping(value = "/isUnique/{name}/{id}")
     public Map<String, String> isUniqueSessionName(@PathVariable(value = "name") String name,
@@ -69,14 +84,14 @@ public class SessionController {
         return response;
     }
 
-    // @PutMapping("/title/update")
-    // public void updateAudience(@RequestBody ExamTitle examTitle) {
-    // if (examTitle.getId() == 0) {
-    // throw new EntityNotFoundException(
-    // "Audience can't be updated before saving. First save the examTitle and then try updating!");
-    // }
-    //
-    // examTitleRepository.save(examTitle);
-    // }
+    @PutMapping("/update")
+    public void updateSession(@RequestBody Session session) {
+        if (session.getId() == 0) {
+            throw new EntityNotFoundException(
+                    "Session can't be updated before saving. First save the session and then try updating!");
+        }
+
+        sessionRepository.save(session);
+    }
 
 }

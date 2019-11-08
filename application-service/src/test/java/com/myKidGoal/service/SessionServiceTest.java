@@ -129,14 +129,14 @@ public class SessionServiceTest {
 
         SubjectTitle subjectTitle = new SubjectTitle();
         subjectTitle.setTitle("Mathametics");
-        subjectTitle.setColor(1);
+        subjectTitle.setColor("Red");
         subjectTitle.setExtraActivity(false);
         subjectTitle.setShortTitle("Maths");
         subjectTitle = subjectTitleRepository.save(subjectTitle);
 
         SubjectTitle subjectTitle2 = new SubjectTitle();
         subjectTitle2.setTitle("English");
-        subjectTitle2.setColor(1);
+        subjectTitle2.setColor("Green");
         subjectTitle2.setExtraActivity(false);
         subjectTitle2.setShortTitle("English");
         subjectTitle2 = subjectTitleRepository.save(subjectTitle2);

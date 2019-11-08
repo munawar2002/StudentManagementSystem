@@ -28,11 +28,12 @@ public class SubjectTitle extends BaseTimeEntity {
 
     @Basic
     @Column(name = "Short")
+    @JsonProperty(value = "short")
     private String shortTitle;
 
     @Basic
     @Column(name = "Color")
-    private Integer color;
+    private String color;
 
     @Basic
     @Column(name = "ISEXTRAACTIVITY")

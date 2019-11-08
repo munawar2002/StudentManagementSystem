@@ -30,14 +30,17 @@ public interface SessionRepository extends JpaRepository<Session, Integer> {
     @RestResource(path = "active")
     List<Session> findByDeletedIsFalseAndActiveIsTrue();
 
+    @RestResource(path = "active")
+    Session findByName(@Param("name") String name);
+
     /**
      * Check if not deleted session name exists
      *
-     * @param Name
+     * @param name
      * @return <TRUE>If exists</TRUE>
      */
     @RestResource(path = "isUnique")
-    boolean existsByNameIgnoreCaseAndDeletedIsFalse(@Param("name") String Name);
+    boolean existsByNameIgnoreCaseAndDeletedIsFalse(@Param("name") String name);
 
     /**
      * Check if not deleted session name exists except given id exam title
