@@ -33,16 +33,16 @@ public class SessionController {
     // examTitleRepository.save(examTitle);
     // }
     //
-     @GetMapping("/search/details/{id}")
-     public Session oneSession(@PathVariable(value = "id") int id) {
-     Optional<Session> optionalSession = sessionRepository.findById(id);
+    @GetMapping("/search/details/{id}")
+    public Session oneSession(@PathVariable(value = "id") int id) {
+        Optional<Session> optionalSession = sessionRepository.findById(id);
 
-     if (optionalSession.isPresent()) {
-     return optionalSession.get();
-     } else {
-     throw new RuntimeException("Session not found with ID [" + id + "]");
-     }
-     }
+        if (optionalSession.isPresent()) {
+            return optionalSession.get();
+        } else {
+            throw new RuntimeException("Session not found with ID [" + id + "]");
+        }
+    }
     //
     // @GetMapping("/title/search/all/active")
     // public Map<String, Object> allExamTitlesActive() {

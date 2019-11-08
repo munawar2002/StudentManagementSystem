@@ -8,7 +8,6 @@ import org.apache.commons.lang.builder.ToStringStyle;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -43,14 +42,14 @@ public class Student implements Serializable {
     private Religion religion;
     private House house;
     private Integer regNo;
-    private LocalDate regDate;
+    private LocalDateTime regDate;
     private Boolean admissioned;
     private String name;
     private Integer grNo;
     private Boolean male;
-    private LocalDate dob;
-    private LocalDate doa;
-    private LocalDate dol;
+    private LocalDateTime dob;
+    private LocalDateTime doa;
+    private LocalDateTime dol;
     private Boolean leftSchool;
     private String causeOfRemoval;
     private Double discountPercentage;
@@ -168,12 +167,12 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "RegDate")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    public LocalDate getRegDate() {
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    public LocalDateTime getRegDate() {
         return regDate;
     }
 
-    public void setRegDate(LocalDate regDate) {
+    public void setRegDate(LocalDateTime regDate) {
         this.regDate = regDate;
     }
 
@@ -225,34 +224,34 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "DOB")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    public LocalDate getDob() {
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    public LocalDateTime getDob() {
         return dob;
     }
 
-    public void setDob(LocalDate dob) {
+    public void setDob(LocalDateTime dob) {
         this.dob = dob;
     }
 
     @Basic
     @Column(name = "DOA")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    public LocalDate getDoa() {
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    public LocalDateTime getDoa() {
         return doa;
     }
 
-    public void setDoa(LocalDate doa) {
+    public void setDoa(LocalDateTime doa) {
         this.doa = doa;
     }
 
     @Basic
     @Column(name = "DOL")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    public LocalDate getDol() {
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    public LocalDateTime getDol() {
         return dol;
     }
 
-    public void setDol(LocalDate dol) {
+    public void setDol(LocalDateTime dol) {
         this.dol = dol;
     }
 

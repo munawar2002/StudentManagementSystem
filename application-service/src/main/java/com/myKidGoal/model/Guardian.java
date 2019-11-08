@@ -9,7 +9,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -65,8 +64,8 @@ public class Guardian {
 
     @Basic
     @Column(name = "ToDate")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate toDate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime toDate;
 
     @Basic
     @Column(name = "ID_User")

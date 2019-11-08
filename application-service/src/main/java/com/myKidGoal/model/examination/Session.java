@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -29,15 +29,15 @@ public class Session extends BaseEntity {
 
     @Basic
     @Column(name = "STARTDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonProperty(value = "from")
-    private LocalDate startDate;
+    private LocalDateTime startDate;
 
     @Basic
     @Column(name = "ENDDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonProperty(value = "to")
-    private LocalDate endDate;
+    private LocalDateTime endDate;
 
     @Basic
     @Column(name = "ISEXECUTED")

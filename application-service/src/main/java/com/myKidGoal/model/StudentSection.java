@@ -8,7 +8,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "DS_STUDENTSEC")
@@ -32,13 +32,13 @@ public class StudentSection extends BaseTimeEntity {
 
     @Basic
     @Column(name = "TransferDate")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate transferDate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime transferDate;
 
     @Basic
     @Column(name = "ToDate")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate toDate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime toDate;
 
     @ManyToOne
     @JoinColumn(name = "Id_Session")

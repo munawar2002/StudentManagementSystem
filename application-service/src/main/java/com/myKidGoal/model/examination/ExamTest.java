@@ -10,7 +10,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "DS_TEST")
@@ -45,8 +45,8 @@ public class ExamTest extends BaseTimeEntity {
 
     @Basic
     @Column(name = "EXAMDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate examDate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime examDate;
 
     @JoinColumn(name = "Id_Subject")
     @JsonProperty(value = "course")

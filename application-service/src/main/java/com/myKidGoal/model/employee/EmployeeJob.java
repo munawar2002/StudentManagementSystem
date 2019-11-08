@@ -8,7 +8,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "DS_EMPLOYEEJOB")
@@ -37,8 +37,8 @@ public class EmployeeJob extends BaseTimeEntity {
 
     @Basic
     @Column(name = "FROMDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate fromDate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime fromDate;
 
     @Basic
     @Column(name = "ISACTIVE")

@@ -2,7 +2,8 @@ package com.myKidGoal.service;
 
 import com.myKidGoal.TestApplication;
 import com.myKidGoal.TestInputFileLoader;
-import com.myKidGoal.model.*;
+import com.myKidGoal.model.Guardian;
+import com.myKidGoal.model.Student;
 import com.myKidGoal.model.notification.Audience;
 import com.myKidGoal.model.notification.Notification;
 import com.myKidGoal.model.notification.NotificationDetail;
@@ -21,7 +22,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -102,10 +103,10 @@ public class AudienceServiceTest {
 
         Notification notification = new Notification();
         notification.setAudience(audience.orElse(null));
-        notification.setEffectiveDate(LocalDate.now());
-        notification.setExpiryDate(LocalDate.now());
+        notification.setEffectiveDate(LocalDateTime.now());
+        notification.setExpiryDate(LocalDateTime.now());
         notification.setMessage("Sending message to students");
-        notification.setPostingDate(LocalDate.now());
+        notification.setPostingDate(LocalDateTime.now());
         notification.setTopic("Notification Send ExamTest");
 
         boolean success = notificationService.sendNotification(notification);
@@ -126,10 +127,10 @@ public class AudienceServiceTest {
 
         Notification notification = new Notification();
         notification.setAudience(audience.orElse(null));
-        notification.setEffectiveDate(LocalDate.now());
-        notification.setExpiryDate(LocalDate.now());
+        notification.setEffectiveDate(LocalDateTime.now());
+        notification.setExpiryDate(LocalDateTime.now());
         notification.setMessage("Sending message to students");
-        notification.setPostingDate(LocalDate.now());
+        notification.setPostingDate(LocalDateTime.now());
         notification.setTopic("Notification Send ExamTest");
 
         boolean success = notificationService.sendNotification(notification);

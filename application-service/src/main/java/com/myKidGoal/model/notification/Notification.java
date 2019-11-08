@@ -8,7 +8,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "NOTIFICATION")
@@ -37,18 +37,18 @@ public class Notification extends BaseTimeEntity {
 
     @Basic
     @Column(name = "POSTINGDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate postingDate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime postingDate;
 
     @Basic
     @Column(name = "EFFECTIVEDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate effectiveDate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime effectiveDate;
 
     @Basic
     @Column(name = "EXPIRYDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate expiryDate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime expiryDate;
 
     @Basic
     @Column(name = "ISDELETED")

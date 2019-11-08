@@ -10,7 +10,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "DS_EMPLOYEE")
@@ -61,8 +61,8 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "NICEXPIREDON")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate nicExpiredOn;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime nicExpiredOn;
 
     @Basic
     @Column(name = "CONTACT1")
@@ -91,18 +91,18 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "DOJ")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate doj;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime doj;
 
     @Basic
     @Column(name = "DOB")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate dob;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime dob;
 
     @Basic
     @Column(name = "DOP")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate dop;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime dop;
 
     @Basic
     @Column(name = "ISLEFT")
@@ -111,8 +111,8 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "DOL")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate dol;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime dol;
 
     @Basic
     @Column(name = "CAUSEOFLEAVING")
