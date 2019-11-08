@@ -1,6 +1,7 @@
 package com.myKidGoal.model.examination;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.myKidGoal.model.BaseEntity;
 import com.myKidGoal.model.Category;
@@ -23,22 +24,25 @@ public class Session extends BaseEntity {
 
     @Id
     @Column(name = "Id_Session")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Basic
-    @Column(name = "From")
+    @Column(name = "STARTDATE")
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate from;
+    @JsonProperty(value = "from")
+    private LocalDate startDate;
 
     @Basic
-    @Column(name = "To")
+    @Column(name = "ENDDATE")
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate to;
+    @JsonProperty(value = "to")
+    private LocalDate endDate;
 
     @Basic
     @Column(name = "ISEXECUTED")
     @JsonProperty("isExecuted")
-    private boolean isExecuted;
+    private boolean executed;
 
     @Basic
     @Column(name = "ISDELETED")
@@ -52,8 +56,24 @@ public class Session extends BaseEntity {
     @Column(name = "STATUS")
     private String status;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+    @ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })
     @JoinTable(name = "BRANCH_SESSION", joinColumns = { @JoinColumn(name = "Id_Session") }, inverseJoinColumns = {
             @JoinColumn(name = "Id_Category") })
     private List<Category> category;
+
+    @OneToMany(mappedBy = "session")
+    @JsonProperty(value = "assessments")
+    @JsonManagedReference
+    private List<Exam> exams;
+
+    @OneToMany(mappedBy = "session")
+    @JsonProperty(value = "courses")
+    @JsonManagedReference
+    private List<Subject> subjects;
+
+    @OneToMany(mappedBy = "session")
+    @JsonProperty(value = "assessmentschedules")
+    @JsonManagedReference
+    private List<ExamTest> tests;
+
 }

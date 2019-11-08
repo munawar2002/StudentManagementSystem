@@ -1212,8 +1212,8 @@
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Name" type="VARCHAR(50)"/>
-            <column name="From" type="DATE"/>
-            <column name="To" type="DATE"/>
+            <column name="StartDate" type="DATE"/>
+            <column name="EndDate" type="DATE"/>
             <column name="Status" type="VARCHAR(50)"/>
             <column name="IsExecuted" type="${booleanType}" defaultValueBoolean="false" />
             <column name="IsActive" type="${booleanType}" defaultValueBoolean="true" />
@@ -1403,7 +1403,7 @@
             </column>
             <column name="Id_Class" type="INT"/>
             <column name="Id_SubjectTitle" type="INT"/>
-            <column name="IsExtraActivity" type="${booleanType}"/>
+            <column name="Id_Session" type="INT"/>
             <column name="IsActive" type="${booleanType}"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
@@ -1416,6 +1416,7 @@
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Title" type="VARCHAR(50)"/>
+            <column name="IsExtraActivity" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
             <column name="Short" type="VARCHAR(50)"/>
@@ -1428,12 +1429,13 @@
             <column name="Id_Test" type="INT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" />
             </column>
+            <column name="Id_Session" type="INT"/>
             <column name="Id_Subject" type="INT"/>
+            <column name="Id_Exam" type="INT"/>
+            <column name="examDate" type="DATE"/>
             <column name="MaxMarks" type="DOUBLE"/>
             <column name="PassingMarks" type="DOUBLE"/>
             <column name="MonthlyTestsMarks" type="INT"/>
-            <column name="Id_Exam" type="INT"/>
-            <column name="DATE" type="DATE"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>
         </createTable>
@@ -1710,27 +1712,6 @@
     </changeSet>
 
     <changeSet author="mykidgoal" id="student-management-schema-0.0.1-116">
-        <insert tableName="DS_EXAMTYPE">
-            <column name="ID_ExamType"  value="1"/>
-            <column name="NAME"  value="Assessment"/>
-            <column name="LEVEL"  value="1"/>
-            <column name="ID_USER"  value="-1"/>
-        </insert>
-        <insert tableName="DS_EXAMTYPE">
-            <column name="ID_ExamType"  value="2"/>
-            <column name="NAME"  value="Mid Term"/>
-            <column name="LEVEL"  value="1"/>
-            <column name="ID_USER"  value="-1"/>
-        </insert>
-        <insert tableName="DS_EXAMTYPE">
-            <column name="ID_ExamType"  value="3"/>
-            <column name="NAME"  value="Final"/>
-            <column name="LEVEL"  value="1"/>
-            <column name="ID_USER"  value="-1"/>
-        </insert>
-    </changeSet>
-
-    <changeSet author="mykidgoal" id="student-management-schema-0.0.1-117">
         <createTable tableName="BRANCH_SESSION">
             <column name="Id_Session" type="INT" >
                 <constraints nullable="false" primaryKey="true"/>

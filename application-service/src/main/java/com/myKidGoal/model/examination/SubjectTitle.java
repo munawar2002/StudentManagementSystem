@@ -1,7 +1,7 @@
 package com.myKidGoal.model.examination;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.myKidGoal.model.BaseTimeEntity;
-import com.myKidGoal.model.Class;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -18,12 +18,9 @@ import javax.persistence.*;
 public class SubjectTitle extends BaseTimeEntity {
 
     @Id
-    @Column(name = "Id_SubjectTitle")
+    @Column(name = "ID_SUBJECTTITLE")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @JoinColumn(name = "Id_Class")
-    @ManyToOne
-    private Class studentClass;
 
     @Basic
     @Column(name = "Title")
@@ -36,5 +33,10 @@ public class SubjectTitle extends BaseTimeEntity {
     @Basic
     @Column(name = "Color")
     private Integer color;
+
+    @Basic
+    @Column(name = "ISEXTRAACTIVITY")
+    @JsonProperty(value = "isExtraActivity")
+    private boolean extraActivity;
 
 }

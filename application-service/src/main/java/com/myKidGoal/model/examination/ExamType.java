@@ -17,7 +17,8 @@ import javax.persistence.*;
 public class ExamType extends BaseEntity {
 
     @Id
-    @Column(name = "Id_ExamType")
+    @Column(name = "ID_EXAMTYPE")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Basic

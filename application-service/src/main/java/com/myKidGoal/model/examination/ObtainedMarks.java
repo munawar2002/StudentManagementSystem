@@ -26,7 +26,7 @@ public class ObtainedMarks extends BaseTimeEntity {
 
     @JoinColumn(name = "Id_Test")
     @ManyToOne
-    private Test test;
+    private ExamTest test;
 
     @Basic
     @Column(name = "Marks")

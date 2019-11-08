@@ -1,5 +1,6 @@
 package com.myKidGoal.controller;
 
+import com.myKidGoal.model.examination.Session;
 import com.myKidGoal.repository.examination.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/sms/academicsession")
@@ -31,16 +33,16 @@ public class SessionController {
     // examTitleRepository.save(examTitle);
     // }
     //
-    // @GetMapping("/title/search/details/{id}")
-    // public ExamTitle oneExamTitle(@PathVariable(value = "id") int id) {
-    // Optional<ExamTitle> optionalExamTitle = examTitleRepository.findById(id);
-    //
-    // if (optionalExamTitle.isPresent()) {
-    // return optionalExamTitle.get();
-    // } else {
-    // throw new RuntimeException("ExamTitle not found with ID [" + id + "]");
-    // }
-    // }
+     @GetMapping("/search/details/{id}")
+     public Session oneSession(@PathVariable(value = "id") int id) {
+     Optional<Session> optionalSession = sessionRepository.findById(id);
+
+     if (optionalSession.isPresent()) {
+     return optionalSession.get();
+     } else {
+     throw new RuntimeException("Session not found with ID [" + id + "]");
+     }
+     }
     //
     // @GetMapping("/title/search/all/active")
     // public Map<String, Object> allExamTitlesActive() {

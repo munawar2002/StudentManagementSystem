@@ -1,5 +1,6 @@
 package com.myKidGoal.model.examination;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.myKidGoal.model.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,9 +19,10 @@ public class Exam extends BaseTimeEntity {
 
     @Id
     @Column(name = "Id_Exam")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @JoinColumn(name = "Id_ExamTitle")
+    @JoinColumn(name = "Id_EXAMTITLE")
     @ManyToOne
     private ExamTitle examTitle;
 
@@ -29,11 +31,12 @@ public class Exam extends BaseTimeEntity {
     private String remarks;
 
     @Basic
-    @Column(name = "SideNote")
+    @Column(name = "SIDENOTE")
     private String sideNote;
 
     @JoinColumn(name = "Id_Session")
     @ManyToOne
-    private Session sessionInfo;
+    @JsonBackReference
+    private Session session;
 
 }

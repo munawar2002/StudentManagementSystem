@@ -19,6 +19,6 @@ public class BaseTimeEntity {
     @Basic
     @Column(name = "USERTIME")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime userTime;
+    private LocalDateTime userTime = LocalDateTime.now();
 
 }

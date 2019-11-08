@@ -106,7 +106,7 @@ public class AudienceServiceTest {
         notification.setExpiryDate(LocalDate.now());
         notification.setMessage("Sending message to students");
         notification.setPostingDate(LocalDate.now());
-        notification.setTopic("Notification Send Test");
+        notification.setTopic("Notification Send ExamTest");
 
         boolean success = notificationService.sendNotification(notification);
         Assert.assertTrue(success);
@@ -130,7 +130,7 @@ public class AudienceServiceTest {
         notification.setExpiryDate(LocalDate.now());
         notification.setMessage("Sending message to students");
         notification.setPostingDate(LocalDate.now());
-        notification.setTopic("Notification Send Test");
+        notification.setTopic("Notification Send ExamTest");
 
         boolean success = notificationService.sendNotification(notification);
         Assert.assertTrue(success);

@@ -1,5 +1,6 @@
 package com.myKidGoal.model.examination;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.myKidGoal.model.BaseTimeEntity;
 import com.myKidGoal.model.Class;
 import lombok.AllArgsConstructor;
@@ -19,22 +20,24 @@ public class Subject extends BaseTimeEntity {
 
     @Id
     @Column(name = "Id_Subject")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @JoinColumn(name = "Id_Class")
     @ManyToOne
-    private Class studentClass;
+    private Class classes;
 
-    @JoinColumn(name = "Id_SubjectTitle")
+    @JoinColumn(name = "ID_SUBJECTTITLE")
     @ManyToOne
     private SubjectTitle subjectTitle;
 
     @Basic
-    @Column(name = "IsExtraActivity")
-    private boolean extraActivity;
-
-    @Basic
-    @Column(name = "IsActive")
+    @Column(name = "ISACTIVE")
     private boolean active;
+
+    @JoinColumn(name = "Id_Session")
+    @ManyToOne
+    @JsonBackReference
+    private Session session;
 
 }

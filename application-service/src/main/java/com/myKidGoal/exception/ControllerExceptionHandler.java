@@ -33,6 +33,7 @@ public class ControllerExceptionHandler {
     @ResponseBody
     public Integer handleRuntimeException(RuntimeException e) {
         logger.severe("Exception occurred while performing task." + e);
+        e.printStackTrace();
         return HttpStatus.INTERNAL_SERVER_ERROR.value();
     }
 

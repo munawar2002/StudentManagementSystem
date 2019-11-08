@@ -17,7 +17,8 @@ import javax.persistence.*;
 public class ExamTitle extends BaseEntity {
 
     @Id
-    @Column(name = "Id_ExamTitle")
+    @Column(name = "Id_EXAMTITLE")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Basic
@@ -28,7 +29,7 @@ public class ExamTitle extends BaseEntity {
     @Column(name = "ISDELETED")
     private boolean deleted;
 
-    @JoinColumn(name = "Id_ExamType")
+    @JoinColumn(name = "ID_EXAMTYPE")
     @ManyToOne
     private ExamType examType;
 
