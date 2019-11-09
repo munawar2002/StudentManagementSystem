@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.myKidGoal.model.BaseTimeEntity;
+import com.myKidGoal.model.Class;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -58,4 +59,13 @@ public class ExamTest extends BaseTimeEntity {
     @JsonBackReference
     private Session session;
 
+    @Transient
+    private Class classes;
+
+    public Class getClasses() {
+        if (subject != null) {
+            return subject.getClasses();
+        }
+        return null;
+    }
 }
