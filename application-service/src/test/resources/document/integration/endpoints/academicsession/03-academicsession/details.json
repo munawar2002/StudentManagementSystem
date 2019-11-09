@@ -1,277 +1,385 @@
 {
+    "name": "Session-2019-20",
+    "userId": -1,
+    "userTime": "2019-11-04 16:15:26",
     "id": 1,
-    "name": "Session 2018-2019",
-    "from": "2012-12-18T02:52:40",
-    "to": "2012-12-18T02:52:40",
-    "active": true,
     "deleted": false,
+    "active": false,
+    "status": "ACTIVE",
     "category": [
-        {
-            "name": "Junior 1",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:25",
-            "id": 1,
-            "orderNo": 1,
-            "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
-            "shortAccount": "J.1",
-            "code": 2
-        },
-        {
-            "name": "Johar",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:25",
-            "id": 2,
-            "orderNo": 3,
-            "bankAccount": "             UNITED BANK LIMITED                              (All Branches in Karachi & Hyderabad)                             Collection AC # 219692562",
-            "shortAccount": "JH1",
-            "code": 0
-        },
-        {
-            "name": "Nazimabad Branch",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:25",
-            "id": 3,
-            "orderNo": 7,
-            "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
-            "shortAccount": "NZB",
-            "code": 2
-        },
-        {
-            "name": "Hyderabad Sr",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:25",
-            "id": 4,
-            "orderNo": 13,
-            "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
-            "shortAccount": "H.S",
-            "code": 1
-        },
-        {
-            "name": "Junior 2",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:25",
-            "id": 5,
-            "orderNo": 2,
-            "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
-            "shortAccount": "J.2",
-            "code": 2
-        },
-        {
-            "name": "Senior Girls ",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:25",
-            "id": 6,
-            "orderNo": 8,
-            "bankAccount": "          Askari Bank Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC# 2330100000342",
-            "shortAccount": "S.G",
-            "code": 1
-        },
-        {
-            "name": "Hyderabad Jr",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:25",
-            "id": 7,
-            "orderNo": 12,
-            "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
-            "shortAccount": "H.J",
-            "code": 1
-        },
-        {
-            "name": "A Level",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:26",
-            "id": 8,
-            "orderNo": 10,
-            "bankAccount": "          Askari Bank Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC# 2330100000342",
-            "shortAccount": "A.L",
-            "code": 1
-        },
-        {
-            "name": "Senior Boys ",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:26",
-            "id": 9,
-            "orderNo": 9,
-            "bankAccount": "          Askari Bank Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC# 2330100000342",
-            "shortAccount": "S.B",
-            "code": 1
-        },
-        {
-            "name": "Kindergarten",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:26",
-            "id": 10,
-            "orderNo": 6,
-            "bankAccount": "             UNITED BANK LIMITED                              (All Branches in Karachi & Hyderabad)                             Collection AC # 219692562",
-            "shortAccount": "KGT",
-            "code": 0
-        },
-        {
-            "name": "Prep",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:26",
-            "id": 11,
-            "orderNo": 5,
-            "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
-            "shortAccount": "PRP",
-            "code": 1
-        },
-        {
-            "name": "Johar 2",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:26",
-            "id": 12,
-            "orderNo": 4,
-            "bankAccount": "             UNITED BANK LIMITED                              (All Branches in Karachi & Hyderabad)                             Collection AC # 219692562",
-            "shortAccount": "JH2",
-            "code": 0
-        },
-        {
-            "name": "Matric Khi",
-            "userId": 7,
-            "userTime": "2012-12-18T02:57:26",
-            "id": 13,
-            "orderNo": 11,
-            "bankAccount": "          Bank AL Habib Limited                              (All Branches in Karachi & Hyderabad)                             Collection AC#0080-900178-01",
-            "shortAccount": "MKH",
-            "code": 2
-        },
-        {
-            "name": "JOHAR CAMPUS 2",
-            "userId": 7,
-            "userTime": "2013-02-06T14:35:23",
-            "id": 14,
-            "orderNo": 14,
-            "bankAccount": "             UNITED BANK LIMITED                              (All Branches in Karachi & Hyderabad)                             Collection AC # 219692562",
-            "shortAccount": "JR2",
-            "code": 0
-        },
-        {
-            "name": "Dummy Bank",
-            "userId": 7,
-            "userTime": "2013-02-06T14:35:23",
-            "id": 15,
-            "orderNo": 14,
-            "bankAccount": "DummyBank",
-            "shortAccount": "DUM",
-            "code": 0
-        }
+      {
+        "name": "Gulshan Branch",
+        "userId": null,
+        "userTime": "2019-11-04 16:15:26",
+        "id": 1,
+        "orderNo": 119,
+        "bankAccount": "HBL",
+        "shortAccount": null,
+        "code": 1001
+      },
+      {
+        "name": "Gulshan Branch",
+        "userId": null,
+        "userTime": "2019-11-04 16:15:26",
+        "id": 2,
+        "orderNo": 119,
+        "bankAccount": "HBL",
+        "shortAccount": null,
+        "code": 1001
+      }
     ],
-    "isExecuted": false,
-    "status": "Executed",
+    "from": "2019-11-04",
+    "to": "2019-11-04",
+    "isExecuted": true,
     "assessments": [
-        {
+      {
+        "userId": null,
+        "userTime": "2019-11-04 16:15:26",
+        "id": 1,
+        "examTitle": {
+          "name": "1st Assesment",
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 1,
+          "active": true,
+          "deleted": false,
+          "examType": {
+            "name": "Assessment",
+            "userId": -1,
+            "userTime": "2019-11-04 16:15:26",
             "id": 1,
-            "examTitle": {
-                "id": 1,
-                "name": "Final Exams",
-                "isActive": true,
-                "examType": {
-                    "name": "Weekly Term",
-                    "userId": 7,
-                    "level": 0,
-                    "userTime": "2012-12-18T02:52:40",
-                    "id": 1
-                }
-            },
-            "remarks": "",
-            "sideNote": ""
-        }
+            "level": 1,
+           "active": true,
+            "deleted": false
+          }
+        },
+        "remarks": "1st one",
+        "sideNote": "if any"
+      },
+      {
+        "userId": null,
+        "userTime": "2019-11-04 16:15:26",
+        "id": 2,
+        "examTitle": {
+          "name": "2nd Assesment",
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 2,
+          "active": true,
+          "deleted": false,
+          "examType": {
+            "name": "Assessment",
+            "userId": -1,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "level": 1,
+            "active": true,
+            "deleted": false
+          }
+        },
+        "remarks": "2nd one",
+        "sideNote": "if any"
+      }
     ],
     "courses": [
-        {
-            "classes": {
-                "id": 1,
-                "category": null,
-                "name": "VII",
-                "userId": null,
-                "userTime": null,
-                "level": 1
-            },
-            "subjectTitles": [
-                {
-                    "id": 1,
-                    "title": "Mathematics",
-                    "userId": null,
-                    "userTime": null,
-                    "color": "RED",
-                    "active": true,
-                    "isExtraActivity": false
-                },
-                {
-                    "id": 1,
-                    "title": "Mathematics",
-                    "userId": null,
-                    "userTime": null,
-                    "color": "RED",
-                    "active": true,
-                    "isExtraActivity": false
-                }
-            ]
-        }
+      {
+        "userId": null,
+        "userTime": "2019-11-04 16:15:26",
+        "id": 1,
+        "classes": {
+          "name": "Class-1",
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 1,
+          "category": {
+            "name": "Gulshan Branch",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "orderNo": 119,
+            "bankAccount": "HBL",
+            "shortAccount": null,
+            "code": 1001
+          },
+          "level": 1,
+          "isDeleted": null
+        },
+        "subjectTitle": {
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 1,
+          "title": "Mathametics",
+          "shortTitle": "Maths",
+          "color": 1,
+          "isExtraActivity": false
+        },
+        "active": true
+      }
     ],
     "assessmentschedules": [
-        {
-            "classes": {
-                "id": 1,
-                "category": null,
-                "name": "VII",
-                "userId": null,
-                "userTime": null,
-                "level": 1
+      {
+        "userId": null,
+        "userTime": "2019-11-04 16:15:26",
+        "id": 1,
+        "maxMarks": 25,
+        "monthlyTestsMarks": null,
+        "examDate": "2019-11-04",
+        "assessments": {
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 1,
+          "examTitle": {
+            "name": "1st Assesment",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "active": true,
+            "deleted": false,
+            "examType": {
+              "name": "Assessment",
+              "userId": -1,
+              "userTime": "2019-11-04 16:15:26",
+              "id": 1,
+              "level": 1,
+              "active": true,
+              "deleted": false
+            }
+          },
+          "remarks": "1st one",
+          "sideNote": "if any"
+        },
+        "minMarks": 12,
+        "course": {
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 1,
+          "classes": {
+            "name": "Class-1",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "category": {
+              "name": "Gulshan Branch",
+              "userId": null,
+              "userTime": "2019-11-04 16:15:26",
+              "id": 1,
+              "orderNo": 119,
+              "bankAccount": "HBL",
+              "shortAccount": null,
+              "code": 1001
             },
-            "assessments": {
-                "id": 1,
-                "examTitle": {
-                    "id": 1,
-                    "name": "Final Exams",
-                    "isActive": true,
-                    "examType": {
-                        "name": "Weekly Term",
-                        "userId": 7,
-                        "level": 0,
-                        "userTime": "2012-12-18T02:52:40",
-                        "id": 1
-                    }
-                },
-                "remarks": "",
-                "sideNote": ""
-            },
-            "courses": [
-                {
-                    "classes": {
-                        "id": 1,
-                        "category": null,
-                        "name": "VII",
-                        "userId": null,
-                        "userTime": null,
-                        "level": 1
-                    },
-                    "subjectTitles": [
-                        {
-                            "id": 1,
-                            "title": "Mathematics",
-                            "userId": null,
-                            "userTime": null,
-                            "color": "RED",
-                            "active": true,
-                            "isExtraActivity": false
-                        },
-                        {
-                            "id": 1,
-                            "title": "Mathematics",
-                            "userId": null,
-                            "userTime": null,
-                            "color": "RED",
-                            "active": true,
-                            "isExtraActivity": false
-                        }
-                    ]
-                }
-            ],
-            "examDate": "2012-12-18T02:57:25",
-            "maxMarks": 50,
-            "minMarks": 20
+            "level": 1,
+            "isDeleted": null
+          },
+          "subjectTitle": {
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "title": "Mathametics",
+            "shortTitle": "Maths",
+            "color": 1,
+            "isExtraActivity": false
+          },
+          "active": true
         }
+      },
+      {
+        "userId": null,
+        "userTime": "2019-11-04 16:15:26",
+        "id": 2,
+        "maxMarks": 25,
+        "monthlyTestsMarks": null,
+        "examDate": "2019-11-04",
+        "assessments": {
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 2,
+          "examTitle": {
+            "name": "2nd Assesment",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 2,
+            "active": true,
+            "deleted": false,
+            "examType": {
+              "name": "Assessment",
+              "userId": -1,
+              "userTime": "2019-11-04 16:15:26",
+              "id": 1,
+              "level": 1,
+              "active": true,
+              "deleted": false
+            }
+          },
+          "remarks": "2nd one",
+          "sideNote": "if any"
+        },
+        "minMarks": 12,
+        "course": {
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 1,
+          "classes": {
+            "name": "Class-1",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "category": {
+              "name": "Gulshan Branch",
+              "userId": null,
+              "userTime": "2019-11-04 16:15:26",
+              "id": 1,
+              "orderNo": 119,
+              "bankAccount": "HBL",
+              "shortAccount": null,
+              "code": 1001
+            },
+            "level": 1,
+            "isDeleted": null
+          },
+          "subjectTitle": {
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "title": "Mathametics",
+            "shortTitle": "Maths",
+            "color": 1,
+            "isExtraActivity": false
+          },
+          "active": true
+        }
+      },
+      {
+        "userId": null,
+        "userTime": "2019-11-04 16:15:26",
+        "id": 3,
+        "maxMarks": 25,
+        "monthlyTestsMarks": null,
+        "examDate": "2019-11-04",
+        "assessments": {
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 1,
+          "examTitle": {
+            "name": "1st Assesment",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "active": true,
+            "deleted": false,
+            "examType": {
+              "name": "Assessment",
+              "userId": -1,
+              "userTime": "2019-11-04 16:15:26",
+              "id": 1,
+              "level": 1,
+              "active": true,
+              "deleted": false
+            }
+          },
+          "remarks": "1st one",
+          "sideNote": "if any"
+        },
+        "minMarks": 12,
+        "course": {
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 2,
+          "classes": {
+            "name": "Class-1",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "category": {
+              "name": "Gulshan Branch",
+              "userId": null,
+              "userTime": "2019-11-04 16:15:26",
+              "id": 1,
+              "orderNo": 119,
+              "bankAccount": "HBL",
+              "shortAccount": null,
+              "code": 1001
+            },
+            "level": 1,
+            "isDeleted": null
+          },
+          "subjectTitle": {
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 2,
+            "title": "English",
+            "shortTitle": "English",
+            "color": 1,
+            "isExtraActivity": false
+          },
+          "active": true
+        }
+      },
+      {
+        "userId": null,
+        "userTime": "2019-11-04 16:15:26",
+        "id": 4,
+        "maxMarks": 25,
+        "monthlyTestsMarks": null,
+        "examDate": "2019-11-04",
+        "assessments": {
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 2,
+          "examTitle": {
+            "name": "2nd Assesment",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 2,
+            "active": true,
+            "deleted": false,
+            "examType": {
+              "name": "Assessment",
+              "userId": -1,
+              "userTime": "2019-11-04 16:15:26",
+              "id": 1,
+              "level": 1,
+              "active": true,
+              "deleted": false
+            }
+          },
+          "remarks": "2nd one",
+          "sideNote": "if any"
+        },
+        "minMarks": 12,
+        "course": {
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 2,
+          "classes": {
+            "name": "Class-1",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "category": {
+              "name": "Gulshan Branch",
+              "userId": null,
+              "userTime": "2019-11-04 16:15:26",
+              "id": 1,
+              "orderNo": 119,
+              "bankAccount": "HBL",
+              "shortAccount": null,
+              "code": 1001
+            },
+            "level": 1,
+            "isDeleted": null
+          },
+          "subjectTitle": {
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 2,
+            "title": "English",
+            "shortTitle": "English",
+            "color": 1,
+            "isExtraActivity": false
+          },
+          "active": true
+        }
+      }
     ]
-}
+  }
