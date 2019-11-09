@@ -181,6 +181,24 @@
             "isExtraActivity": false
           },
           "active": true
+        },
+        "classes": {
+          "name": "Class-1",
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 1,
+          "category": {
+            "name": "Gulshan Branch",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "orderNo": 119,
+            "bankAccount": "HBL",
+            "shortAccount": null,
+            "code": 1001
+          },
+          "level": 1,
+          "isDeleted": null
         }
       },
       {
@@ -190,6 +208,24 @@
         "maxMarks": 25,
         "monthlyTestsMarks": null,
         "examDate": "2019-11-04",
+        "classes": {
+          "name": "Class-1",
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 1,
+          "category": {
+            "name": "Gulshan Branch",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "orderNo": 119,
+            "bankAccount": "HBL",
+            "shortAccount": null,
+            "code": 1001
+          },
+          "level": 1,
+          "isDeleted": null
+        }
         "assessments": {
           "userId": null,
           "userTime": "2019-11-04 16:15:26",
@@ -256,6 +292,24 @@
         "maxMarks": 25,
         "monthlyTestsMarks": null,
         "examDate": "2019-11-04",
+        "classes": {
+          "name": "Class-1",
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 1,
+          "category": {
+            "name": "Gulshan Branch",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "orderNo": 119,
+            "bankAccount": "HBL",
+            "shortAccount": null,
+            "code": 1001
+          },
+          "level": 1,
+          "isDeleted": null
+        },
         "assessments": {
           "userId": null,
           "userTime": "2019-11-04 16:15:26",
@@ -322,6 +376,24 @@
         "maxMarks": 25,
         "monthlyTestsMarks": null,
         "examDate": "2019-11-04",
+        "classes": {
+          "name": "Class-1",
+          "userId": null,
+          "userTime": "2019-11-04 16:15:26",
+          "id": 1,
+          "category": {
+            "name": "Gulshan Branch",
+            "userId": null,
+            "userTime": "2019-11-04 16:15:26",
+            "id": 1,
+            "orderNo": 119,
+            "bankAccount": "HBL",
+            "shortAccount": null,
+            "code": 1001
+          },
+          "level": 1,
+          "isDeleted": null
+        }
         "assessments": {
           "userId": null,
           "userTime": "2019-11-04 16:15:26",
