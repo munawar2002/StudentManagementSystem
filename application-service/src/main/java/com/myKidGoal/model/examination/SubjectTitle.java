@@ -40,4 +40,8 @@ public class SubjectTitle extends BaseTimeEntity {
     @JsonProperty(value = "isExtraActivity")
     private boolean extraActivity;
 
+    @Basic
+    @Column(name = "LOCKED")
+    private boolean locked;
+
 }

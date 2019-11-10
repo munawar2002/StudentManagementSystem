@@ -675,6 +675,7 @@
             </column>
             <column name="Id_ExamType" type="INT"/>
             <column name="Name" type="VARCHAR(50)"/>
+            <column name="locked" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="IsActive" type="${booleanType}" defaultValueBoolean="true"/>
             <column name="IsDeleted" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
@@ -689,6 +690,7 @@
             </column>
             <column name="Name" type="VARCHAR(50)"/>
             <column name="Level" type="INT"/>
+            <column name="locked" type="${booleanType}" defaultValueBoolean="true"/>
             <column name="IsActive" type="${booleanType}" defaultValueBoolean="true"/>
             <column name="IsDeleted" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
@@ -1416,6 +1418,7 @@
                 <constraints nullable="false" primaryKey="true" />
             </column>
             <column name="Title" type="VARCHAR(50)"/>
+            <column name="locked" type="${booleanType}" defaultValueBoolean="true"/>
             <column name="IsExtraActivity" type="${booleanType}" defaultValueBoolean="false"/>
             <column name="ID_User" type="INT"/>
             <column name="UserTime" type="${timestamp}" defaultValueComputed="CURRENT_TIMESTAMP"/>

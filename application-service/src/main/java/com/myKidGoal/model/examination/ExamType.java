@@ -33,4 +33,8 @@ public class ExamType extends BaseEntity {
     @Column(name = "ISDELETED")
     private boolean deleted;
 
+    @Basic
+    @Column(name = "LOCKED")
+    private boolean locked;
+
 }

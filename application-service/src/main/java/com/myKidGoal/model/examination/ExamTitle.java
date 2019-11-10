@@ -33,4 +33,8 @@ public class ExamTitle extends BaseEntity {
     @ManyToOne
     private ExamType examType;
 
+    @Basic
+    @Column(name = "LOCKED")
+    private boolean locked;
+
 }
