@@ -39,7 +39,7 @@ public class AudienceController {
         return response;
     }
 
-    @GetMapping("/search/all/active")
+    @GetMapping("/search/active/all")
     public Map<String, Object> allActiveAudiences() {
         Map<String, Object> response = new HashMap<>();
         Map<String, Object> res = new HashMap<>();
