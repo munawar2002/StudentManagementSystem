@@ -47,7 +47,7 @@ public class ExaminationController {
         }
     }
 
-    @GetMapping("/title/search/all/active")
+    @GetMapping("/title/search/active/all")
     public Map<String, Object> allExamTitlesActive() {
         Map<String, Object> response = new HashMap<>();
         Map<String, Object> res = new HashMap<>();
@@ -107,7 +107,7 @@ public class ExaminationController {
         }
     }
 
-    @GetMapping("/type/search/all/active")
+    @GetMapping("/type/search/active/all")
     public Map<String, Object> allExamTypeActive() {
         Map<String, Object> response = new HashMap<>();
         Map<String, Object> res = new HashMap<>();
