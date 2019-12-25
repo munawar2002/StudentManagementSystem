@@ -72,7 +72,7 @@ public class StudentController {
         }
 
         Map<String, String> response = new HashMap<>();
-        response.put("isUnique", String.valueOf(isEmailExists));
+        response.put("isUnique", String.valueOf(!isEmailExists));
         return response;
     }
 

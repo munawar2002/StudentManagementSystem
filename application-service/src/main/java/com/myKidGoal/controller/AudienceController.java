@@ -83,15 +83,15 @@ public class AudienceController {
     public Map<String, String> isUniqueAudienceName(@PathVariable(value = "name") String name,
             @PathVariable(value = "id") int id) {
 
-        Boolean isAudienceExists;
+        boolean isAudienceNotExists;
         if (id == 0) {
-            isAudienceExists = !audienceRepository.existsByNameIgnoreCaseAndDeletedIsFalse(name);
+            isAudienceNotExists = !audienceRepository.existsByNameIgnoreCaseAndDeletedIsFalse(name);
         } else {
-            isAudienceExists = !audienceRepository.existsByNameIgnoreCaseAndDeletedIsFalseAndIdNot(name, id);
+            isAudienceNotExists = !audienceRepository.existsByNameIgnoreCaseAndDeletedIsFalseAndIdNot(name, id);
         }
 
         Map<String, String> response = new HashMap<>();
-        response.put("isUnique", String.valueOf(isAudienceExists));
+        response.put("isUnique", String.valueOf(isAudienceNotExists));
         return response;
     }
 

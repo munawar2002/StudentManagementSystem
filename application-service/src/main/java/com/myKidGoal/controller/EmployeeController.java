@@ -82,7 +82,7 @@ public class EmployeeController {
         }
 
         Map<String, String> response = new HashMap<>();
-        response.put("isUnique", String.valueOf(isEmailExists));
+        response.put("isUnique", String.valueOf(!isEmailExists));
         return response;
     }
 
@@ -102,7 +102,7 @@ public class EmployeeController {
         }
 
         Map<String, String> response = new HashMap<>();
-        response.put("isUnique", String.valueOf(isCnicExists));
+        response.put("isUnique", String.valueOf(!isCnicExists));
         return response;
     }
 

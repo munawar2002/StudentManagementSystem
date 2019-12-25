@@ -53,19 +53,19 @@ public class GuardianController {
     public Map<String, String> isUniqueCnic(@PathVariable(value = "cnic") String cnic,
             @PathVariable(value = "id") int id) {
 
-        Boolean isAudienceExists = false;
+        Boolean isCnicExists = false;
         if (id == 0) {
             if (guardianRepository.findByCnicWithoutDash(cnic).isPresent()) {
-                isAudienceExists = true;
+                isCnicExists = true;
             }
         } else {
             if (guardianRepository.findByCnicAndIdWithoutDash(cnic, id).isPresent()) {
-                isAudienceExists = true;
+                isCnicExists = true;
             }
         }
 
         Map<String, String> response = new HashMap<>();
-        response.put("isUnique", String.valueOf(isAudienceExists));
+        response.put("isUnique", String.valueOf(!isCnicExists));
         return response;
     }
 
@@ -73,7 +73,7 @@ public class GuardianController {
     public Map<String, String> isUniqueEmail(@PathVariable(value = "email") String email,
             @PathVariable(value = "id") int id) {
 
-        Boolean isEmailExists = false;
+        boolean isEmailExists = false;
         if (id == 0) {
             if (guardianRepository.findByEmail(email).isPresent()) {
                 isEmailExists = true;
@@ -85,7 +85,7 @@ public class GuardianController {
         }
 
         Map<String, String> response = new HashMap<>();
-        response.put("isUnique", String.valueOf(isEmailExists));
+        response.put("isUnique", String.valueOf(!isEmailExists));
         return response;
     }
 
