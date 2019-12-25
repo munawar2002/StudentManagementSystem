@@ -1,6 +1,5 @@
 package com.myKidGoal.model.notification;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.myKidGoal.model.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "NOTIFICATION")
@@ -37,18 +36,15 @@ public class Notification extends BaseTimeEntity {
 
     @Basic
     @Column(name = "POSTINGDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime postingDate;
+    private Date postingDate;
 
     @Basic
     @Column(name = "EFFECTIVEDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime effectiveDate;
+    private Date effectiveDate;
 
     @Basic
     @Column(name = "EXPIRYDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime expiryDate;
+    private Date expiryDate;
 
     @Basic
     @Column(name = "ISDELETED")

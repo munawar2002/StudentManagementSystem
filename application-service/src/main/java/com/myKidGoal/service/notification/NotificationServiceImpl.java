@@ -1,7 +1,8 @@
 package com.myKidGoal.service.notification;
 
 import com.myKidGoal.exception.ApplicationException;
-import com.myKidGoal.model.*;
+import com.myKidGoal.model.Guardian;
+import com.myKidGoal.model.Student;
 import com.myKidGoal.model.notification.Audience;
 import com.myKidGoal.model.notification.Notification;
 import com.myKidGoal.model.notification.NotificationDetail;
@@ -12,8 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -84,7 +85,7 @@ public class NotificationServiceImpl implements NotificationService {
             notificationDetail.setSentTo("" + student.getGrNo());
             notificationDetail.setNotification(notification);
             notificationDetail.setDelivered(false);
-            notificationDetail.setUserTime(LocalDateTime.now());
+            notificationDetail.setUserTime(new Date());
             notificationDetails.add(notificationDetail);
         }
 
@@ -102,7 +103,7 @@ public class NotificationServiceImpl implements NotificationService {
             notificationDetail.setSentTo("" + guardian.getNicno());
             notificationDetail.setNotification(notification);
             notificationDetail.setDelivered(false);
-            notificationDetail.setUserTime(LocalDateTime.now());
+            notificationDetail.setUserTime(new Date());
             notificationDetails.add(notificationDetail);
         }
 

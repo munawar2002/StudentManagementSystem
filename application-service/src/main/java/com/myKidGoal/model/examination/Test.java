@@ -1,9 +1,6 @@
 package com.myKidGoal.model.examination;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.myKidGoal.model.BaseTimeEntity;
-import com.myKidGoal.model.Class;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -18,15 +15,13 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public class ExamTest extends BaseTimeEntity {
+public class Test extends BaseTimeEntity {
 
     @Id
     @Column(name = "Id_Test")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @JoinColumn(name = "Id_Exam")
-    @JsonProperty(value = "assessments")
     @ManyToOne
     private Exam exam;
 
@@ -36,7 +31,6 @@ public class ExamTest extends BaseTimeEntity {
 
     @Basic
     @Column(name = "passingmarks")
-    @JsonProperty(value = "minMarks")
     private Double passingMarks;
 
     @Basic
@@ -44,26 +38,11 @@ public class ExamTest extends BaseTimeEntity {
     private Integer monthlyTestsMarks;
 
     @Basic
-    @Column(name = "EXAMDATE")
-    private Date examDate;
+    @Column(name = "Date")
+    private Date date;
 
     @JoinColumn(name = "Id_Subject")
-    @JsonProperty(value = "course")
     @ManyToOne
     private Subject subject;
 
-    @JoinColumn(name = "Id_Session")
-    @ManyToOne
-    @JsonBackReference
-    private Session session;
-
-    @Transient
-    private Class classes;
-
-    public Class getClasses() {
-        if (subject != null) {
-            return subject.getClasses();
-        }
-        return null;
-    }
 }

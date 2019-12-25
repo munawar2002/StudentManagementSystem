@@ -1,12 +1,11 @@
 package com.myKidGoal.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 @MappedSuperclass
@@ -18,7 +17,6 @@ public class BaseTimeEntity {
 
     @Basic
     @Column(name = "USERTIME")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime userTime = LocalDateTime.now();
+    private Date userTime = new Date();
 
 }

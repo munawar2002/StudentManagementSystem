@@ -17,9 +17,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -63,8 +63,8 @@ public class SessionServiceTest {
         Session session = new Session();
         session.setName("Session-2019-20");
         session.setExecuted(true);
-        session.setStartDate(LocalDateTime.now());
-        session.setEndDate(LocalDateTime.now());
+        session.setStartDate(new Date());
+        session.setEndDate(new Date());
         session.setStatus("ACTIVE");
         session.setUserId(-1);
 
@@ -159,7 +159,7 @@ public class SessionServiceTest {
         test1.setSession(session);
         test1.setSubject(subject);
         test1.setExam(exam);
-        test1.setExamDate(LocalDateTime.now());
+        test1.setExamDate(new Date());
         test1.setMaxMarks(25d);
         test1.setPassingMarks(12d);
         test1 = examTestRepository.save(test1);
@@ -168,7 +168,7 @@ public class SessionServiceTest {
         test2.setSession(session);
         test2.setSubject(subject);
         test2.setExam(exam2);
-        test2.setExamDate(LocalDateTime.now());
+        test2.setExamDate(new Date());
         test2.setMaxMarks(25d);
         test2.setPassingMarks(12d);
         test2 = examTestRepository.save(test2);
@@ -177,7 +177,7 @@ public class SessionServiceTest {
         test3.setSession(session);
         test3.setSubject(subject2);
         test3.setExam(exam);
-        test3.setExamDate(LocalDateTime.now());
+        test3.setExamDate(new Date());
         test3.setMaxMarks(25d);
         test3.setPassingMarks(12d);
         test3 = examTestRepository.save(test3);
@@ -186,7 +186,7 @@ public class SessionServiceTest {
         test4.setSession(session);
         test4.setSubject(subject2);
         test4.setExam(exam2);
-        test4.setExamDate(LocalDateTime.now());
+        test4.setExamDate(new Date());
         test4.setMaxMarks(25d);
         test4.setPassingMarks(12d);
         test4 = examTestRepository.save(test4);

@@ -1,6 +1,5 @@
 package com.myKidGoal.model.examination;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.myKidGoal.model.BaseEntity;
@@ -11,7 +10,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -29,15 +28,13 @@ public class Session extends BaseEntity {
 
     @Basic
     @Column(name = "STARTDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonProperty(value = "from")
-    private LocalDateTime startDate;
+    private Date startDate;
 
     @Basic
     @Column(name = "ENDDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonProperty(value = "to")
-    private LocalDateTime endDate;
+    private Date endDate;
 
     @Basic
     @Column(name = "ISEXECUTED")

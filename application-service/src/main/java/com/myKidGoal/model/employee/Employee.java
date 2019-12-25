@@ -1,6 +1,5 @@
 package com.myKidGoal.model.employee;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.myKidGoal.model.Area;
 import com.myKidGoal.model.BaseEntity;
@@ -10,7 +9,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "DS_EMPLOYEE")
@@ -61,8 +60,7 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "NICEXPIREDON")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime nicExpiredOn;
+    private Date nicExpiredOn;
 
     @Basic
     @Column(name = "CONTACT1")
@@ -91,18 +89,15 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "DOJ")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime doj;
+    private Date doj;
 
     @Basic
     @Column(name = "DOB")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime dob;
+    private Date dob;
 
     @Basic
     @Column(name = "DOP")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime dop;
+    private Date dop;
 
     @Basic
     @Column(name = "ISLEFT")
@@ -111,8 +106,7 @@ public class Employee extends BaseEntity {
 
     @Basic
     @Column(name = "DOL")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime dol;
+    private Date dol;
 
     @Basic
     @Column(name = "CAUSEOFLEAVING")

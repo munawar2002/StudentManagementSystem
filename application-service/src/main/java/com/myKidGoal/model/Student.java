@@ -1,6 +1,5 @@
 package com.myKidGoal.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
@@ -8,7 +7,7 @@ import org.apache.commons.lang.builder.ToStringStyle;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Objects;
 
 /*
@@ -42,14 +41,14 @@ public class Student implements Serializable {
     private Religion religion;
     private House house;
     private Integer regNo;
-    private LocalDateTime regDate;
+    private Date regDate;
     private Boolean admissioned;
     private String name;
     private Integer grNo;
     private Boolean male;
-    private LocalDateTime dob;
-    private LocalDateTime doa;
-    private LocalDateTime dol;
+    private Date dob;
+    private Date doa;
+    private Date dol;
     private Boolean leftSchool;
     private String causeOfRemoval;
     private Double discountPercentage;
@@ -57,7 +56,7 @@ public class Student implements Serializable {
     private Boolean freeze;
     private Boolean boarding;
     private Integer userId;
-    private LocalDateTime userTime;
+    private Date userTime;
     private Integer fakeGrNo;
     private Boolean fixedLateFine;
     private String email;
@@ -167,12 +166,11 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "RegDate")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    public LocalDateTime getRegDate() {
+    public Date getRegDate() {
         return regDate;
     }
 
-    public void setRegDate(LocalDateTime regDate) {
+    public void setRegDate(Date regDate) {
         this.regDate = regDate;
     }
 
@@ -224,34 +222,31 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "DOB")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    public LocalDateTime getDob() {
+    public Date getDob() {
         return dob;
     }
 
-    public void setDob(LocalDateTime dob) {
+    public void setDob(Date dob) {
         this.dob = dob;
     }
 
     @Basic
     @Column(name = "DOA")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    public LocalDateTime getDoa() {
+    public Date getDoa() {
         return doa;
     }
 
-    public void setDoa(LocalDateTime doa) {
+    public void setDoa(Date doa) {
         this.doa = doa;
     }
 
     @Basic
     @Column(name = "DOL")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    public LocalDateTime getDol() {
+    public Date getDol() {
         return dol;
     }
 
-    public void setDol(LocalDateTime dol) {
+    public void setDol(Date dol) {
         this.dol = dol;
     }
 
@@ -330,12 +325,11 @@ public class Student implements Serializable {
 
     @Basic
     @Column(name = "UserTime")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    public LocalDateTime getUserTime() {
+    public Date getUserTime() {
         return userTime;
     }
 
-    public void setUserTime(LocalDateTime userTime) {
+    public void setUserTime(Date userTime) {
         this.userTime = userTime;
     }
 

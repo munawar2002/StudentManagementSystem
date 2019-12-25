@@ -1,6 +1,5 @@
 package com.myKidGoal.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,7 +8,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -64,8 +63,7 @@ public class Guardian {
 
     @Basic
     @Column(name = "ToDate")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime toDate;
+    private Date toDate;
 
     @Basic
     @Column(name = "ID_User")
@@ -73,8 +71,7 @@ public class Guardian {
 
     @Basic
     @Column(name = "UserTime")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime userTime;
+    private Date userTime;
 
     @Basic
     @Column(name = "ISDELETED")

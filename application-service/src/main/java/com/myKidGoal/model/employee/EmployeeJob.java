@@ -1,6 +1,5 @@
 package com.myKidGoal.model.employee;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.myKidGoal.model.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "DS_EMPLOYEEJOB")
@@ -37,8 +36,7 @@ public class EmployeeJob extends BaseTimeEntity {
 
     @Basic
     @Column(name = "FROMDATE")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime fromDate;
+    private Date fromDate;
 
     @Basic
     @Column(name = "ISACTIVE")

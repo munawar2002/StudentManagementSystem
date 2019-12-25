@@ -22,8 +22,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -103,10 +103,10 @@ public class AudienceServiceTest {
 
         Notification notification = new Notification();
         notification.setAudience(audience.orElse(null));
-        notification.setEffectiveDate(LocalDateTime.now());
-        notification.setExpiryDate(LocalDateTime.now());
+        notification.setEffectiveDate(new Date());
+        notification.setExpiryDate(new Date());
         notification.setMessage("Sending message to students");
-        notification.setPostingDate(LocalDateTime.now());
+        notification.setPostingDate(new Date());
         notification.setTopic("Notification Send ExamTest");
 
         boolean success = notificationService.sendNotification(notification);
@@ -127,10 +127,10 @@ public class AudienceServiceTest {
 
         Notification notification = new Notification();
         notification.setAudience(audience.orElse(null));
-        notification.setEffectiveDate(LocalDateTime.now());
-        notification.setExpiryDate(LocalDateTime.now());
+        notification.setEffectiveDate(new Date());
+        notification.setExpiryDate(new Date());
         notification.setMessage("Sending message to students");
-        notification.setPostingDate(LocalDateTime.now());
+        notification.setPostingDate(new Date());
         notification.setTopic("Notification Send ExamTest");
 
         boolean success = notificationService.sendNotification(notification);
