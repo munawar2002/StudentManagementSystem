@@ -11,6 +11,10 @@ UPDATE ds_area SET usertime = '2018-02-09 10:21:29' WHERE usertime = '0000-00-00
 UPDATE ds_profession SET usertime = '2018-02-09 10:21:29' WHERE usertime = '0000-00-00 00:00:00';
 UPDATE ds_GUARDIAN SET NICNO = SUBSTRING(NICNO,1,15) WHERE LENGTH(NICNO) > 20;
 UPDATE ds_employee SET usertime = '2018-02-09 10:21:29' , dol=NULL WHERE usertime = '0000-00-00 00:00:00';
-
+UPDATE ds_guardian SET nicno = REPLACE(nicno,'-','');
+INSERT INTO `ds_guardian` (`Id_Guardian`, `Id_Profession`, `Name`, `NICNo`, `Contact1`, `Contact2`, `Contact3`, `Address`, `ToDate`, `Id_Area`, `email`, `ISDELETED`, `ID_User`, `UserTime`)
+VALUES('371','181','UNKNOWN','0000000000000','00000000000','00000000000','02100000000','UNKNOWN',NULL,'9',NULL,'0','0','2018-02-09 10:21:29');
+UPDATE ds_student SET id_guardian = 371 WHERE id_guardian=0;
+DELETE FROM ds_student WHERE id_house=0;
 COMMIT;
 

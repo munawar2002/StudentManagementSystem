@@ -27,8 +27,8 @@ public class DateUtilsTest {
 
     @Test
     public void getYearTest() throws ParseException {
-        Date endDate = DateUtils.getDate("01.01.2025", "dd.mm.yy");
-        Date startDate = new Date();
+        Date endDate = DateUtils.getDate("01.01.2025", "dd.mm.yyyy");
+        Date startDate = DateUtils.getDate("01.01.2019", "dd.mm.yyyy");
 
         int years = DateUtils.getYear(startDate, endDate);
         Assert.assertEquals(6, years);
