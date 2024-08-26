@@ -34,7 +34,7 @@
         <spring.jpa.version>2.0.6.RELEASE</spring.jpa.version>
         <spring.data.rest.version>3.0.6.RELEASE</spring.data.rest.version>
         <spring.security.version>4.2.5.RELEASE</spring.security.version>
-        <swagger2-version>2.7.0</swagger2-version>
+        <swagger2-version>2.10.0</swagger2-version>
         <jackson.fasterxml.version>2.9.5</jackson.fasterxml.version>
         <project.version>0.0.1</project.version>
 
